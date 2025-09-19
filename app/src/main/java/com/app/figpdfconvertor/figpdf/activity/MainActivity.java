@@ -30,6 +30,7 @@ import com.app.figpdfconvertor.figpdf.R;
 import com.app.figpdfconvertor.figpdf.ads.GoogleMobileAdsConsentManager;
 import com.app.figpdfconvertor.figpdf.databinding.ActivityMainBinding;
 import com.app.figpdfconvertor.figpdf.funnelss.AnalyticsManager;
+import com.app.figpdfconvertor.figpdf.preferences.AppHelper;
 import com.app.figpdfconvertor.figpdf.utils.BottomNavHelper;
 import com.app.figpdfconvertor.figpdf.utils.InAppUpdate;
 import com.app.figpdfconvertor.figpdf.utils.MyApp;
@@ -61,30 +62,34 @@ public class MainActivity extends BaseActivity {
 
         if (isNetworkAvailable(this)) {
             try {
-                if (checkCountry()) {
-                    getGoogleMobileAdsConsentManager().gatherConsent(this, new GoogleMobileAdsConsentManager.OnConsentGatheringCompleteListener() {
-                        @Override
-                        public void consentGatheringComplete(FormError error) {
-                            if (error == null) {
-                                // If consent is required → only load when allowed
-                                if (getGoogleMobileAdsConsentManager().isConsentRequired()) {
-                                    if (getGoogleMobileAdsConsentManager().canRequestAds()) {
-                                        MyApp.getInstance().loadPreferredAds();
+                if (!AppHelper.isConsentCompleted()){
+                    if (checkCountry()) {
+                        getGoogleMobileAdsConsentManager().gatherConsent(this, new GoogleMobileAdsConsentManager.OnConsentGatheringCompleteListener() {
+                            @Override
+                            public void consentGatheringComplete(FormError error) {
+                                if (error == null) {
+                                    AppHelper.setConsentCompleted(true);
+                                    // If consent is required → only load when allowed
+                                    if (getGoogleMobileAdsConsentManager().isConsentRequired()) {
+                                        if (getGoogleMobileAdsConsentManager().canRequestAds()) {
+                                            MyApp.getInstance().loadPreferredAds();
+                                        } else {
+                                            Log.e("Consent", "Consent required but not granted.");
+                                        }
                                     } else {
-                                        Log.e("Consent", "Consent required but not granted.");
+                                        // ✅ If consent is NOT required → always load ads
+                                        MyApp.getInstance().loadPreferredAds();
                                     }
                                 } else {
-                                    // ✅ If consent is NOT required → always load ads
-                                    MyApp.getInstance().loadPreferredAds();
+                                    Log.e("Consent", "Consent gathering failed: " + error.getMessage());
                                 }
-                            } else {
-                                Log.e("Consent", "Consent gathering failed: " + error.getMessage());
                             }
-                        }
-                    });
-                }else{
-                    MyApp.getInstance().loadPreferredAds();
+                        });
+                    }else{
+                        MyApp.getInstance().loadPreferredAds();
+                    }
                 }
+
             } catch (Exception e) {
                 // progressBar.setVisibility(View.GONE);
                 e.printStackTrace();

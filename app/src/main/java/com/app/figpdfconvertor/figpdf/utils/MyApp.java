@@ -33,6 +33,7 @@ import io.appmetrica.analytics.AppMetrica;
 import io.appmetrica.analytics.AppMetricaConfig;
 
 import java.util.Collections;
+import java.util.Locale;
 
 public class MyApp extends MultiDexApplication implements Application.ActivityLifecycleCallbacks {
 
@@ -66,7 +67,7 @@ public class MyApp extends MultiDexApplication implements Application.ActivityLi
             Clarity.initialize(getApplicationContext(), config);
         }
         ConstantKt.setGoogleMobileAdsConsentManager(GoogleMobileAdsConsentManager.Companion.getInstance(this));
-
+        setDefaultLanguageIfFirstLaunch();
         String apiKey = "9e786f9c-02b1-42ca-8bb3-01eb9105dd3d";
         try {
             AppMetricaConfig config = AppMetricaConfig.newConfigBuilder(apiKey)
@@ -140,5 +141,55 @@ public class MyApp extends MultiDexApplication implements Application.ActivityLi
             AdManagerRewarded.loadRewardAd(this);
         }
     }
+
+    private void setDefaultLanguageIfFirstLaunch() {
+        if (AppHelper.isFirstTime()) {
+            String deviceCountry = Locale.getDefault().getCountry(); // e.g., "DE", "IN"
+            String defaultLangCode = "en"; // fallback
+
+            switch (deviceCountry) {
+                case "DE":
+                    defaultLangCode = "de"; // German
+                    break;
+                case "FR":
+                    defaultLangCode = "fr"; // French
+                    break;
+                case "IN":
+                    defaultLangCode = "hi"; // Hindi
+                    break;
+                case "ES":
+                    defaultLangCode = "es"; // Spanish
+                    break;
+                case "BR":
+                    defaultLangCode = "pt"; // Portuguese
+                    break;
+                case "TH":
+                    defaultLangCode = "th"; // Thai
+                    break;
+                case "CN":
+                case "TW":
+                    defaultLangCode = "zh"; // Chinese
+                    break;
+                case "JP":
+                    defaultLangCode = "ja"; // Japanese
+                    break;
+                case "RU":
+                    defaultLangCode = "ru"; // Russian
+                    break;
+                case "TR":
+                    defaultLangCode = "tr"; // Turkish
+                    break;
+                case "VN":
+                    defaultLangCode = "vi"; // Vietnamese
+                    break;
+                default:
+                    defaultLangCode = "en"; // fallback English
+            }
+
+            AppHelper.setLanguageCode(defaultLangCode); // save in preferences
+            LocaleHelper.setLocale(this, defaultLangCode); // apply locale
+        }
+    }
+
 
 }

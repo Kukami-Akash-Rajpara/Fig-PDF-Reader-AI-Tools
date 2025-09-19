@@ -228,9 +228,9 @@ class FileViewerActivity : BaseActivity() {
     }
 
     private fun goToDownloadScreen(file: File?) {
-
+        Log.e("PATHHH",Uri.fromFile(file).toString())
         val intent = Intent(this, ViewFileActivity::class.java)
-        intent.putExtra("pdf_uri", Uri.fromFile(file).toString())
+        intent.putExtra("pdf_uri", file?.absolutePath)
         startActivity(intent)
     }
     /** ---------------------- Save PDF ---------------------- **/
@@ -306,25 +306,55 @@ class FileViewerActivity : BaseActivity() {
     /** ---------------------- TEXT / HTML ---------------------- **/
     private fun convertTextToPdfBytes(text: String): ByteArray {
         val pdfDocument = PdfDocument()
-        val pageInfo = PdfDocument.PageInfo.Builder(595, 842, 1).create()
-        val page = pdfDocument.startPage(pageInfo)
+        val pageWidth = 595
+        val pageHeight = 842
+        val margin = 50f
 
-        val canvas = page.canvas
         val paint = Paint().apply { textSize = 14f }
-        var y = 50f
-        val x = 50f
+        val lineHeight = paint.descent() - paint.ascent()
+
+        var y = margin
+        val usableWidth = pageWidth - 2 * margin
+        var pageNumber = 1
+
+        var pageInfo = PdfDocument.PageInfo.Builder(pageWidth, pageHeight, pageNumber).create()
+        var page = pdfDocument.startPage(pageInfo)
+        var canvas = page.canvas
 
         for (line in text.split("\n")) {
-            canvas.drawText(line, x, y, paint)
-            y += paint.descent() - paint.ascent()
+            var currentLine = line
+
+            while (currentLine.isNotEmpty()) {
+                // Check if line fits in width
+                val charsThatFit = paint.breakText(currentLine, true, usableWidth, null)
+                val part = currentLine.substring(0, charsThatFit)
+                currentLine = currentLine.substring(charsThatFit)
+
+                // If page is full → new page
+                if (y + lineHeight > pageHeight - margin) {
+                    pdfDocument.finishPage(page)
+                    pageNumber++
+                    pageInfo = PdfDocument.PageInfo.Builder(pageWidth, pageHeight, pageNumber).create()
+                    page = pdfDocument.startPage(pageInfo)
+                    canvas = page.canvas
+                    y = margin
+                }
+
+                canvas.drawText(part, margin, y, paint)
+                y += lineHeight
+            }
         }
+
         pdfDocument.finishPage(page)
 
-        val bos = ByteArrayOutputStream()
-        pdfDocument.writeTo(bos)
+        val outputStream = ByteArrayOutputStream()
+        pdfDocument.writeTo(outputStream)
         pdfDocument.close()
-        return bos.toByteArray()
+
+        return outputStream.toByteArray()
     }
+
+
 
     /** ---------------------- WORD ---------------------- **/
     private fun convertWordToPdfBytes(uri: Uri, fileName: String): ByteArray {

@@ -90,6 +90,7 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:text="@string/card_heading"
                         android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/black"
                         android:textStyle="bold" />
 
                     <TextView
@@ -130,6 +131,7 @@
                 android:layout_marginBottom="@dimen/_8sdp"
                 android:fontFamily="@font/roboto_extra_bold"
                 android:text="@string/ocr_text_heading"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_14ssp" />
 
             <androidx.cardview.widget.CardView
@@ -206,11 +208,12 @@
                         android:layout_gravity="top|end"
                         android:background="@drawable/top_right_popular"
                         android:fontFamily="@font/roboto_semi_bold"
-                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingStart="@dimen/_10sdp"
                         android:paddingVertical="@dimen/_4sdp"
                         android:text="@string/ocr_badge"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_11ssp" />
+                        android:textSize="@dimen/_10ssp" />
 
                 </FrameLayout>
 
@@ -222,6 +225,7 @@
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginBottom="0dp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_extra_bold"
                 android:text="@string/features"
                 android:textSize="@dimen/_14ssp" />
@@ -240,16 +244,16 @@
 
                     <FrameLayout
                         android:id="@+id/pdf_converter_pro_button"
-                        android:layout_width="@dimen/_128sdp"
+                        android:layout_width="@dimen/_118sdp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_7sdp"
-                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
                         android:clipChildren="false">
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/_133sdp"
+                            android:layout_height="@dimen/_130sdp"
                             android:layout_gravity="bottom"
                             android:layout_marginTop="@dimen/_40sdp"
                             app:cardBackgroundColor="@color/card_background_light_pink"
@@ -293,7 +297,7 @@
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:elevation="4dp"
                             android:padding="@dimen/_8sdp"
@@ -303,15 +307,15 @@
 
                     <FrameLayout
                         android:id="@+id/layAiResumeAnalyzer"
-                        android:layout_width="@dimen/_128sdp"
+                        android:layout_width="@dimen/_118sdp"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
                         android:clipChildren="false">
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/_133sdp"
+                            android:layout_height="@dimen/_130sdp"
                             android:layout_gravity="bottom"
                             android:layout_marginTop="@dimen/_40sdp"
                             app:cardBackgroundColor="@color/card_background_light_pink"
@@ -355,7 +359,7 @@
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:elevation="4dp"
                             android:padding="@dimen/_8sdp"
@@ -365,15 +369,15 @@
 
                     <FrameLayout
                         android:id="@+id/layAiPptMaker"
-                        android:layout_width="@dimen/_128sdp"
+                        android:layout_width="@dimen/_118sdp"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
                         android:clipChildren="false">
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/_133sdp"
+                            android:layout_height="@dimen/_130sdp"
                             android:layout_gravity="bottom"
                             android:layout_marginTop="@dimen/_40sdp"
                             app:cardBackgroundColor="@color/card_background_light_pink"
@@ -415,7 +419,7 @@
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:elevation="4dp"
                             android:padding="@dimen/_8sdp"
@@ -434,6 +438,7 @@
                 android:layout_marginTop="@dimen/_12sdp"
                 android:layout_marginBottom="@dimen/_12sdp"
                 android:fontFamily="@font/roboto_extra_bold"
+                android:textColor="@color/black"
                 android:text="@string/interview_text"
                 android:textSize="@dimen/_14ssp" />
 
@@ -511,7 +516,7 @@
                         android:layout_gravity="top|end"
                         android:background="@drawable/top_right_shape"
                         android:fontFamily="@font/roboto_semi_bold"
-                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:paddingHorizontal="@dimen/_10sdp"
                         android:paddingVertical="@dimen/_4sdp"
                         android:text="@string/interview_badge"
                         android:textColor="@color/white"
@@ -528,6 +533,7 @@
                 android:layout_marginVertical="@dimen/_12sdp"
                 android:fontFamily="@font/roboto_extra_bold"
                 android:text="@string/recommendation_text"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_14ssp" />
 
             <androidx.cardview.widget.CardView
@@ -625,7 +631,7 @@
                         android:layout_gravity="top|end"
                         android:background="@drawable/top_right_shape"
                         android:fontFamily="@font/roboto_semi_bold"
-                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:paddingHorizontal="@dimen/_10sdp"
                         android:paddingVertical="@dimen/_4sdp"
                         android:text="@string/recommendation_badge"
                         android:textColor="@color/white"

@@ -1,7 +1,18 @@
 package com.app.figpdfconvertor.figpdf.preferences;
 
-public class AppHelper {
 
+import android.content.Context;
+
+public class AppHelper {
+    private static final String KEY_CONSENT_COMPLETED = "consent_completed";
+
+    public static boolean isConsentCompleted() {
+        return PrefHelper.getInstance().getBoolean(KEY_CONSENT_COMPLETED, false);
+    }
+
+    public static void setConsentCompleted(boolean completed) {
+        PrefHelper.getInstance().setBoolean(KEY_CONSENT_COMPLETED, completed);
+    }
     public static String getAppUpdateVersionCode() {
         return PrefHelper.getInstance().getString("versionCode", "1");
     }

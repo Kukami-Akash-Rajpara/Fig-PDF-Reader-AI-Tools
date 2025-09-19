@@ -99,7 +99,6 @@ public class LanguageActivity extends BaseActivity {
     }
 
     public class Language {
-
         public String languageCode;
         public int languageIcon;
         public String languageName;
@@ -127,6 +126,14 @@ public class LanguageActivity extends BaseActivity {
         languages.add(new Language("ru", R.drawable.language_russian_img, "Russian", savedLanguageCode.equals("ru")));
         languages.add(new Language("vi", R.drawable.language_vietnamese_img, "Vietnamese", savedLanguageCode.equals("vi")));
         languages.add(new Language("tr", R.drawable.language_turkish_img, "Turkish", savedLanguageCode.equals("tr")));
+        languages.add(new Language("bn", R.drawable.language_turkish_img, "Bengali", savedLanguageCode.equals("bn")));
+        languages.add(new Language("in", R.drawable.language_turkish_img, "Indonesian", savedLanguageCode.equals("in")));
+        languages.add(new Language("it", R.drawable.language_turkish_img, "Italian", savedLanguageCode.equals("it")));
+        languages.add(new Language("ko", R.drawable.language_turkish_img, "Korean", savedLanguageCode.equals("ko")));
+        languages.add(new Language("pl", R.drawable.language_turkish_img, "Polish", savedLanguageCode.equals("pl")));
+        languages.add(new Language("nl", R.drawable.language_turkish_img, "Dutch", savedLanguageCode.equals("nl")));
+        languages.add(new Language("ms", R.drawable.language_turkish_img, "Malay", savedLanguageCode.equals("ms")));
+        languages.add(new Language("fil", R.drawable.language_turkish_img, "Filipino", savedLanguageCode.equals("fil")));
         return languages;
     }
 

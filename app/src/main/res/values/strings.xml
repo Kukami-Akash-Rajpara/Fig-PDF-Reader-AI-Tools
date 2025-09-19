@@ -9,9 +9,9 @@
     <string name="interview_text">Your Personal Interview Mentor</string>
     <string name="interview_bot_heading">Interview Bot</string>
     <string name="interview_bot_description">Enhance your interview readiness with AI-powered tips and mock questions</string>
-    <string name="interview_badge">✨&#160;&#160; Let’s Practice!</string>
+    <string name="interview_badge">✨&#160;Let’s Practice!</string>
     <string name="recommendation_text">Personalized Recommendations</string>
-    <string name="recommendation_badge">💡&#160;&#160;Try Me!</string>
+    <string name="recommendation_badge">💡&#160;Try Me!</string>
     <string name="last_used_day">2 days ago</string>
     <string name="import_button">Import</string>
     <string name="import_button_count">Import (%1$d)</string>
@@ -120,7 +120,7 @@
     <string name="ocr_text_heading">OCR Made Easy</string>
     <string name="ocr_title">OCR With PDF</string>
     <string name="ocr_text_description">From scanned to smart — OCR made simple.</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;Popular</string>
+    <string name="ocr_badge">🔥&#160;Popular</string>
     <string name="pdf_converter_heading">PDF Converter Pro Tools</string>
     <string name="pdf_converter_description">Smart PDF Converter for Fast &amp; Easy Conversion</string>
     <string name="resume_analyzer">AI Resume Analyzer</string>

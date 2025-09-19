@@ -4,6 +4,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.pdf.PdfDocument;
@@ -215,7 +216,7 @@ public class ImageOcrResult extends AppCompatActivity {
 
         // ✅ Unique filename
         String fileName = "OcrResult_" + System.currentTimeMillis() + ".pdf";
-
+        Uri uri = null;
        /* if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
             // 👉 Android 10+ → Use MediaStore (publicly visible)
             ContentValues values = new ContentValues();
@@ -259,7 +260,7 @@ public class ImageOcrResult extends AppCompatActivity {
             values.put(MediaStore.MediaColumns.RELATIVE_PATH,
                     Environment.DIRECTORY_DOCUMENTS + "/" + getString(R.string.app_name) + "/OCR with PDF");
 
-            Uri uri = getContentResolver().insert(MediaStore.Files.getContentUri("external"), values);
+            uri = getContentResolver().insert(MediaStore.Files.getContentUri("external"), values);
 
             try {
                 OutputStream outputStream = getContentResolver().openOutputStream(uri);
@@ -282,6 +283,13 @@ public class ImageOcrResult extends AppCompatActivity {
             try {
                 pdfDocument.writeTo(new FileOutputStream(file));
                 Toast.makeText(this, "PDF saved in: " + file.getAbsolutePath(), Toast.LENGTH_LONG).show();
+
+                uri = androidx.core.content.FileProvider.getUriForFile(
+                        this,
+                        getPackageName() + ".provider", // authority (must match manifest provider)
+                        file
+                );
+
             } catch (IOException e) {
                 e.printStackTrace();
                 Toast.makeText(this, "Error saving PDF!", Toast.LENGTH_SHORT).show();
@@ -289,7 +297,12 @@ public class ImageOcrResult extends AppCompatActivity {
         }
         pdfDocument.close();
 
-        finish();
+        if (uri != null) {
+            Intent intent = new Intent(this, ViewFileActivity.class);
+            intent.putExtra("pdf_uri", uri.toString());
+            startActivity(intent);
+            finish();
+        }
     }
 
 

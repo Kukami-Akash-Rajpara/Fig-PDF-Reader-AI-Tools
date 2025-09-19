@@ -10,11 +10,11 @@
     tools:context=".activity.ComingSoonActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/_140sdp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:adjustViewBounds="true"
-        android:src="@drawable/icon_hero_image" />
+        android:src="@drawable/icon_hero_image1" />
 
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmer_layout"
