@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu1"
+        android:title="Human Resources" />
+    <item
+        android:id="@+id/menu2"
+        android:title="Software &amp; IT" />
+    <item
+        android:id="@+id/menu3"
+        android:title="Design &amp; Creative" />
+    <item
+        android:id="@+id/menu4"
+        android:title="Sales &amp; Marketing" />
+    <item
+        android:id="@+id/menu5"
+        android:title="Finance &amp; Accounting" />
+    <item
+        android:id="@+id/menu6"
+        android:title="Operations &amp; Administration" />
+    <item
+        android:id="@+id/menu7"
+        android:title="Business &amp; Strategy" />
+    <item
+        android:id="@+id/menu8"
+        android:title="Engineering" />
+    <item
+        android:id="@+id/menu9"
+        android:title="Healthcare" />
+    <item
+        android:id="@+id/menu10"
+        android:title="Education &amp; Training" />
+</menu>

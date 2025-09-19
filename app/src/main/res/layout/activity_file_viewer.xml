@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/back_img" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/imgBack">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtImageName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:maxLines="1"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/app_name"
+                android:textSize="@dimen/_14ssp" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.cherry.lib.doc.widget.DocView
+        android:id="@+id/webViewFile"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@color/bg"
+        android:padding="@dimen/_10sdp"
+        android:layout_weight="1"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_25sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/btnConvert"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:background="@drawable/btn_fill_gradient"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtButton"
+                android:layout_width="match_parent"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_8sdp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/convert_to_pdf"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

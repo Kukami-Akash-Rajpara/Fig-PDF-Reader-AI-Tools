@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/_5sdp">
+
+  <!--  <Button
+        android:id="@+id/pickPdfBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick PDF" />
+
+    <TextView
+        android:id="@+id/pdfNameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingStart="8dp"
+        android:text="No file selected"
+        android:textColor="@android:color/black" />-->
+
+    <LinearLayout
+        android:id="@+id/pickPdfBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_weight="1"
+        android:paddingVertical="@dimen/_20sdp"
+        android:background="@drawable/bg_upload_pdf_layout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtUploadData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:includeFontPadding="false"
+            android:text="@string/tap_to_upload_your_file"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp" />
+
+        <TextView
+            android:id="@+id/pdfNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/no_file_selected"
+            android:textColor="#65000000"
+            android:textSize="@dimen/_11ssp" />
+
+    </LinearLayout>
+</LinearLayout>

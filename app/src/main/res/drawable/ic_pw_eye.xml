@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="67.55556dp" android:viewportHeight="19" android:viewportWidth="18" android:width="64dp">
+      
+    <path android:fillColor="#00000000" android:pathData="M10.897,7.602L7.102,11.397C6.614,10.91 6.314,10.242 6.314,9.499C6.314,8.014 7.514,6.814 8.999,6.814C9.742,6.814 10.41,7.114 10.897,7.602Z" android:strokeAlpha="0.5" android:strokeColor="#000000" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeWidth="1.125"/>
+      
+    <path android:fillColor="#00000000" android:pathData="M13.365,4.828C12.052,3.838 10.552,3.298 9,3.298C6.352,3.298 3.885,4.858 2.167,7.558C1.492,8.615 1.492,10.393 2.167,11.45C2.76,12.38 3.45,13.183 4.2,13.828" android:strokeAlpha="0.5" android:strokeColor="#000000" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeWidth="1.125"/>
+      
+    <path android:fillColor="#00000000" android:pathData="M6.314,15.147C7.169,15.507 8.077,15.702 8.999,15.702C11.647,15.702 14.115,14.142 15.832,11.442C16.507,10.385 16.507,8.607 15.832,7.55C15.585,7.16 15.314,6.792 15.037,6.447" android:strokeAlpha="0.5" android:strokeColor="#000000" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeWidth="1.125"/>
+      
+    <path android:fillColor="#00000000" android:pathData="M11.633,10.025C11.438,11.083 10.575,11.945 9.518,12.14" android:strokeAlpha="0.5" android:strokeColor="#000000" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeWidth="1.125"/>
+      
+    <path android:fillColor="#00000000" android:pathData="M7.102,11.398L1.5,17" android:strokeAlpha="0.5" android:strokeColor="#000000" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeWidth="1.125"/>
+      
+    <path android:fillColor="#00000000" android:pathData="M16.5,2L10.898,7.602" android:strokeAlpha="0.5" android:strokeColor="#000000" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeWidth="1.125"/>
+    
+</vector>

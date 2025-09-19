@@ -1,0 +1,12 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <!-- Semi-transparent black fill -->
+    <solid android:color="#80000000"/> <!-- adjust alpha as needed (80 in hex = 50%) -->
+
+    <!-- Border -->
+    <stroke
+        android:width="2dp"
+        android:color="#FFFFFF"/>
+
+    <!-- Rounded corners to match your image -->
+    <corners android:radius="8dp"/>
+</shape>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.EditScreen">
+
+    <!-- top bar -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Left: Back Button -->
+        <ImageView
+            android:id="@+id/back_button_to_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/back_img" />
+
+        <!-- individual image name  -->
+        <TextView
+            android:id="@+id/image_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="Edit Screen Activity"
+            android:textSize="@dimen/_14ssp" />
+
+        <ImageView
+            android:id="@+id/edit_image_name"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/_2sdp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_edit_image_name" />
+
+        <!--    elllipsis menu    -->
+
+    </LinearLayout> <!--  top bar end  -->
+
+    <!--  image and its slider  -->
+    <RelativeLayout
+        android:id="@+id/image_slider_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_sheet_gallery"
+        android:layout_below="@+id/header"
+        android:layout_marginVertical="@dimen/_6sdp"
+        android:orientation="vertical">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <!--    image counter    -->
+        <LinearLayout
+            android:id="@+id/image_slide_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_slider"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/dialog_background"
+            android:elevation="@dimen/_4sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_4sdp">
+
+            <ImageView
+                android:id="@+id/ic_chevron_left_disabled"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_chevron_left_disabled" />
+
+            <ImageView
+                android:id="@+id/ic_chevron_left_enabled"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_chevron_left_enabled"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/image_slide_counter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="start"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:singleLine="true"
+                android:text="1/12"
+                android:textSize="@dimen/_12ssp" />
+
+            <ImageView
+                android:id="@+id/ic_chevron_right_disabled"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_chevron_right_disabled"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ic_chevron_right_enabled"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_chevron_right_enabled"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <!--    recycler to show the selected image at the bottom can also select the image from here    -->
+    <!--  bottom sheet images  -->
+    <RelativeLayout
+        android:id="@+id/bottom_sheet_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_above="@+id/bottomBar"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!--   delete option from the bottom sheet     -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bottom_sheet_images"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginVertical="@dimen/_12sdp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <!--  bottom sticky bar  -->
+
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:paddingVertical="@dimen/_6sdp">
+
+        <!-- 4 tools equally spaced -->
+        <LinearLayout
+            android:id="@+id/tool_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <!-- Crop button -->
+            <LinearLayout
+                android:id="@+id/crop_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_crop_1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="@string/crop_button"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+            <!-- doodle button -->
+            <LinearLayout
+                android:id="@+id/doodle_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_doodle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="@string/doodle_button"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+            <!-- filter button -->
+            <LinearLayout
+                android:id="@+id/filter_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_filter" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="@string/filter_button"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+            <!-- text button  -->
+            <LinearLayout
+                android:id="@+id/text_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="@string/text_button"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+            <!-- Done button aligned to right -->
+            <TextView
+                android:id="@+id/done_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_gradient_stroke"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/done_button"
+                android:textColor="@color/dark_pink_color" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

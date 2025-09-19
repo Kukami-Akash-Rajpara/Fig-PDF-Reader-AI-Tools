@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_screen"
+    android:orientation="vertical"
+    tools:context=".activity.PDFSummarizerActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backKey"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/back_img" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_minus14sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:includeFontPadding="false"
+        android:text="@string/pdf"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_26ssp" />
+
+    <com.app.figpdfconvertor.figpdf.customwidget.GradientTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/federant_regular"
+        android:gravity="center"
+        android:text="@string/summarizer"
+        android:textSize="@dimen/_20ssp"
+        app:endColor="#BF496A"
+        app:startColor="#F975CD" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_upload_pdf_layout"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layChangePdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:padding="@dimen/_10sdp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icon_edit_document" />
+
+            <com.app.figpdfconvertor.figpdf.customwidget.GradientTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:includeFontPadding="false"
+                android:text="@string/edit"
+                android:textSize="@dimen/_11ssp"
+                app:endColor="#BF496A"
+                app:startColor="#F975CD" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layUpload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:adjustViewBounds="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/animation_document_upload"
+                app:lottie_repeatMode="restart" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:includeFontPadding="false"
+                android:text="@string/tap_to_upload_your_file"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/just_upload_your_file"
+                android:textColor="#65000000"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layPdfView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icon_pdf_img" />
+
+            <TextView
+                android:id="@+id/txtPdfName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/tap_to_upload_your_file"
+                android:textColor="#DD000000"
+                android:textSize="@dimen/_14ssp" />
+
+            <LinearLayout
+                android:id="@+id/layViewFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp">
+
+                <com.app.figpdfconvertor.figpdf.customwidget.GradientTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/view_file"
+                    android:textSize="@dimen/_13ssp"
+                    app:endColor="#BF496A"
+                    app:startColor="#F975CD" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F975CD" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txtSummarizer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:background="@drawable/bg_btn_theme"
+        android:fontFamily="@font/roboto_semi_bold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/summarizer"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp" />
+
+</LinearLayout>

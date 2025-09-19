@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "288473427946",
+    "project_id": "figpdfconvertor0107",
+    "storage_bucket": "figpdfconvertor0107.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288473427946:android:d061c2de097df0799b0c93",
+        "android_client_info": {
+          "package_name": "com.app.figpdfconvertor.figpdf"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-NiATHP_7HvlpDig0epaUL6fd2EZ8AVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

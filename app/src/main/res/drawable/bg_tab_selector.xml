@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/dashed_stroke_bg.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Rounded corners -->
+    <corners android:radius="@dimen/_5sdp" />
+
+    <!-- Transparent background -->
+    <solid android:color="#1BFF578C" />
+
+</shape>

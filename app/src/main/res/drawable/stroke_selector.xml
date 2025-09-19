@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- When pressed/clicked -->
+    <item android:color="@color/white" android:state_pressed="true"/>
+    <!-- Default stroke -->
+    <item android:color="@color/default_stroke_color"/>
+</selector>

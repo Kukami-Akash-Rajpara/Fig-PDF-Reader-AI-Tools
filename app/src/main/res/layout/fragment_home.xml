@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="62dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsbold"
+                    android:gravity="start"
+                    android:maxLines="2"
+                    android:text="@string/landing_title"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/_13ssp" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/language_picker"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/language_picker"
+                    app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/layPdfSummarize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/ic_card_view"
+                android:elevation="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_140sdp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/icon_hero_image" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/card_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_80sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="@string/card_heading"
+                        android:textSize="@dimen/_14ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_80sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/card_description"
+                        android:textColor="#77222222"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.app.figpdfconvertor.figpdf.customwidget.GradientTextView
+                        android:id="@+id/summarize_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:background="@drawable/bg_gradient_stroke"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_8sdp"
+                        android:text="@string/card_button"
+                        android:textSize="@dimen/_12ssp"
+                        app:drawableEndCompat="@drawable/pointerright"
+                        app:endColor="#BF496A"
+                        app:startColor="#F975CD" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:fontFamily="@font/roboto_extra_bold"
+                android:text="@string/ocr_text_heading"
+                android:textSize="@dimen/_14ssp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cdOcrWithPdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/card_background_light_pink"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="@dimen/_3sdp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_8sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_ocr" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_4sdp"
+                                android:fontFamily="@font/roboto_semi_bold"
+                                android:text="@string/ocr_title"
+                                android:textColor="@color/heading_color"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="@string/ocr_text_description"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+                        </LinearLayout>
+
+                        <!-- Right Image / Action button -->
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/gobutton" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/ocr_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:background="@drawable/top_right_popular"
+                        android:fontFamily="@font/roboto_semi_bold"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:paddingVertical="@dimen/_4sdp"
+                        android:text="@string/ocr_badge"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp" />
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="0dp"
+                android:fontFamily="@font/roboto_extra_bold"
+                android:text="@string/features"
+                android:textSize="@dimen/_14ssp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/pdf_converter_pro_button"
+                        android:layout_width="@dimen/_128sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:clipChildren="false">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_133sdp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            app:cardBackgroundColor="@color/card_background_light_pink"
+                            app:cardCornerRadius="@dimen/_12sdp"
+                            app:cardElevation="2dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom"
+                                android:orientation="vertical"
+                                android:paddingHorizontal="@dimen/_8sdp"
+                                android:paddingBottom="@dimen/_8sdp">
+
+                                <TextView
+                                    android:id="@+id/pdf_converter_heading"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="44dp"
+                                    android:fontFamily="@font/roboto_semi_bold"
+                                    android:paddingHorizontal="@dimen/_10sdp"
+                                    android:paddingBottom="@dimen/_6sdp"
+                                    android:text="@string/pdf_converter_heading"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/heading_color"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+                                    android:id="@+id/pdf_converter_description"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:paddingBottom="@dimen/_7sdp"
+                                    android:text="@string/pdf_converter_description"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/desc_color"
+                                    android:textSize="@dimen/_9ssp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_100sdp"
+                            android:adjustViewBounds="true"
+                            android:elevation="4dp"
+                            android:padding="@dimen/_8sdp"
+                            android:src="@drawable/banner_home_pdf_converter" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/layAiResumeAnalyzer"
+                        android:layout_width="@dimen/_128sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:clipChildren="false">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_133sdp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            app:cardBackgroundColor="@color/card_background_light_pink"
+                            app:cardCornerRadius="@dimen/_12sdp"
+                            app:cardElevation="2dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom"
+                                android:orientation="vertical"
+                                android:paddingHorizontal="@dimen/_8sdp"
+                                android:paddingBottom="@dimen/_8sdp">
+
+                                <TextView
+                                    android:id="@+id/resume_analuzer_heading"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_semi_bold"
+                                    android:paddingHorizontal="@dimen/_10sdp"
+                                    android:paddingBottom="@dimen/_4sdp"
+                                    android:text="@string/resume_analyzer"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/heading_color"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+                                    android:id="@+id/resume_description"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:paddingBottom="@dimen/_7sdp"
+                                    android:text="@string/resume_description"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/desc_color"
+                                    android:textSize="@dimen/_9ssp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_100sdp"
+                            android:adjustViewBounds="true"
+                            android:elevation="4dp"
+                            android:padding="@dimen/_8sdp"
+                            android:src="@drawable/banner_home_resume_analyzer" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/layAiPptMaker"
+                        android:layout_width="@dimen/_128sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_7sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:clipChildren="false">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_133sdp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            app:cardBackgroundColor="@color/card_background_light_pink"
+                            app:cardCornerRadius="@dimen/_12sdp"
+                            app:cardElevation="2dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom"
+                                android:orientation="vertical"
+                                android:paddingHorizontal="@dimen/_8sdp"
+                                android:paddingBottom="@dimen/_8sdp">
+
+                                <TextView
+                                    android:id="@+id/ppt_heading"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_semi_bold"
+                                    android:paddingHorizontal="0dp"
+                                    android:paddingBottom="@dimen/_4sdp"
+                                    android:text="@string/ppt_heading"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/heading_color"
+                                    android:textSize="@dimen/_11ssp" />
+
+                                <TextView
+                                    android:id="@+id/ppt_description"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:paddingBottom="@dimen/_7sdp"
+                                    android:text="@string/ppt_description"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/desc_color"
+                                    android:textSize="@dimen/_9ssp" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_100sdp"
+                            android:adjustViewBounds="true"
+                            android:elevation="4dp"
+                            android:padding="@dimen/_8sdp"
+                            android:src="@drawable/banner_home_ppt_maker" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:fontFamily="@font/roboto_extra_bold"
+                android:text="@string/interview_text"
+                android:textSize="@dimen/_14ssp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardInterviewbot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/card_background_light_pink"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="@dimen/_3sdp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_8sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_gravity="center_vertical"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/banner_home_interview_bot" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/_10sdp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_4sdp"
+                                android:fontFamily="@font/roboto_semi_bold"
+                                android:text="@string/interview_bot_heading"
+                                android:textColor="@color/heading_color"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="@string/interview_bot_description"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10ssp" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/gobutton" />
+
+                    </LinearLayout>
+
+                    <!-- Optional top-right badge -->
+                    <TextView
+                        android:id="@+id/interview_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:background="@drawable/top_right_shape"
+                        android:fontFamily="@font/roboto_semi_bold"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:paddingVertical="@dimen/_4sdp"
+                        android:text="@string/interview_badge"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp" />
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_12sdp"
+                android:fontFamily="@font/roboto_extra_bold"
+                android:text="@string/recommendation_text"
+                android:textSize="@dimen/_14ssp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardRecommendation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_80sdp"
+                app:cardBackgroundColor="@color/card_background_light_pink"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="@dimen/_3sdp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_8sdp">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="@dimen/_70sdp"
+                            android:layout_gravity="center_vertical"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/banner_home_pdf_converter" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="0.8"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_semi_bold"
+                                android:text="@string/pdf_converter_pro_tools"
+                                android:textColor="@color/heading_color"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/last_used_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="@string/last_used_day"
+                                android:textColor="@color/desc_color"
+                                android:textSize="@dimen/_12ssp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="@string/explore_pro_tool"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <com.app.figpdfconvertor.figpdf.customwidget.GradientTextView
+                                android:id="@+id/resume_again"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:background="@drawable/bg_gradient_stroke"
+                                android:drawablePadding="@dimen/_4sdp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_6sdp"
+                                android:text="@string/pdf_tools"
+                                android:textSize="@dimen/_10ssp"
+                                app:drawableEndCompat="@drawable/pointerright"
+                                app:endColor="#BF496A"
+                                app:startColor="#F975CD" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/recommendation_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:background="@drawable/top_right_shape"
+                        android:fontFamily="@font/roboto_semi_bold"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:paddingVertical="@dimen/_4sdp"
+                        android:text="@string/recommendation_badge"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp" />
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

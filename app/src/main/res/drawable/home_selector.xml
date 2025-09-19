@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Active state → PNG image -->
+    <item android:state_checked="true" android:drawable="@drawable/active_home"/>
+    <!-- Inactive state → normal icon -->
+    <item android:drawable="@drawable/disabled_home"/>
+</selector>

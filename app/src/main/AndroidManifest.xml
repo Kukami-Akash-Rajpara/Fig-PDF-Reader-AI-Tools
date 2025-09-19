@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+    <application
+        android:name=".utils.MyApp"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PDFConverter"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.LoadingCandidatesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ResumeDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LoadingHiringActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RAHiringActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ResumeAnalyzerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="false"
+            android:theme="@style/MainPageTheme" />
+        <activity
+            android:name=".activity.UnderMaintenanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ComingSoonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.InterviewBotResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.InterviewBatDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.InterviewBotQuestionActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.InterviewBotMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PDFViewerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SuccessfullyConvertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DragItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ConvertPDFActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ImageEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ImageSelection"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ProConverterTools"
+            android:exported="false" />
+        <activity
+            android:name=".summarizer.activity.RAHiringActivity"
+            android:exported="false" />
+        <activity
+            android:name=".summarizer.activity.ResumeAnalyzerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PdfSummaryActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.LoadingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ViewFileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PDFSummarizerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CropActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FullScreenImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FileViewerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PdfToImagesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PdfMergeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.EditScreen"
+            android:exported="false" />
+        <activity
+            android:name=".activity.EditImage"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AppUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LanguageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SummeryViewActivity"
+            android:exported="false" />
+        <activity android:name="com.app.figpdfconvertor.figpdf.activity.OcrCapturedImage"
+            android:exported="false"
+            />
+        <activity android:name="com.app.figpdfconvertor.figpdf.activity.ImageOcrResult"
+            android:exported="false"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <!--
+<provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.app.figpdfconvertor.figpdf.shareFile"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        -->
+        <!--
+<meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING"
+            android:value="true" />
+    </application>
+
+</manifest>

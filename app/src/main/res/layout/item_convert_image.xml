@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_180sdp"
+    android:layout_margin="@dimen/_5sdp">
+
+    <!--  &lt;!&ndash; Background image wrapped in BlurTarget &ndash;&gt;
+      <eightbitlab.com.blurview.BlurTarget
+          android:id="@+id/target"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <com.google.android.material.imageview.ShapeableImageView
+              android:id="@+id/image_item"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:src="@drawable/img_demo"
+              android:adjustViewBounds="true"
+              android:scaleType="fitXY"
+              app:shapeAppearanceOverlay="@style/RoundedImageSelection"/>
+      </eightbitlab.com.blurview.BlurTarget>
+
+      &lt;!&ndash; Blur overlay at bottom &ndash;&gt;
+      <eightbitlab.com.blurview.BlurView
+          android:id="@+id/topBlurView"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_30sdp"
+          android:layout_alignParentBottom="true"
+          app:layout_constraintBottom_toBottomOf="@id/target"
+          app:blurOverlayColor="@color/colorOverlay">
+
+          &lt;!&ndash; Centered text inside blur &ndash;&gt;
+          <com.google.android.material.textview.MaterialTextView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:text="abc"
+              android:textColor="@android:color/black"
+              android:textSize="14sp"/>
+      </eightbitlab.com.blurview.BlurView>-->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="0dp"
+        app:strokeWidth="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <eightbitlab.com.blurview.BlurTarget
+                    android:id="@+id/target"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Background image -->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/image_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_demo" />
+                </eightbitlab.com.blurview.BlurTarget>
+
+                <!-- Bottom Blur -->
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/topBlurView"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    app:blurOverlayColor="@color/colorOverlay"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="abc"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+                </eightbitlab.com.blurview.BlurView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/selectionOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80000000"
+                android:visibility="gone" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/ck_select"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

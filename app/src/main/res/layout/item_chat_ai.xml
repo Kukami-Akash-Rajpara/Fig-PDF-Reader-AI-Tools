@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start|bottom"
+    android:padding="@dimen/_7sdp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_26sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/icon_avatar_2" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="start|bottom">
+
+        <TextView
+            android:id="@+id/txtAiMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/bg_ai_chat"
+            android:fontFamily="@font/roboto_regular"
+            android:includeFontPadding="false"
+            android:padding="@dimen/_9sdp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+</LinearLayout>

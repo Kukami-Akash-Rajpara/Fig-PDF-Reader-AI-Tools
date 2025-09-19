@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <RelativeLayout
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sort_by"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:textSize="@dimen/_14sdp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/black"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llName"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            android:layout_toStartOf="@id/imgName"
+            />
+
+        <ImageView
+            android:id="@+id/imgName"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/selector_radio_button"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llCreated"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/created_date"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:layout_toStartOf="@id/imgCreated"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textSize="@dimen/_13sdp"
+            />
+        <ImageView
+            android:id="@+id/imgCreated"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/selector_radio_button"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llModify"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/modified_date"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:layout_toStartOf="@id/imgModify"
+            android:textSize="@dimen/_13sdp"
+            />
+        <ImageView
+            android:id="@+id/imgModify"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/selector_radio_button"
+            />
+    </RelativeLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1ssp"
+        android:alpha="0.7"
+        android:layout_marginVertical="@dimen/_10sdp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/llAscending"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ascending"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textSize="@dimen/_13sdp"
+            android:layout_toStartOf="@id/imgAscending"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            />
+
+        <ImageView
+            android:id="@+id/imgAscending"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/selector_radio_button"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llDescending"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/descending"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textSize="@dimen/_13sdp"
+            android:layout_toStartOf="@id/imgDescending"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            />
+
+        <ImageView
+            android:id="@+id/imgDescending"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/selector_radio_button"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/bg_gradient_stroke"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_8sdp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/str_cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@drawable/btn_fill_gradient"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_8sdp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/ok"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

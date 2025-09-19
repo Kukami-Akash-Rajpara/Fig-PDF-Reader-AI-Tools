@@ -1,0 +1,5 @@
+<!-- res/drawable/color_circle_bg.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <solid android:color="@android:color/darker_gray"/> <!-- overridden in adapter -->
+    <stroke android:width="2dp" android:color="@android:color/black"/> <!-- always visible border -->
+</shape>

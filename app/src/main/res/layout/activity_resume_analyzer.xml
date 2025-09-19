@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_screen"
+    android:orientation="vertical"
+    tools:context=".activity.ResumeAnalyzerActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backKey"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/back_img" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_minus14sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:includeFontPadding="false"
+        android:text="@string/ai"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_26ssp" />
+
+    <com.app.figpdfconvertor.figpdf.customwidget.GradientTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/federant_regular"
+        android:gravity="center"
+        android:text="@string/resume_analyzer"
+        android:textSize="@dimen/_20ssp"
+        app:endColor="#BF496A"
+        app:startColor="#F975CD" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_50ssp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/banner_resume_analyzer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20ssp"
+        android:fontFamily="@font/roboto_medium"
+        android:includeFontPadding="false"
+        android:text="@string/choose_any_one_option"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15ssp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/select_your_role_and_begin"
+        android:textColor="#65000000"
+        android:textSize="@dimen/_10ssp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvHiring"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:backgroundTint="@android:color/white"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_1sdp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:singleLine="true"
+            android:text="@string/hiring"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCandidates"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:backgroundTint="@android:color/white"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_1sdp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:singleLine="true"
+            android:text="@string/candidates"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

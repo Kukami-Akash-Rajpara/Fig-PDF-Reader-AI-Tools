@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgThumbnail"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:shapeAppearanceOverlay="@style/RoundedImageSelection" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/imgClose"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@id/imgThumbnail"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:singleLine="true"
+                android:textStyle="bold" />
+
+            <!-- New single TextView for date, time, and size -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#666"
+                android:textSize="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:singleLine="true" />
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="@dimen/_10sdp"
+            android:alpha="0.5"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_close_vector" />
+    </RelativeLayout>
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        app:dividerColor="@color/gray_border_color"
+        />
+    <RelativeLayout
+        android:id="@+id/llSaveGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/imgRename"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_edit_name" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtPDFname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_toStartOf="@id/imgClear"
+            android:hint="@string/orientation"
+            android:layout_toEndOf="@id/imgRename"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2ssp"
+            android:layout_below="@id/txtPDFname"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toStartOf="@id/imgClear"
+            android:layout_toEndOf="@id/imgRename"
+            android:alpha="0.5"
+            android:background="@drawable/dashed_line" />
+
+        <ImageView
+            android:id="@+id/imgClear"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_clear_name" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llSetPw"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/imgPw"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_lock" />
+        <LinearLayout
+            android:layout_toStartOf="@id/imgPwEye"
+            android:layout_toEndOf="@id/imgPw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/password"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtPw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:alpha="0.5"
+                android:fontFamily="@font/roboto_medium"
+                android:visibility="gone"
+                android:text="@string/compression_settings"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9sdp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/imgPwEye"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            android:src="@drawable/ic_pw_eye" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/imgMargin"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_red_delete" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_toEndOf="@id/imgMargin"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/file_toolsbar_delete"
+            android:textColor="#FF0000"
+            android:textSize="@dimen/_13sdp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

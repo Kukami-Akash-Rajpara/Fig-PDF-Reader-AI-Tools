@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected tab: rounded background drawable -->
+    <item android:drawable="@drawable/tab_rounded_background" android:state_selected="true"/>
+
+    <!-- Default tab: plain color as a drawable -->
+    <item android:drawable="@color/activity_background"/>
+</selector>

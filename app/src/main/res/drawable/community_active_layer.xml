@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pink/gradient circle background -->
+    <item android:drawable="@drawable/bottom_menu_active" />
+
+    <!-- Foreground icon -->
+    <item
+        android:drawable="@drawable/community"
+        android:gravity="center" />
+</layer-list>

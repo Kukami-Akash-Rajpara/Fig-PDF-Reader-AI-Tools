@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/dashed_stroke_bg.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Rounded corners -->
+    <corners android:radius="@dimen/_8sdp" />
+
+    <!-- Transparent background -->
+    <solid android:color="#1BFF578C" />
+
+    <!-- Dashed stroke -->
+    <stroke
+        android:width="2dp"
+        android:color="#FF578C"
+        android:dashWidth="8dp"
+        android:dashGap="4dp" />
+
+</shape>

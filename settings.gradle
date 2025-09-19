@@ -1,0 +1,2 @@
+include ':app'
+include ':curved_bottom_navigation'

@@ -1,0 +1,35 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_80sdp"
+    android:layout_height="wrap_content">
+
+    <!-- Main Image -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_item"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="@dimen/_3sdp"
+        app:shapeAppearanceOverlay="@style/RoundedImageSelection"
+        android:background="@drawable/tab_rounded_background"/>
+
+    <!-- X Button (for Bottom Sheet) -->
+
+    <ImageView
+        android:id="@+id/remove_button"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:adjustViewBounds="true"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:src="@drawable/ic_close"
+        android:layout_alignParentEnd="true"
+        android:visibility="visible"/>
+
+
+</RelativeLayout>

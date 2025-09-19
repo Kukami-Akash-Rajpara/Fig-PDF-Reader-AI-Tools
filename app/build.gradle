@@ -1,0 +1,159 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.app.figpdfconvertor.figpdf'
+    compileSdk 36
+
+    /* 19-09-2025 09:20:00 AM */
+    defaultConfig {
+        applicationId "com.app.figpdfconvertor.figpdf"
+        minSdk 26
+        targetSdk 36
+        versionCode 14
+        versionName "1.13"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        resourceConfigurations += ['en', 'hi', 'es', 'fr', 'de', 'pt', 'th', 'zh', 'ja', 'ru', 'vi', 'tr']
+    }
+
+    /*signingConfigs {
+        create("release") {
+            storeFile = file("C:\\Akash Rajpara\\PDF Converter\\PDF Converter\\pdf_convertor_fig.jks")
+            storePassword = "test123"
+            keyAlias = "key0"
+            keyPassword = "test123"
+        }
+    }*/
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            /*signingConfig signingConfigs.release*/
+            ndk.debugSymbolLevel = "FULL"
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'META-INF/NOTICE', 'META-INF/LICENSE', 'META-INF/NOTICE.txt', 'META-INF/LICENSE.txt']
+        }
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            returnDefaultValues = true
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+    lint {
+        checkReleaseBuilds false
+    }
+
+    ndkVersion '29.0.14033849 rc4'
+}
+
+configurations {
+    all {
+        exclude module: 'httpclient'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'androidx.activity:activity:1.10.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'junit:junit:4.13.2'
+    implementation 'androidx.core:core-ktx:1.16.0'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    implementation(project(":curved_bottom_navigation"))
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.airbnb.android:lottie:6.6.7'
+
+    implementation 'com.google.android.gms:play-services-ads:24.6.0'
+    implementation "androidx.lifecycle:lifecycle-process:2.9.1"
+    implementation 'com.microsoft.clarity:clarity:3.4.0'
+
+    implementation 'com.intuit.sdp:sdp-android:1.1.1'
+    implementation 'com.intuit.ssp:ssp-android:1.1.1'
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.google.android.play:app-update:2.1.0'
+
+    implementation platform("com.google.firebase:firebase-bom:33.16.0")
+    implementation "com.google.firebase:firebase-analytics"
+    implementation "com.google.firebase:firebase-crashlytics"
+    implementation "com.google.firebase:firebase-config"
+    implementation "com.google.firebase:firebase-messaging"
+
+    implementation "com.vanniktech:android-image-cropper:4.6.0"
+    implementation 'com.github.Dimezis:BlurView:version-3.1.0'
+
+    implementation "com.github.bhuvaneshw.pdfviewer:core:1.1.1"
+    implementation "com.github.bhuvaneshw.pdfviewer:ui:1.1.1"
+
+    def nav_version = "2.9.3"
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    implementation 'io.appmetrica.analytics:analytics:7.12.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+
+    implementation "com.google.mlkit:text-recognition:16.0.1"
+    implementation "org.apache.poi:poi-scratchpad:5.2.3"
+    implementation "org.apache.poi:poi-ooxml:5.2.3"
+
+    implementation "com.github.Victor2018:DocViewer:3.0.4"
+    implementation "com.itextpdf:itext7-core:7.2.5"
+    implementation "com.itextpdf:itextpdf:5.5.13.4"
+
+    implementation "com.squareup.retrofit2:retrofit:3.0.0"
+    implementation "com.squareup.retrofit2:converter-gson:3.0.0"
+    implementation "com.squareup.okhttp3:okhttp:4.12.0"
+
+    implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+}
+
+assemble.dependsOn('lint')

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_screen"
+    android:orientation="vertical"
+    tools:context=".activity.PDFSummarizerActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backKey"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/back_img" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_minus14sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:includeFontPadding="false"
+        android:text="@string/ai"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_26ssp" />
+
+    <com.app.figpdfconvertor.figpdf.customwidget.GradientTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/federant_regular"
+        android:gravity="center"
+        android:text="@string/presentation_generation"
+        android:textSize="@dimen/_20ssp"
+        app:endColor="#BF496A"
+        app:startColor="#F975CD" />
+
+    <TextView
+        android:id="@+id/txtSummarizer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:background="@drawable/bg_btn_theme"
+        android:fontFamily="@font/roboto_semi_bold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/generate_outline"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp" />
+
+</LinearLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <RelativeLayout
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/compression_setting"
+            android:layout_toStartOf="@id/imgClose"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textSize="@dimen/_14sdp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:id="@+id/imgClose"
+            android:layout_width="20dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_close"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/llName"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@id/imgMax"
+            android:layout_height="wrap_content">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/max_compression"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+
+            />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/small_size_low_quality"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black"
+                android:alpha="0.5"
+                android:textSize="@dimen/_10sdp"
+
+                />
+        </LinearLayout>
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/imgMax"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/selector_radio_button"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llCreated"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@id/imgMedium"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/medium_compression"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/medium_size_medium_quality"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black"
+                android:alpha="0.5"
+                android:textSize="@dimen/_10sdp"
+
+                />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imgMedium"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/selector_radio_button"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llModify"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@id/imgRegular"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/regular_compression"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/large_size_high_quality"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black"
+                android:alpha="0.5"
+                android:textSize="@dimen/_10sdp"
+
+                />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imgRegular"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/selector_radio_button"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llAscending"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@id/imgLow"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/low_compression"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/max_size_original_quality"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black"
+                android:alpha="0.5"
+                android:textSize="@dimen/_10sdp"
+
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgLow"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/selector_radio_button"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlOk"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:background="@drawable/btn_fill_gradient"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/_8sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp" />
+
+    </RelativeLayout>
+</LinearLayout>
