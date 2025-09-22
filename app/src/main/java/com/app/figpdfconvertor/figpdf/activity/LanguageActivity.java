@@ -35,7 +35,7 @@ import java.util.Locale;
 public class LanguageActivity extends BaseActivity {
 
     private ActivityLanguageBinding binding;
-    private String selectedLanguageCode = "en";
+    private String selectedLanguageCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,7 @@ public class LanguageActivity extends BaseActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        selectedLanguageCode = AppHelper.getLanguageCode(); // load default saved language
 
         if (AppHelper.isFirstTime()) {
             binding.nextTxt.setText(R.string.next);

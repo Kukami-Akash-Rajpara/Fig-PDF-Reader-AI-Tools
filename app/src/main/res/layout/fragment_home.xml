@@ -277,6 +277,7 @@
                                     android:paddingBottom="@dimen/_6sdp"
                                     android:text="@string/pdf_converter_heading"
                                     android:textAlignment="center"
+
                                     android:textColor="@color/heading_color"
                                     android:textSize="@dimen/_12ssp" />
 
@@ -288,6 +289,8 @@
                                     android:paddingBottom="@dimen/_7sdp"
                                     android:text="@string/pdf_converter_description"
                                     android:textAlignment="center"
+                                    android:maxLines="2"
+                                    android:ellipsize="end"
                                     android:textColor="@color/desc_color"
                                     android:textSize="@dimen/_9ssp" />
 
@@ -347,6 +350,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/roboto_medium"
+                                    android:maxLines="2"
+                                    android:ellipsize="end"
                                     android:paddingBottom="@dimen/_7sdp"
                                     android:text="@string/resume_description"
                                     android:textAlignment="center"
@@ -410,6 +415,8 @@
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/roboto_medium"
                                     android:paddingBottom="@dimen/_7sdp"
+                                    android:maxLines="2"
+                                    android:ellipsize="end"
                                     android:text="@string/ppt_description"
                                     android:textAlignment="center"
                                     android:textColor="@color/desc_color"
@@ -493,6 +500,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto_medium"
+                                android:ellipsize="end"
+                                android:maxLines="2"
                                 android:text="@string/interview_bot_description"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/_10ssp" />
@@ -520,7 +529,7 @@
                         android:paddingVertical="@dimen/_4sdp"
                         android:text="@string/interview_badge"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_11ssp" />
+                        android:textSize="@dimen/_10ssp" />
 
                 </FrameLayout>
 
@@ -599,10 +608,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/_5sdp"
-                                android:fontFamily="@font/roboto_regular"
+                                android:fontFamily="@font/roboto_medium"
                                 android:text="@string/explore_pro_tool"
                                 android:textColor="@color/black"
-                                android:textSize="@dimen/_12ssp" />
+                                android:textSize="@dimen/_10ssp" />
 
                             <com.app.figpdfconvertor.figpdf.customwidget.GradientTextView
                                 android:id="@+id/resume_again"
@@ -631,11 +640,12 @@
                         android:layout_gravity="top|end"
                         android:background="@drawable/top_right_shape"
                         android:fontFamily="@font/roboto_semi_bold"
-                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_5sdp"
                         android:paddingVertical="@dimen/_4sdp"
                         android:text="@string/recommendation_badge"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_11ssp" />
+                        android:textSize="@dimen/_10ssp" />
 
                 </FrameLayout>
 
