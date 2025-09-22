@@ -253,8 +253,9 @@ public class MainActivity extends BaseActivity {
 
         okBtn.setOnClickListener(v -> {
             trackExit();
-            finish();
             exitDialog.dismiss();
+            finishAffinity();   // ✅ closes all activities in the task
+            System.exit(0);     // optional: ensures process is killed
         });
 
         exitDialog.show();
