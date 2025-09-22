@@ -9,7 +9,9 @@
     <string name="interview_text">Il tuo mentore personale per i colloqui</string>
     <string name="interview_bot_heading">Bot per Colloqui</string>
     <string name="interview_bot_description">Migliora la tua preparazione ai colloqui con suggerimenti basati su AI e domande simulate</string>
+    <string name="interview_badge">✨&#160;Pratica!</string>
     <string name="recommendation_text">Raccomandazioni personalizzate</string>
+    <string name="recommendation_badge">💡&#160;Prova!</string>
     <string name="last_used_day">2 giorni fa</string>
     <string name="import_button">Importa</string>
     <string name="import_button_count">Importa (%1$d)</string>
@@ -106,7 +108,7 @@
     <string name="evaluation">Valutazione</string>
     <string name="no_text_found">Nessun testo trovato</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Non siamo riusciti a estrarre il testo dal PDF caricato. Carica un curriculum valido</string>
-    <string name="coming_soon">🌟Prossimamente</string>
+    <string name="coming_soon">🌟Presto</string>
     <string name="history">Cronologia</string>
     <string name="image_selection">Selezione immagine</string>
     <string name="save_all_images">Salva tutte le immagini</string>
@@ -118,7 +120,7 @@
     <string name="ocr_text_heading">OCR reso semplice</string>
     <string name="ocr_title">OCR con PDF</string>
     <string name="ocr_text_description">Da scansionato a intelligente — OCR reso semplice.</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;Popolare</string>
+    <string name="ocr_badge">🔥&#160;Popolare</string>
     <string name="pdf_converter_heading">Strumenti Pro per Convertitore PDF</string>
     <string name="pdf_converter_description">Convertitore PDF intelligente per conversioni rapide e semplici</string>
     <string name="resume_analyzer">Analizzatore di curriculum AI</string>

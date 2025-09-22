@@ -9,7 +9,9 @@
     <string name="interview_text">আপনার ব্যক্তিগত ইন্টারভিউ পরামর্শদাতা</string>
     <string name="interview_bot_heading">ইন্টারভিউ বট</string>
     <string name="interview_bot_description">এআই-চালিত টিপস এবং মক প্রশ্নের মাধ্যমে আপনার ইন্টারভিউ প্রস্তুতি উন্নত করুন</string>
+    <string name="interview_badge">✨&#160;অনুশীলন করো!</string>
     <string name="recommendation_text">ব্যক্তিগতকৃত সুপারিশ</string>
+    <string name="recommendation_badge">💡&#160;চেষ্টা করো!</string>
     <string name="last_used_day">২ দিন আগে</string>
     <string name="import_button">আমদানি</string>
     <string name="import_button_count">আমদানি (%1$d)</string>
@@ -106,7 +108,7 @@
     <string name="evaluation">মূল্যায়ন</string>
     <string name="no_text_found">কোনো টেক্সট পাওয়া যায়নি</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">আপলোড করা পিডিএফ থেকে টেক্সট বের করতে পারিনি। অনুগ্রহ করে একটি বৈধ রেজিউমে আপলোড করুন</string>
-    <string name="coming_soon">🌟 শীঘ্রই আসছে</string>
+    <string name="coming_soon">🌟 শীঘ্রই</string>
     <string name="history">ইতিহাস</string>
     <string name="image_selection">চিত্র নির্বাচন</string>
     <string name="save_all_images">সব ছবি সংরক্ষণ করুন</string>
@@ -118,7 +120,7 @@
     <string name="ocr_text_heading">ওসিআর সহজ করা হয়েছে</string>
     <string name="ocr_title">পিডিএফ সহ ওসিআর</string>
     <string name="ocr_text_description">স্ক্যান করা থেকে স্মার্ট — ওসিআর সহজ করা হয়েছে।</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;জনপ্রিয়</string>
+    <string name="ocr_badge">🔥&#160;জনপ্রিয়</string>
     <string name="pdf_converter_heading">পিডিএফ কনভার্টার প্রো টুলস</string>
     <string name="pdf_converter_description">দ্রুত এবং সহজ রূপান্তরের জন্য স্মার্ট পিডিএফ কনভার্টার</string>
     <string name="resume_analyzer">এআই রেজিউমে বিশ্লেষক</string>

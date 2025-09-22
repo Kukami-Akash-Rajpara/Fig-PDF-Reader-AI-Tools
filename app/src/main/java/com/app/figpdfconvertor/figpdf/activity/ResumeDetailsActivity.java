@@ -23,7 +23,7 @@ import com.google.android.flexbox.JustifyContent;
 
 import java.util.List;
 
-public class ResumeDetailsActivity extends AppCompatActivity {
+public class ResumeDetailsActivity extends BaseActivity {
 
     private ActivityResumeDetailsBinding binding;
 

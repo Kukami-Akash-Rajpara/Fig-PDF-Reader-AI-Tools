@@ -10,11 +10,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.app.figpdfconvertor.figpdf.R
+import com.app.figpdfconvertor.figpdf.activity.BaseActivity
 import com.app.figpdfconvertor.figpdf.databinding.ActivitySuccessfullyConvertBinding
 import com.app.figpdfconvertor.figpdf.utils.MyUtils
 import java.io.File
 
-class SuccessfullyConvertActivity : AppCompatActivity() {
+class SuccessfullyConvertActivity : BaseActivity() {
 
     private lateinit var binding: ActivitySuccessfullyConvertBinding
     override fun onCreate(savedInstanceState: Bundle?) {

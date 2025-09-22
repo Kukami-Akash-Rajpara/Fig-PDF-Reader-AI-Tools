@@ -97,7 +97,7 @@ public class HomeFragment extends BaseFragment {
             AnalyticsManager.INSTANCE.logEvent("feature_selected",
                     java.util.Collections.singletonMap("feature", "ppt_maker"));
             AnalyticsManager.INSTANCE.logFunnelStep("ppt_maker_selected", null);
-            startActivity(new Intent(requireContext(), PptMainActivity.class));
+            startActivity(new Intent(requireContext(), ComingSoonActivity.class));
         });
 
         binding.layAiResumeAnalyzer.setOnClickListener(new DoubleClickListener() {

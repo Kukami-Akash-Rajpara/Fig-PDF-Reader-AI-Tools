@@ -9,7 +9,9 @@
     <string name="interview_text">आपका व्यक्तिगत साक्षात्कार मेंटर</string>
     <string name="interview_bot_heading">साक्षात्कार बॉट</string>
     <string name="interview_bot_description">एआई-संचालित सुझावों और मॉक प्रश्नों के साथ अपनी साक्षात्कार की तैयारी को बढ़ाएँ</string>
+    <string name="interview_badge">✨&#160;अभ्यास करो!</string>
     <string name="recommendation_text">वैयक्तिकृत सिफारिशें</string>
+    <string name="recommendation_badge">💡&#160;आज़माओ!</string>
     <string name="last_used_day">2 दिन पहले</string>
     <string name="import_button">आयात करें</string>
     <string name="import_button_count">आयात करें (%1$d)</string>
@@ -106,7 +108,7 @@
     <string name="evaluation">मूल्यांकन</string>
     <string name="no_text_found">कोई पाठ नहीं मिला</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">हम अपलोड किए गए पीडीएफ से पाठ निकाल नहीं सके। कृपया एक वैध रिज्यूमे अपलोड करें</string>
-    <string name="coming_soon">🌟 जल्द ही आ रहा है</string>
+    <string name="coming_soon">🌟 जल्द</string>
     <string name="history">इतिहास</string>
     <string name="image_selection">छवि चयन</string>
     <string name="save_all_images">सभी छवियाँ सहेजें</string>
@@ -118,7 +120,7 @@
     <string name="ocr_text_heading">ओसीआर आसान बना</string>
     <string name="ocr_title">पीडीएफ के साथ ओसीआर</string>
     <string name="ocr_text_description">स्कैन से स्मार्ट तक — ओसीआर को सरल बनाया गया।</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;लोकप्रिय</string>
+    <string name="ocr_badge">🔥&#160;लोकप्रिय</string>
     <string name="pdf_converter_heading">पीडीएफ कनवर्टर प्रो टूल्स</string>
     <string name="pdf_converter_description">तेज और आसान रूपांतरण के लिए स्मार्ट पीडीएफ कनवर्टर</string>
     <string name="resume_analyzer">एआई रिज्यूमे विश्लेषक</string>

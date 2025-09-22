@@ -37,7 +37,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.io.File
 
-class ImageEditActivity : AppCompatActivity() {
+class ImageEditActivity : BaseActivity() {
 
     private lateinit var binding: ActivityImageEditBinding
     private lateinit var imageUris: ArrayList<String>

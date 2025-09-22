@@ -29,6 +29,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.app.figpdfconvertor.figpdf.R
+import com.app.figpdfconvertor.figpdf.activity.BaseActivity
 import com.app.figpdfconvertor.figpdf.adapter.EditedImagesAdapter
 import com.app.figpdfconvertor.figpdf.databinding.ActivityConvertPdfactivityBinding
 import com.app.figpdfconvertor.figpdf.dialogs.ChooseCardDialogFragment
@@ -55,7 +56,7 @@ import java.util.Date
 import java.util.Locale
 
 
-class ConvertPDFActivity : AppCompatActivity() {
+class ConvertPDFActivity : BaseActivity() {
     private lateinit var imagesList: MutableList<String>
     private var mPath: String? = null
     private var mSharedPreferences: SharedPreferences? = null

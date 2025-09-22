@@ -57,7 +57,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ImageOcrResult extends AppCompatActivity {
+public class ImageOcrResult extends BaseActivity {
 
     private ActivityImageOcrResultBinding binding;
 

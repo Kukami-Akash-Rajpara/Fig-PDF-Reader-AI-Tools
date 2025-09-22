@@ -9,7 +9,9 @@
     <string name="interview_text">Twój osobisty mentor na rozmowę kwalifikacyjną</string>
     <string name="interview_bot_heading">Bot Rozmów Kwalifikacyjnych</string>
     <string name="interview_bot_description">Zwiększ swoją gotowość do rozmowy kwalifikacyjnej dzięki wskazówkom opartym na AI i próbnym pytaniom</string>
+    <string name="interview_badge">✨&#160;Ćwicz!</string>
     <string name="recommendation_text">Spersonalizowane rekomendacje</string>
+    <string name="recommendation_badge">💡&#160;Spróbuj!</string>
     <string name="last_used_day">2 dni temu</string>
     <string name="import_button">Importuj</string>
     <string name="import_button_count">Importuj (%1$d)</string>
@@ -118,7 +120,7 @@
     <string name="ocr_text_heading">OCR ułatwiony</string>
     <string name="ocr_title">OCR z PDF</string>
     <string name="ocr_text_description">Od zeskanowanego do inteligentnego — OCR stał się prosty.</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;Popularny</string>
+    <string name="ocr_badge">🔥&#160;Popularne</string>
     <string name="pdf_converter_heading">Narzędzia Pro Konwertera PDF</string>
     <string name="pdf_converter_description">Inteligentny konwerter PDF dla szybkiej i łatwej konwersji</string>
     <string name="resume_analyzer">Analizator CV AI</string>

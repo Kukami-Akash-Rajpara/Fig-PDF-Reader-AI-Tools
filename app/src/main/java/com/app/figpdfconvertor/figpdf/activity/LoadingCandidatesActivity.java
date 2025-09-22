@@ -33,7 +33,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class LoadingCandidatesActivity extends AppCompatActivity {
+public class LoadingCandidatesActivity extends BaseActivity {
 
     private ActivityLoadingCandidatesBinding binding;
     private String pdfUriString;

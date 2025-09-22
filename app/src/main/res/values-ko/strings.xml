@@ -9,7 +9,9 @@
     <string name="interview_text">당신의 개인 면접 멘토</string>
     <string name="interview_bot_heading">면접 봇</string>
     <string name="interview_bot_description">AI 기반 팁과 모의 질문을 통해 면접 준비를 향상시키세요</string>
+    <string name="interview_badge">✨&#160;연습!</string>
     <string name="recommendation_text">맞춤형 추천</string>
+    <string name="recommendation_badge">💡&#160;시도!</string>
     <string name="last_used_day">2일 전</string>
     <string name="import_button">가져오기</string>
     <string name="import_button_count">가져오기 (%1$d)</string>
@@ -106,7 +108,7 @@
     <string name="evaluation">평가</string>
     <string name="no_text_found">텍스트를 찾을 수 없음</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">업로드된 PDF에서 텍스트를 추출할 수 없습니다. 유효한 이력서를 업로드하세요</string>
-    <string name="coming_soon">🌟곧 출시</string>
+    <string name="coming_soon">🌟곧</string>
     <string name="history">기록</string>
     <string name="image_selection">이미지 선택</string>
     <string name="save_all_images">모든 이미지 저장</string>
@@ -118,7 +120,7 @@
     <string name="ocr_text_heading">OCR 간편화</string>
     <string name="ocr_title">PDF와 함께 OCR</string>
     <string name="ocr_text_description">스캔에서 스마트로 — OCR이 간단해졌습니다.</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;인기</string>
+    <string name="ocr_badge">🔥&#160;인기</string>
     <string name="pdf_converter_heading">PDF 변환기 프로 도구</string>
     <string name="pdf_converter_description">빠르고 쉬운 변환을 위한 스마트 PDF 변환기</string>
     <string name="resume_analyzer">AI 이력서 분석기</string>

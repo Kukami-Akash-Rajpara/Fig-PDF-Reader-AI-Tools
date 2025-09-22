@@ -9,7 +9,9 @@
     <string name="interview_text">Ihr persönlicher Interview-Mentor</string>
     <string name="interview_bot_heading">Interview-Bot</string>
     <string name="interview_bot_description">Verbessern Sie Ihre Interview-Vorbereitung mit KI-gestützten Tipps und Übungsfragen</string>
+    <string name="interview_badge">✨&#160;Üben!</string>
     <string name="recommendation_text">Personalisierte Empfehlungen</string>
+    <string name="recommendation_badge">💡&#160;Probier!</string>
     <string name="last_used_day">Vor 2 Tagen</string>
     <string name="import_button">Importieren</string>
     <string name="import_button_count">Importieren (%1$d)</string>
@@ -106,7 +108,7 @@
     <string name="evaluation">Bewertung</string>
     <string name="no_text_found">Kein Text gefunden</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Wir konnten keinen Text aus dem hochgeladenen PDF extrahieren. Bitte laden Sie einen gültigen Lebenslauf hoch</string>
-    <string name="coming_soon">🌟Bald verfügbar</string>
+    <string name="coming_soon">🌟Bald</string>
     <string name="history">Verlauf</string>
     <string name="image_selection">Bildauswahl</string>
     <string name="save_all_images">Alle Bilder speichern</string>
@@ -118,7 +120,7 @@
     <string name="ocr_text_heading">OCR leicht gemacht</string>
     <string name="ocr_title">OCR mit PDF</string>
     <string name="ocr_text_description">Von gescannt zu intelligent — OCR vereinfacht.</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;Beliebt</string>
+    <string name="ocr_badge">🔥&#160;Beliebt</string>
     <string name="pdf_converter_heading">PDF-Konverter-Pro-Tools</string>
     <string name="pdf_converter_description">Intelligenter PDF-Konverter für schnelle und einfache Konvertierungen</string>
     <string name="resume_analyzer">KI-Lebenslauf-Analysator</string>

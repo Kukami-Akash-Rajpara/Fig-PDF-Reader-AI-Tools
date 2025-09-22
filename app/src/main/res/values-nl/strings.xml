@@ -9,7 +9,9 @@
     <string name="interview_text">Uw persoonlijke sollicitatiementor</string>
     <string name="interview_bot_heading">Sollicitatiebot</string>
     <string name="interview_bot_description">Verbeter uw sollicitatievoorbereiding met AI-gestuurde tips en oefenvragen</string>
+    <string name="interview_badge">✨&#160;Oefen!</string>
     <string name="recommendation_text">Gepersonaliseerde aanbevelingen</string>
+    <string name="recommendation_badge">💡&#160;Probeer!</string>
     <string name="last_used_day">2 dagen geleden</string>
     <string name="import_button">Importeren</string>
     <string name="import_button_count">Importeren (%1$d)</string>
@@ -106,7 +108,7 @@
     <string name="evaluation">Evaluatie</string>
     <string name="no_text_found">Geen tekst gevonden</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">We konden geen tekst extraheren uit de geüploade PDF. Upload alstublieft een geldig CV</string>
-    <string name="coming_soon">🌟Binnenkort beschikbaar</string>
+    <string name="coming_soon">🌟Binnenkort</string>
     <string name="history">Geschiedenis</string>
     <string name="image_selection">Afbeeldingsselectie</string>
     <string name="save_all_images">Alle afbeeldingen opslaan</string>
@@ -118,7 +120,7 @@
     <string name="ocr_text_heading">OCR eenvoudig gemaakt</string>
     <string name="ocr_title">OCR met PDF</string>
     <string name="ocr_text_description">Van gescand naar slim — OCR eenvoudig gemaakt.</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;Populair</string>
+    <string name="ocr_badge">🔥&#160;Populair</string>
     <string name="pdf_converter_heading">PDF Converter Pro Tools</string>
     <string name="pdf_converter_description">Slimme PDF-converter voor snelle en eenvoudige conversie</string>
     <string name="resume_analyzer">AI CV Analyzer</string>

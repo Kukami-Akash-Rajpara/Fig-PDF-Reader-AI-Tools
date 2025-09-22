@@ -9,7 +9,9 @@
     <string name="interview_text">Votre mentor personnel d’entretien</string>
     <string name="interview_bot_heading">Bot d’Entretien</string>
     <string name="interview_bot_description">Améliorez votre préparation aux entretiens avec des conseils et des questions simulées alimentés par l’IA</string>
+    <string name="interview_badge">✨&#160;Pratique!</string>
     <string name="recommendation_text">Recommandations personnalisées</string>
+    <string name="recommendation_badge">💡&#160;Essaie!</string>
     <string name="last_used_day">Il y a 2 jours</string>
     <string name="import_button">Importer</string>
     <string name="import_button_count">Importer (%1$d)</string>
@@ -106,7 +108,7 @@
     <string name="evaluation">Évaluation</string>
     <string name="no_text_found">Aucun texte trouvé</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Nous n’avons pas pu extraire le texte du PDF téléchargé. Veuillez télécharger un CV valide</string>
-    <string name="coming_soon">🌟Bientôt disponible</string>
+    <string name="coming_soon">🌟Bientôt</string>
     <string name="history">Historique</string>
     <string name="image_selection">Sélection d’images</string>
     <string name="save_all_images">Enregistrer toutes les images</string>
@@ -118,7 +120,7 @@
     <string name="ocr_text_heading">OCR Simplifié</string>
     <string name="ocr_title">OCR avec PDF</string>
     <string name="ocr_text_description">Du scanné à l’intelligent — OCR simplifié.</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;Populaire</string>
+    <string name="ocr_badge">🔥&#160;Populaire</string>
     <string name="pdf_converter_heading">Outils Pro de Conversion PDF</string>
     <string name="pdf_converter_description">Convertisseur PDF intelligent pour des conversions rapides et faciles</string>
     <string name="resume_analyzer">Analyseur de CV par IA</string>

@@ -9,9 +9,9 @@
     <string name="interview_text">Your Personal Interview Mentor</string>
     <string name="interview_bot_heading">Interview Bot</string>
     <string name="interview_bot_description">Enhance your interview readiness with AI-powered tips and mock questions</string>
-    <string name="interview_badge" translatable="false">✨&#160;Let’s Practice!</string>
+    <string name="interview_badge">✨&#160;Let’s Practice!</string>
     <string name="recommendation_text">Personalized Recommendations</string>
-    <string name="recommendation_badge" translatable="false">💡&#160;Try Me!</string>
+    <string name="recommendation_badge">💡&#160;Try Me!</string>
     <string name="last_used_day">2 days ago</string>
     <string name="import_button">Import</string>
     <string name="import_button_count">Import (%1$d)</string>
@@ -108,7 +108,7 @@
     <string name="evaluation">Evaluation</string>
     <string name="no_text_found">No Text Found</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">We could not extract text from the uploaded PDF. Please upload a valid resume</string>
-    <string name="coming_soon">🌟Coming Soon</string>
+    <string name="coming_soon">🌟Soon</string>
     <string name="history">History</string>
     <string name="image_selection">Image Selection</string>
     <string name="save_all_images">Save All Images</string>
@@ -120,7 +120,7 @@
     <string name="ocr_text_heading">OCR Made Easy</string>
     <string name="ocr_title">OCR With PDF</string>
     <string name="ocr_text_description">From scanned to smart — OCR made simple.</string>
-    <string name="ocr_badge" translatable="false">🔥&#160;Popular</string>
+    <string name="ocr_badge">🔥&#160;Popular</string>
     <string name="pdf_converter_heading">PDF Converter Pro Tools</string>
     <string name="pdf_converter_description">Smart PDF Converter for Fast &amp; Easy Conversion</string>
     <string name="resume_analyzer">AI Resume Analyzer</string>
@@ -244,4 +244,6 @@ We appreciate your cooperation and apologize for any inconvenience this may caus
     <string name="download_pdf_text">Download PDF</string>
     <string name="presentation_generation">Presentation Generation</string>
     <string name="generate_outline">Generate Outline</string>
+    <string name="please_enter_your_slides_topic">Please enter your slides topic</string>
+    <string name="number_of_slides">Number Of Slides</string>
 </resources>

@@ -9,7 +9,9 @@
     <string name="interview_text">Người cố vấn phỏng vấn cá nhân của bạn</string>
     <string name="interview_bot_heading">Bot Phỏng vấn</string>
     <string name="interview_bot_description">Nâng cao sự chuẩn bị phỏng vấn của bạn với các mẹo và câu hỏi thực hành được hỗ trợ bởi AI</string>
+    <string name="interview_badge">✨&#160;Luyện tập!</string>
     <string name="recommendation_text">Khuyến nghị cá nhân hóa</string>
+    <string name="recommendation_badge">💡&#160;Thử!</string>
     <string name="last_used_day">2 ngày trước</string>
     <string name="import_button">Nhập</string>
     <string name="import_button_count">Nhập (%1$d)</string>
@@ -106,7 +108,7 @@
     <string name="evaluation">Đánh giá</string>
     <string name="no_text_found">Không tìm thấy văn bản</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Chúng tôi không thể trích xuất văn bản từ PDF đã tải lên. Vui lòng tải lên một hồ sơ hợp lệ</string>
-    <string name="coming_soon">🌟Sắp ra mắt</string>
+    <string name="coming_soon">🌟Sắp</string>
     <string name="history">Lịch sử</string>
     <string name="image_selection">Chọn hình ảnh</string>
     <string name="save_all_images">Lưu tất cả hình ảnh</string>
@@ -118,7 +120,7 @@
     <string name="ocr_text_heading">OCR dễ dàng</string>
     <string name="ocr_title">OCR với PDF</string>
     <string name="ocr_text_description">Từ quét đến thông minh — OCR đơn giản hóa.</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;Phổ biến</string>
+    <string name="ocr_badge">🔥&#160;Phổ biến</string>
     <string name="pdf_converter_heading">Công cụ chuyển đổi PDF chuyên nghiệp</string>
     <string name="pdf_converter_description">Trình chuyển đổi PDF thông minh cho các chuyển đổi nhanh chóng và dễ dàng</string>
     <string name="resume_analyzer">Trình phân tích hồ sơ bằng AI</string>

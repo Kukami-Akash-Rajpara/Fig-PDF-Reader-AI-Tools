@@ -17,7 +17,7 @@ import com.app.figpdfconvertor.figpdf.preferences.AppHelper;
 import com.app.figpdfconvertor.figpdf.utils.DoubleClickListener;
 import com.app.figpdfconvertor.figpdf.utils.MyUtils;
 
-public class ResumeAnalyzerActivity extends AppCompatActivity {
+public class ResumeAnalyzerActivity extends BaseActivity {
 
     private ActivityResumeAnalyzerBinding binding;
 

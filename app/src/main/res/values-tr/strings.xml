@@ -9,7 +9,9 @@
     <string name="interview_text">Kişisel Mülakat Mentörünüz</string>
     <string name="interview_bot_heading">Mülakat Botu</string>
     <string name="interview_bot_description">Yapay zeka destekli ipuçları ve simüle edilmiş sorularla mülakat hazırlığınızı geliştirin</string>
+    <string name="interview_badge">✨&#160;Pratik yap!</string>
     <string name="recommendation_text">Kişiselleştirilmiş Öneriler</string>
+    <string name="recommendation_badge">💡&#160;Dene!</string>
     <string name="last_used_day">2 gün önce</string>
     <string name="import_button">İçe Aktar</string>
     <string name="import_button_count">İçe Aktar (%1$d)</string>
@@ -118,7 +120,7 @@
     <string name="ocr_text_heading">Kolay OCR</string>
     <string name="ocr_title">PDF ile OCR</string>
     <string name="ocr_text_description">Taranmıştan akıllıya — Basitleştirilmiş OCR.</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;Popüler</string>
+    <string name="ocr_badge">🔥&#160;Popüler</string>
     <string name="pdf_converter_heading">PDF Dönüştürücü Pro Araçlar</string>
     <string name="pdf_converter_description">Hızlı ve kolay dönüşümler için akıllı PDF dönüştürücü</string>
     <string name="resume_analyzer">Yapay Zeka ile Özgeçmiş Analizörü</string>

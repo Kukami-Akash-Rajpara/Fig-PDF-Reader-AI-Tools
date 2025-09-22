@@ -118,6 +118,7 @@
                     android:background="@drawable/top_right_shape"
                     android:fontFamily="@font/roboto_semi_bold"
                     android:gravity="center"
+                    android:paddingHorizontal="@dimen/_3sdp"
                     android:text="@string/coming_soon"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_8ssp" />

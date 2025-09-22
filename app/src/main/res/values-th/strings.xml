@@ -9,7 +9,9 @@
     <string name="interview_text">ที่ปรึกษาการสัมภาษณ์ส่วนตัวของคุณ</string>
     <string name="interview_bot_heading">บอทสัมภาษณ์</string>
     <string name="interview_bot_description">พัฒนาการเตรียมตัวสัมภาษณ์ของคุณด้วยเคล็ดลับและคำถามจำลองที่ขับเคลื่อนด้วย AI</string>
+    <string name="interview_badge">✨&#160;ฝึก!</string>
     <string name="recommendation_text">คำแนะนำส่วนบุคคล</string>
+    <string name="recommendation_badge">💡&#160;ลอง!</string>
     <string name="last_used_day">2 วันก่อน</string>
     <string name="import_button">นำเข้า</string>
     <string name="import_button_count">นำเข้า (%1$d)</string>
@@ -118,7 +120,7 @@
     <string name="ocr_text_heading">OCR ที่ง่ายดาย</string>
     <string name="ocr_title">OCR กับ PDF</string>
     <string name="ocr_text_description">จากสแกนสู่สมาร์ท — OCR ที่เรียบง่าย</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;ยอดนิยม</string>
+    <string name="ocr_badge">🔥&#160;ยอดนิยม</string>
     <string name="pdf_converter_heading">เครื่องมือ Pro การแปลง PDF</string>
     <string name="pdf_converter_description">ตัวแปลง PDF อัจฉริยะสำหรับการแปลงที่รวดเร็วและง่าย</string>
     <string name="resume_analyzer">ตัววิเคราะห์เรซูเม่ด้วย AI</string>

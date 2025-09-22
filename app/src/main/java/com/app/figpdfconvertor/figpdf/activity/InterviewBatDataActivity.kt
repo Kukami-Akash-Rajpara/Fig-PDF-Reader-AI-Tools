@@ -26,6 +26,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import com.app.figpdfconvertor.figpdf.BuildConfig
 import com.app.figpdfconvertor.figpdf.R
+import com.app.figpdfconvertor.figpdf.activity.BaseActivity
 import com.app.figpdfconvertor.figpdf.ads.AdManagerRewarded
 import com.app.figpdfconvertor.figpdf.ads.AdManagerRewarded.AdFinished
 import com.app.figpdfconvertor.figpdf.api.ApiClient
@@ -40,7 +41,7 @@ import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import java.io.File
 
-class InterviewBatDataActivity : AppCompatActivity() {
+class InterviewBatDataActivity : BaseActivity() {
     private lateinit var binding: ActivityInterviewBatDataBinding
     private lateinit var filePickerLauncher: ActivityResultLauncher<Intent>
     private var pickedDocumentUri: Uri? = null

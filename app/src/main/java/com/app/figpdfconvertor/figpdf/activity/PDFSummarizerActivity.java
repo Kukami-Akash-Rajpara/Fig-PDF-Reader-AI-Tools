@@ -85,7 +85,6 @@ public class PDFSummarizerActivity extends BaseActivity {
             @Override
             public void performClick(View v) {
                 if (selectedPdfUri != null) {
-
                     if (AppHelper.getShowInterSummarize()) {
                         AdManagerInter.renderInterAdFixed(PDFSummarizerActivity.this, () -> {
                             Intent intent = new Intent(PDFSummarizerActivity.this, LoadingActivity.class);

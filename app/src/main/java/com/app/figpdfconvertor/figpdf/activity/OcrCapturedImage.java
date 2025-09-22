@@ -34,7 +34,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class OcrCapturedImage extends AppCompatActivity {
+public class OcrCapturedImage extends BaseActivity {
 
     private ActivityOcrCapturedImageBinding binding;
     private Uri imageUri;

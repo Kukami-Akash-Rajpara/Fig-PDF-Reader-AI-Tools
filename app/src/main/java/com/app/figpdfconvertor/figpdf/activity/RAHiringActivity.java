@@ -23,7 +23,7 @@ import com.app.figpdfconvertor.figpdf.preferences.AppHelper;
 import com.app.figpdfconvertor.figpdf.utils.DoubleClickListener;
 import com.app.figpdfconvertor.figpdf.utils.MyUtils;
 
-public class RAHiringActivity extends AppCompatActivity {
+public class RAHiringActivity extends BaseActivity {
 
     private ActivityRaHiringBinding binding;
 

@@ -8,7 +8,9 @@
     <string name="interview_text">Mentor Temu Duga Peribadi Anda</string>
     <string name="interview_bot_heading">Bot Temu Duga</string>
     <string name="interview_bot_description">Tingkatkan kesediaan temu duga anda dengan petua berkuasa AI dan soalan latihan</string>
+    <string name="interview_badge">✨&#160;Berlatih!</string>
     <string name="recommendation_text">Syor Peribadi</string>
+    <string name="recommendation_badge">💡&#160;Cuba!</string>
     <string name="last_used_day">2 hari yang lalu</string>
     <string name="import_button">Import</string>
     <string name="import_button_count">Import (%1$d)</string>
@@ -105,7 +107,7 @@
     <string name="evaluation">Penilaian</string>
     <string name="no_text_found">Tiada Teks Dijumpai</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Kami tidak dapat mengekstrak teks daripada PDF yang dimuat naik. Sila muat naik resume yang sah</string>
-    <string name="coming_soon">🌟Akan Datang</string>
+    <string name="coming_soon">🌟Akan</string>
     <string name="history">Sejarah</string>
     <string name="image_selection">Pemilihan Imej</string>
     <string name="save_all_images">Simpan Semua Imej</string>
@@ -117,7 +119,7 @@
     <string name="ocr_text_heading">OCR Dipermudahkan</string>
     <string name="ocr_title">OCR dengan PDF</string>
     <string name="ocr_text_description">Dari imbasan ke pintar — OCR dipermudahkan.</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;Popular</string>
+    <string name="ocr_badge">🔥&#160;Popular</string>
     <string name="pdf_converter_heading">Alat Pro Penukar PDF</string>
     <string name="pdf_converter_description">Penukar PDF Pintar untuk Penukaran Cepat &amp; Mudah</string>
     <string name="resume_analyzer">Penganalisis Resume AI</string>

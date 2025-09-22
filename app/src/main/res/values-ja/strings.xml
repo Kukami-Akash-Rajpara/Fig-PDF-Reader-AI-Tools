@@ -9,7 +9,9 @@
     <string name="interview_text">あなたの個人面接メンター</string>
     <string name="interview_bot_heading">面接ボット</string>
     <string name="interview_bot_description">AIを活用したヒントと模擬質問で面接の準備を強化</string>
+    <string name="interview_badge">✨&#160;練習!</string>
     <string name="recommendation_text">パーソナライズされた推薦</string>
+    <string name="recommendation_badge">💡&#160;試して!</string>
     <string name="last_used_day">2日前</string>
     <string name="import_button">インポート</string>
     <string name="import_button_count">インポート (%1$d)</string>
@@ -106,7 +108,7 @@
     <string name="evaluation">評価</string>
     <string name="no_text_found">テキストが見つかりません</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">アップロードされたPDFからテキストを抽出できませんでした。有効な履歴書をアップロードしてください</string>
-    <string name="coming_soon">🌟近日公開</string>
+    <string name="coming_soon">🌟近日</string>
     <string name="history">履歴</string>
     <string name="image_selection">画像選択</string>
     <string name="save_all_images">すべての画像を保存</string>
@@ -118,7 +120,7 @@
     <string name="ocr_text_heading">簡単OCR</string>
     <string name="ocr_title">PDF OCR</string>
     <string name="ocr_text_description">スキャンからスマートへ — 簡素化されたOCR</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;人気</string>
+    <string name="ocr_badge">🔥&#160;人気</string>
     <string name="pdf_converter_heading">PDFコンバータープロツール</string>
     <string name="pdf_converter_description">迅速かつ簡単な変換のためのインテリジェントなPDFコンバーター</string>
     <string name="resume_analyzer">AI履歴書アナライザー</string>

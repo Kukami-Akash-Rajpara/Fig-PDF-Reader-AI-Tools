@@ -9,7 +9,9 @@
     <string name="interview_text">Ang Iyong Personal na Mentor sa Panayam</string>
     <string name="interview_bot_heading">Interview Bot</string>
     <string name="interview_bot_description">Pahusayin ang iyong paghahanda sa panayam gamit ang mga tip na pinapagana ng AI at mga mock na tanong</string>
+    <string name="interview_badge">✨&#160;Ensayo!</string>
     <string name="recommendation_text">Mga Personalized na Rekomendasyon</string>
+    <string name="recommendation_badge">💡&#160;Subok!</string>
     <string name="last_used_day">2 araw ang nakalipas</string>
     <string name="import_button">I-import</string>
     <string name="import_button_count">I-import (%1$d)</string>
@@ -106,7 +108,7 @@
     <string name="evaluation">Pagsusuri</string>
     <string name="no_text_found">Walang Tekstong Natagpuan</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Hindi kami makakuha ng teksto mula sa na-upload na PDF. Mangyaring mag-upload ng wastong resume</string>
-    <string name="coming_soon">🌟Malapit na</string>
+    <string name="coming_soon">🌟Malapit</string>
     <string name="history">Kasaysayan</string>
     <string name="image_selection">Pagpili ng Larawan</string>
     <string name="save_all_images">I-save ang Lahat ng Larawan</string>
@@ -118,7 +120,7 @@
     <string name="ocr_text_heading">Ginawang Madali ang OCR</string>
     <string name="ocr_title">OCR gamit ang PDF</string>
     <string name="ocr_text_description">Mula sa na-scan hanggang sa matalino — ginawang simple ang OCR.</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;Popular</string>
+    <string name="ocr_badge">🔥&#160;Sikat</string>
     <string name="pdf_converter_heading">PDF Converter Pro Tools</string>
     <string name="pdf_converter_description">Smart PDF Converter para sa Mabilis at Madaling Conversion</string>
     <string name="resume_analyzer">AI Resume Analyzer</string>

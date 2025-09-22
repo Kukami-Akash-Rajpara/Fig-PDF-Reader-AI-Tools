@@ -9,7 +9,9 @@
     <string name="interview_text">您的个人面试导师</string>
     <string name="interview_bot_heading">面试机器人</string>
     <string name="interview_bot_description">通过AI驱动的建议和模拟问题提升您的面试准备</string>
+    <string name="interview_badge">✨&#160;练习!</string>
     <string name="recommendation_text">个性化推荐</string>
+    <string name="recommendation_badge">💡&#160;试我!</string>
     <string name="last_used_day">2天前</string>
     <string name="import_button">导入</string>
     <string name="import_button_count">导入 (%1$d)</string>
@@ -106,7 +108,7 @@
     <string name="evaluation">评估</string>
     <string name="no_text_found">未找到文本</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">我们无法从上传的PDF中提取文本，请上传有效的简历</string>
-    <string name="coming_soon">🌟即将推出</string>
+    <string name="coming_soon">🌟即将</string>
     <string name="history">历史记录</string>
     <string name="image_selection">图片选择</string>
     <string name="save_all_images">保存所有图片</string>
@@ -118,7 +120,7 @@
     <string name="ocr_text_heading">简易OCR</string>
     <string name="ocr_title">PDF OCR</string>
     <string name="ocr_text_description">从扫描到智能——OCR简化版。</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;热门</string>
+    <string name="ocr_badge">🔥&#160;热门</string>
     <string name="pdf_converter_heading">PDF转换器专业工具</string>
     <string name="pdf_converter_description">智能PDF转换器，快速且简单</string>
     <string name="resume_analyzer">AI简历分析器</string>

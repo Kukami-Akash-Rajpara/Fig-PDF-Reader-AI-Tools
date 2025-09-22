@@ -9,7 +9,9 @@
     <string name="interview_text">Mentor Wawancara Pribadi Anda</string>
     <string name="interview_bot_heading">Bot Wawancara</string>
     <string name="interview_bot_description">Tingkatkan kesiapan wawancara Anda dengan tips bertenaga AI dan pertanyaan simulasi</string>
+    <string name="interview_badge">✨&#160;Berlatih!</string>
     <string name="recommendation_text">Rekomendasi yang Dipersonalisasi</string>
+    <string name="recommendation_badge">💡&#160;Coba!</string>
     <string name="last_used_day">2 hari lalu</string>
     <string name="import_button">Impor</string>
     <string name="import_button_count">Impor (%1$d)</string>
@@ -106,7 +108,7 @@
     <string name="evaluation">Evaluasi</string>
     <string name="no_text_found">Tidak Ada Teks Ditemukan</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Kami tidak dapat mengekstrak teks dari PDF yang diunggah. Harap unggah resume yang valid</string>
-    <string name="coming_soon">🌟 Segera Hadir</string>
+    <string name="coming_soon">🌟 Segera</string>
     <string name="history">Riwayat</string>
     <string name="image_selection">Pemilihan Gambar</string>
     <string name="save_all_images">Simpan Semua Gambar</string>
@@ -118,7 +120,7 @@
     <string name="ocr_text_heading">OCR Dibuat Mudah</string>
     <string name="ocr_title">OCR dengan PDF</string>
     <string name="ocr_text_description">Dari hasil pindai menjadi cerdas — OCR dibuat sederhana.</string>
-    <string name="ocr_badge">🔥&#160;&#160;&#160;Populer</string>
+    <string name="ocr_badge">🔥&#160;Populer</string>
     <string name="pdf_converter_heading">Alat Pro Konverter PDF</string>
     <string name="pdf_converter_description">Konverter PDF Cerdas untuk Konversi Cepat &amp; Mudah</string>
     <string name="resume_analyzer">Penganalisis Resume AI</string>
