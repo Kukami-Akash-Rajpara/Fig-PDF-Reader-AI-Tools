@@ -9,9 +9,7 @@
     <string name="interview_text">Ваш личный наставник по собеседованиям</string>
     <string name="interview_bot_heading">Бот для собеседований</string>
     <string name="interview_bot_description">Улучшайте подготовку к собеседованиям с помощью советов и имитационных вопросов на основе ИИ</string>
-    <string name="interview_badge">✨&#160;&#160; Давай практиковаться!</string>
     <string name="recommendation_text">Персонализированные рекомендации</string>
-    <string name="recommendation_badge">💡&#160;&#160;Попробуй меня!</string>
     <string name="last_used_day">2 дня назад</string>
     <string name="import_button">Импортировать</string>
     <string name="import_button_count">Импортировать (%1$d)</string>

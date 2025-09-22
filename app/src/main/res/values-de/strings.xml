@@ -9,9 +9,7 @@
     <string name="interview_text">Ihr persönlicher Interview-Mentor</string>
     <string name="interview_bot_heading">Interview-Bot</string>
     <string name="interview_bot_description">Verbessern Sie Ihre Interview-Vorbereitung mit KI-gestützten Tipps und Übungsfragen</string>
-    <string name="interview_badge">✨&#160;&#160; Lass uns üben!</string>
     <string name="recommendation_text">Personalisierte Empfehlungen</string>
-    <string name="recommendation_badge">💡&#160;&#160;Probier mich aus!</string>
     <string name="last_used_day">Vor 2 Tagen</string>
     <string name="import_button">Importieren</string>
     <string name="import_button_count">Importieren (%1$d)</string>

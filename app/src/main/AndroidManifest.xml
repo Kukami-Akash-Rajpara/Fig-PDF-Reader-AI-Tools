@@ -7,7 +7,6 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="32"
@@ -40,6 +39,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PDFConverter"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.PptMainActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.LoadingCandidatesActivity"
             android:exported="false" />
@@ -157,11 +159,12 @@
         <activity
             android:name=".activity.SummeryViewActivity"
             android:exported="false" />
-        <activity android:name="com.app.figpdfconvertor.figpdf.activity.OcrCapturedImage"
-            android:exported="false"
-            />
-        <activity android:name="com.app.figpdfconvertor.figpdf.activity.ImageOcrResult"
-            android:exported="false"/>
+        <activity
+            android:name=".activity.OcrCapturedImage"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ImageOcrResult"
+            android:exported="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

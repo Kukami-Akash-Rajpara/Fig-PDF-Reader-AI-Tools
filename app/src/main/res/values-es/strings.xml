@@ -9,9 +9,7 @@
     <string name="interview_text">Tu Mentor Personal de Entrevistas</string>
     <string name="interview_bot_heading">Bot de Entrevistas</string>
     <string name="interview_bot_description">Mejora tu preparación para entrevistas con consejos y preguntas simuladas impulsadas por IA</string>
-    <string name="interview_badge">✨&#160;&#160; ¡Vamos a Practicar!</string>
     <string name="recommendation_text">Recomendaciones Personalizadas</string>
-    <string name="recommendation_badge">💡&#160;&#160;¡Pruébame!</string>
     <string name="last_used_day">Hace 2 días</string>
     <string name="import_button">Importar</string>
     <string name="import_button_count">Importar (%1$d)</string>

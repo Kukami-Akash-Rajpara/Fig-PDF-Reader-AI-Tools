@@ -9,9 +9,7 @@
     <string name="interview_text">あなたの個人面接メンター</string>
     <string name="interview_bot_heading">面接ボット</string>
     <string name="interview_bot_description">AIを活用したヒントと模擬質問で面接の準備を強化</string>
-    <string name="interview_badge">✨&#160;&#160; 練習しよう！</string>
     <string name="recommendation_text">パーソナライズされた推薦</string>
-    <string name="recommendation_badge">💡&#160;&#160;試してみて！</string>
     <string name="last_used_day">2日前</string>
     <string name="import_button">インポート</string>
     <string name="import_button_count">インポート (%1$d)</string>

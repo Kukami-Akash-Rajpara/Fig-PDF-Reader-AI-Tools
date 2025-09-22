@@ -9,9 +9,7 @@
     <string name="interview_text">Mentor Wawancara Pribadi Anda</string>
     <string name="interview_bot_heading">Bot Wawancara</string>
     <string name="interview_bot_description">Tingkatkan kesiapan wawancara Anda dengan tips bertenaga AI dan pertanyaan simulasi</string>
-    <string name="interview_badge">✨&#160;&#160; Ayo Berlatih!</string>
     <string name="recommendation_text">Rekomendasi yang Dipersonalisasi</string>
-    <string name="recommendation_badge">💡&#160;&#160;Coba Saya!</string>
     <string name="last_used_day">2 hari lalu</string>
     <string name="import_button">Impor</string>
     <string name="import_button_count">Impor (%1$d)</string>

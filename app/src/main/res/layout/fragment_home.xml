@@ -638,14 +638,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="top|end"
-                        android:background="@drawable/top_right_shape"
+                        android:background="@drawable/top_right_pink_gradient"
                         android:fontFamily="@font/roboto_semi_bold"
+                        android:paddingEnd="@dimen/_10sdp"
                         android:paddingStart="@dimen/_10sdp"
-                        android:paddingEnd="@dimen/_5sdp"
                         android:paddingVertical="@dimen/_4sdp"
                         android:text="@string/recommendation_badge"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_10ssp" />
+
 
                 </FrameLayout>
 

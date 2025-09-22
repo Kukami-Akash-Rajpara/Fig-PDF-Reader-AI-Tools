@@ -9,9 +9,7 @@
     <string name="interview_text">Votre mentor personnel d’entretien</string>
     <string name="interview_bot_heading">Bot d’Entretien</string>
     <string name="interview_bot_description">Améliorez votre préparation aux entretiens avec des conseils et des questions simulées alimentés par l’IA</string>
-    <string name="interview_badge">✨&#160;&#160; Entraînons-nous !</string>
     <string name="recommendation_text">Recommandations personnalisées</string>
-    <string name="recommendation_badge">💡&#160;&#160;Essayez-moi !</string>
     <string name="last_used_day">Il y a 2 jours</string>
     <string name="import_button">Importer</string>
     <string name="import_button_count">Importer (%1$d)</string>

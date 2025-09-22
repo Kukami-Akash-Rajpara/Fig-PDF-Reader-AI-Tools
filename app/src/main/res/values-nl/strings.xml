@@ -9,9 +9,7 @@
     <string name="interview_text">Uw persoonlijke sollicitatiementor</string>
     <string name="interview_bot_heading">Sollicitatiebot</string>
     <string name="interview_bot_description">Verbeter uw sollicitatievoorbereiding met AI-gestuurde tips en oefenvragen</string>
-    <string name="interview_badge">✨&#160;&#160; Laten we oefenen!</string>
     <string name="recommendation_text">Gepersonaliseerde aanbevelingen</string>
-    <string name="recommendation_badge">💡&#160;&#160;Probeer mij!</string>
     <string name="last_used_day">2 dagen geleden</string>
     <string name="import_button">Importeren</string>
     <string name="import_button_count">Importeren (%1$d)</string>

@@ -23,6 +23,7 @@ import androidx.fragment.app.Fragment;
 import com.app.figpdfconvertor.figpdf.activity.ComingSoonActivity;
 import com.app.figpdfconvertor.figpdf.activity.LanguageActivity;
 import com.app.figpdfconvertor.figpdf.activity.OcrCapturedImage;
+import com.app.figpdfconvertor.figpdf.activity.PptMainActivity;
 import com.app.figpdfconvertor.figpdf.activity.ProConverterTools;
 import com.app.figpdfconvertor.figpdf.activity.ResumeAnalyzerActivity;
 import com.app.figpdfconvertor.figpdf.databinding.FragmentHomeBinding;
@@ -96,7 +97,7 @@ public class HomeFragment extends BaseFragment {
             AnalyticsManager.INSTANCE.logEvent("feature_selected",
                     java.util.Collections.singletonMap("feature", "ppt_maker"));
             AnalyticsManager.INSTANCE.logFunnelStep("ppt_maker_selected", null);
-            startActivity(new Intent(requireContext(), ComingSoonActivity.class));
+            startActivity(new Intent(requireContext(), PptMainActivity.class));
         });
 
         binding.layAiResumeAnalyzer.setOnClickListener(new DoubleClickListener() {

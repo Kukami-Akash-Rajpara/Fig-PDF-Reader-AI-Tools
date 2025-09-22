@@ -9,9 +9,7 @@
     <string name="interview_text">আপনার ব্যক্তিগত ইন্টারভিউ পরামর্শদাতা</string>
     <string name="interview_bot_heading">ইন্টারভিউ বট</string>
     <string name="interview_bot_description">এআই-চালিত টিপস এবং মক প্রশ্নের মাধ্যমে আপনার ইন্টারভিউ প্রস্তুতি উন্নত করুন</string>
-    <string name="interview_badge">✨&#160;&#160; আসুন অনুশীলন করি!</string>
     <string name="recommendation_text">ব্যক্তিগতকৃত সুপারিশ</string>
-    <string name="recommendation_badge">💡&#160;&#160;আমাকে চেষ্টা করুন!</string>
     <string name="last_used_day">২ দিন আগে</string>
     <string name="import_button">আমদানি</string>
     <string name="import_button_count">আমদানি (%1$d)</string>

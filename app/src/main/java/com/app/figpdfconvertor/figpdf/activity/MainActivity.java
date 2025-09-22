@@ -228,10 +228,6 @@ public class MainActivity extends BaseActivity {
         getOnBackPressedDispatcher().addCallback(this, callback);
     }
 
-
-
-
-
     public void showExitDialog(Context context) {
         if (exitDialog != null && exitDialog.isShowing()) return; // avoid multiple dialogs
 

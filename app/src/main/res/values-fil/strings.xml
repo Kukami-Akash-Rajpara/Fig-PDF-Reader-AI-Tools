@@ -9,9 +9,7 @@
     <string name="interview_text">Ang Iyong Personal na Mentor sa Panayam</string>
     <string name="interview_bot_heading">Interview Bot</string>
     <string name="interview_bot_description">Pahusayin ang iyong paghahanda sa panayam gamit ang mga tip na pinapagana ng AI at mga mock na tanong</string>
-    <string name="interview_badge">✨&#160;&#160; Mag-ensayo Tayo!</string>
     <string name="recommendation_text">Mga Personalized na Rekomendasyon</string>
-    <string name="recommendation_badge">💡&#160;&#160;Subukan Mo Ako!</string>
     <string name="last_used_day">2 araw ang nakalipas</string>
     <string name="import_button">I-import</string>
     <string name="import_button_count">I-import (%1$d)</string>

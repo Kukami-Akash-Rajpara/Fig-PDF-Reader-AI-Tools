@@ -9,9 +9,7 @@
     <string name="interview_text">Kişisel Mülakat Mentörünüz</string>
     <string name="interview_bot_heading">Mülakat Botu</string>
     <string name="interview_bot_description">Yapay zeka destekli ipuçları ve simüle edilmiş sorularla mülakat hazırlığınızı geliştirin</string>
-    <string name="interview_badge">✨&#160;&#160; Hadi Pratik Yapalım!</string>
     <string name="recommendation_text">Kişiselleştirilmiş Öneriler</string>
-    <string name="recommendation_badge">💡&#160;&#160;Beni Dene!</string>
     <string name="last_used_day">2 gün önce</string>
     <string name="import_button">İçe Aktar</string>
     <string name="import_button_count">İçe Aktar (%1$d)</string>

@@ -8,9 +8,7 @@
     <string name="interview_text">Mentor Temu Duga Peribadi Anda</string>
     <string name="interview_bot_heading">Bot Temu Duga</string>
     <string name="interview_bot_description">Tingkatkan kesediaan temu duga anda dengan petua berkuasa AI dan soalan latihan</string>
-    <string name="interview_badge">✨&#160;&#160; Mari berlatih!</string>
     <string name="recommendation_text">Syor Peribadi</string>
-    <string name="recommendation_badge">💡&#160;&#160;Cubalah saya!</string>
     <string name="last_used_day">2 hari yang lalu</string>
     <string name="import_button">Import</string>
     <string name="import_button_count">Import (%1$d)</string>

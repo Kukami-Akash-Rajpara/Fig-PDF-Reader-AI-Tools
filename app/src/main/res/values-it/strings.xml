@@ -9,9 +9,7 @@
     <string name="interview_text">Il tuo mentore personale per i colloqui</string>
     <string name="interview_bot_heading">Bot per Colloqui</string>
     <string name="interview_bot_description">Migliora la tua preparazione ai colloqui con suggerimenti basati su AI e domande simulate</string>
-    <string name="interview_badge">✨&#160;&#160; Facciamo pratica!</string>
     <string name="recommendation_text">Raccomandazioni personalizzate</string>
-    <string name="recommendation_badge">💡&#160;&#160;Provami!</string>
     <string name="last_used_day">2 giorni fa</string>
     <string name="import_button">Importa</string>
     <string name="import_button_count">Importa (%1$d)</string>

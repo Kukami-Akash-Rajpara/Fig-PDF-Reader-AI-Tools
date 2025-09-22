@@ -9,9 +9,7 @@
     <string name="interview_text">您的个人面试导师</string>
     <string name="interview_bot_heading">面试机器人</string>
     <string name="interview_bot_description">通过AI驱动的建议和模拟问题提升您的面试准备</string>
-    <string name="interview_badge">✨&#160;&#160; 让我们练习吧！</string>
     <string name="recommendation_text">个性化推荐</string>
-    <string name="recommendation_badge">💡&#160;&#160;试试我！</string>
     <string name="last_used_day">2天前</string>
     <string name="import_button">导入</string>
     <string name="import_button_count">导入 (%1$d)</string>
