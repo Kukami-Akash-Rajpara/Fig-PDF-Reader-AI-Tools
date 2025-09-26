@@ -9,7 +9,7 @@ android {
     namespace 'com.app.figpdfconvertor.figpdf'
     compileSdk 36
 
-    /* 22-09-2025 12:20:00 PM */
+    /* 26-09-2025 5:04:00 PM */
     defaultConfig {
         applicationId "com.app.figpdfconvertor.figpdf"
         minSdk 26

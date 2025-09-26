@@ -415,8 +415,6 @@ public class ImageSelection extends BaseActivity {
         bottomSheetAdapter.updateImages(selectedUris);
     }
 
-
-
     private void updateImportButtonText() {
         int count = adapter != null ? adapter.getSelectedCount() : 0;
         binding.importButton.setText(getString(R.string.import_button_count, count));
