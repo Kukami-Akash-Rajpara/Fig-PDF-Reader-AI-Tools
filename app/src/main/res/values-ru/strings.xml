@@ -108,7 +108,7 @@
     <string name="evaluation">Оценка</string>
     <string name="no_text_found">Текст не найден</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Не удалось извлечь текст из загруженного PDF. Пожалуйста, загрузите действительное резюме</string>
-    <string name="coming_soon">🌟Скоро</string>
+    <string name="coming_soon">🎉 Скоро</string>
     <string name="history">История</string>
     <string name="image_selection">Выбор изображения</string>
     <string name="save_all_images">Сохранить все изображения</string>
@@ -240,5 +240,36 @@
     <string name="scan_result">Результат сканирования</string>
     <string name="edit_text_hint">Ваш отсканированный текст появится здесь...</string>
     <string name="download_pdf_text">Скачать PDF</string>
+
+    <string name="presentation_generation">Создание презентаций</string>
+    <string name="generate_outline">Создать структуру</string>
+    <string name="please_enter_your_slides_topic">Пожалуйста, введите тему ваших слайдов</string>
+    <string name="number_of_slides">Количество слайдов</string>
+    <string name="home">Главная</string>
+    <string name="community">Сообщество</string>
+    <string name="suggest_prompt">Предложить подсказку</string>
+    <string name="select_a_template">Выбрать шаблон</string>
+    <string name="view_all">Посмотреть все</string>
+    <string name="edit_data">Редактировать данные</string>
+    <string name="enter_heading_text">Введите текст заголовка</string>
+    <string name="color">Цвет</string>
+    <string name="category">Категория</string>
+    <string name="value">Значение</string>
+    <string name="select_your_language">Выберите язык</string>
+    <string name="export_pdf">Экспортировать в PDF</string>
+    <string name="analyzing">Анализ...</string>
+    <string name="eg_hiring_job_description">💡 Укажите описание вакансии для точного подбора кандидатов (например, опыт, роль)</string>
+    <string name="eg_candidate_job_description">💡 Добавьте описание вакансии компании, чтобы адаптировать ваше резюме (например, роль, навыки, опыт)</string>
+    <string name="choose_your_language">Выберите язык</string>
+    <string name="upload_pdf">Загрузить PDF</string>
+    <string name="card_heading1"><font color='#EB7A9A'>ИИ</font> Составитель кратких обзоров для каждого документа</string>
+    <string name="card_description1">Преобразуйте длинные документы в четкие, готовые к работе выводы</string>
+    <string name="interview_bot_heading1">Помощник на собеседовании</string>
+    <string name="choose_any_one_option1">Выберите вариант</string>
+    <string name="select_your_role_and_begin_the_interview_journey1">Выберите свою область, чтобы начать путь к собеседованию.</string>
+    <string name="hiring1">👔 Для найма</string>
+    <string name="candidates1">🧑‍💼 Для соискателей</string>
+    <string name="explore_ocr">Хотите изучить OCR с PDF?</string>
+    <string name="candidate_job_description">Описание вакансии <font color='#8A000000'>(Необязательно)</font></string>
 
 </resources>

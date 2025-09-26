@@ -40,7 +40,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LoadingActivity extends BaseActivity {
-
     private ActivityLoadingBinding binding;
     private String pdfUriString;
     private Call<UploadResponse> callUploadPdf;

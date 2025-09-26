@@ -482,6 +482,55 @@
 
             </LinearLayout>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_btn_theme"
+                    android:fontFamily="@font/roboto_semi_bold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:text="@string/export_pdf"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/shimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_36sdp"
+                    app:lottie_autoPlay="true"
+                    android:scaleType="fitXY"
+                    app:lottie_loop="true"
+                    android:visibility="visible"
+                    android:adjustViewBounds="true"
+                    app:lottie_rawRes="@raw/shimmer" />
+
+
+            </RelativeLayout>
+
+            <!--<TextView
+                android:id="@+id/txtSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_gravity="center"
+
+                android:background="@drawable/bg_btn_theme"
+                android:fontFamily="@font/roboto_semi_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/export_pdf"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp" />-->
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

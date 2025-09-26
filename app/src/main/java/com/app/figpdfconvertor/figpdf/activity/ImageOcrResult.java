@@ -30,6 +30,7 @@ import androidx.core.text.HtmlCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.app.figpdfconvertor.figpdf.BuildConfig;
 import com.app.figpdfconvertor.figpdf.R;
 import com.app.figpdfconvertor.figpdf.ads.AdManagerInter;
 import com.app.figpdfconvertor.figpdf.api.ApiClient;
@@ -312,7 +313,7 @@ public class ImageOcrResult extends BaseActivity {
         RequestBody requestFile = RequestBody.create(photoFile, MediaType.parse("image/*"));
         MultipartBody.Part filePart = MultipartBody.Part.createFormData("file", photoFile.getName(), requestFile);
 
-        uploadCall = ApiClient.INSTANCE.getApiService().uploadOcrImage(filePart, 1);
+        uploadCall = ApiClient.INSTANCE.getApiService().uploadOcrImage(filePart, BuildConfig.VERSION_CODE);
         uploadCall.enqueue(new Callback<OcrResponse>() {
             @Override
             public void onResponse(Call<OcrResponse> call, Response<OcrResponse> response) {

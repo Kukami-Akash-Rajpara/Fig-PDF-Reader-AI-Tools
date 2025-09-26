@@ -108,7 +108,7 @@
     <string name="evaluation">Evaluatie</string>
     <string name="no_text_found">Geen tekst gevonden</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">We konden geen tekst extraheren uit de geüploade PDF. Upload alstublieft een geldig CV</string>
-    <string name="coming_soon">🌟Binnenkort</string>
+    <string name="coming_soon">🎉 Binnenkort</string>
     <string name="history">Geschiedenis</string>
     <string name="image_selection">Afbeeldingsselectie</string>
     <string name="save_all_images">Alle afbeeldingen opslaan</string>
@@ -239,4 +239,34 @@ We waarderen uw medewerking en bieden onze excuses aan voor eventueel ongemak. D
     <string name="download_pdf_text">PDF downloaden</string>
     <string name="presentation_generation">Presentatiegeneratie</string>
     <string name="generate_outline">Overzicht genereren</string>
+
+
+    <string name="please_enter_your_slides_topic">Voer het onderwerp van uw dia\'s in</string>
+    <string name="number_of_slides">Aantal dia\'s</string>
+    <string name="home">Home</string>
+    <string name="community">Gemeenschap</string>
+    <string name="suggest_prompt">Prompt suggereren</string>
+    <string name="select_a_template">Selecteer een sjabloon</string>
+    <string name="view_all">Alles bekijken</string>
+    <string name="edit_data">Gegevens bewerken</string>
+    <string name="enter_heading_text">Voer koptekst in</string>
+    <string name="color">Kleur</string>
+    <string name="category">Categorie</string>
+    <string name="value">Waarde</string>
+    <string name="select_your_language">Selecteer uw taal</string>
+    <string name="export_pdf">PDF exporteren</string>
+    <string name="analyzing">Analyseren...</string>
+    <string name="eg_hiring_job_description">💡 Specificeer de functiebeschrijving voor nauwkeurige kandidaatmatching (bijv. ervaring, rol)</string>
+    <string name="eg_candidate_job_description">💡 Voeg de functiebeschrijving van het bedrijf toe om uw cv aan te passen (bijv. rol, expertise, ervaring)</string>
+    <string name="choose_your_language">Kies uw taal</string>
+    <string name="upload_pdf">PDF uploaden</string>
+    <string name="card_heading1"><font color='#EB7A9A'>AI</font> Samenvatter voor elk document</string>
+    <string name="card_description1">Zet lange documenten om in duidelijke, werkklare inzichten</string>
+    <string name="interview_bot_heading1">Interviewmaatje</string>
+    <string name="choose_any_one_option1">Selecteer uw optie</string>
+    <string name="select_your_role_and_begin_the_interview_journey1">Selecteer uw vakgebied om uw sollicitatie-avontuur te beginnen.</string>
+    <string name="hiring1">👔 Voor werving</string>
+    <string name="candidates1">🧑‍💼 Voor werkzoekenden</string>
+    <string name="explore_ocr">Wilt u OCR met PDF verkennen?</string>
+    <string name="candidate_job_description">Functiebeschrijving <font color='#8A000000'>(Optioneel)</font></string>
 </resources>

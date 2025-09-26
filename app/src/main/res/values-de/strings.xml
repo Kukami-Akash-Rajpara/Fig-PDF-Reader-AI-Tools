@@ -108,7 +108,7 @@
     <string name="evaluation">Bewertung</string>
     <string name="no_text_found">Kein Text gefunden</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Wir konnten keinen Text aus dem hochgeladenen PDF extrahieren. Bitte laden Sie einen gültigen Lebenslauf hoch</string>
-    <string name="coming_soon">🌟Bald</string>
+    <string name="coming_soon">🎉 Bald</string>
     <string name="history">Verlauf</string>
     <string name="image_selection">Bildauswahl</string>
     <string name="save_all_images">Alle Bilder speichern</string>
@@ -240,5 +240,36 @@ Wir danken Ihnen für Ihre Kooperation und entschuldigen uns für etwaige Unanne
     <string name="scan_result">Scan-Ergebnis</string>
     <string name="edit_text_hint">Ihr gescannter Text wird hier angezeigt...</string>
     <string name="download_pdf_text">PDF herunterladen</string>
+
+    <string name="presentation_generation">Präsentationserstellung</string>
+    <string name="generate_outline">Gliederung erstellen</string>
+    <string name="please_enter_your_slides_topic">Bitte geben Sie das Thema Ihrer Folien ein</string>
+    <string name="number_of_slides">Anzahl der Folien</string>
+    <string name="home">Startseite</string>
+    <string name="community">Community</string>
+    <string name="suggest_prompt">Vorschlag anzeigen</string>
+    <string name="select_a_template">Vorlage auswählen</string>
+    <string name="view_all">Alle anzeigen</string>
+    <string name="edit_data">Daten bearbeiten</string>
+    <string name="enter_heading_text">Überschriftentext eingeben</string>
+    <string name="color">Farbe</string>
+    <string name="category">Kategorie</string>
+    <string name="value">Wert</string>
+    <string name="select_your_language">Sprache auswählen</string>
+    <string name="export_pdf">PDF exportieren</string>
+    <string name="analyzing">Analysiere...</string>
+    <string name="eg_hiring_job_description">💡 Geben Sie die Stellenbeschreibung für eine präzise Kandidatensuche an (z. B. Erfahrung, Rolle)</string>
+    <string name="eg_candidate_job_description">💡 Fügen Sie die Stellenbeschreibung des Unternehmens hinzu, um Ihren Lebenslauf anzupassen (z. B. Rolle, Fachkenntnisse, Erfahrung)</string>
+    <string name="choose_your_language">Wählen Sie Ihre Sprache</string>
+    <string name="upload_pdf">PDF hochladen</string>
+    <string name="card_heading1"><font color='#EB7A9A'>KI</font>-Zusammenfasser für jedes Dokument</string>
+    <string name="card_description1">Lange Dokumente in klare, jobbereite Erkenntnisse umwandeln</string>
+    <string name="interview_bot_heading1">Interview-Buddy</string>
+    <string name="choose_any_one_option1">Wählen Sie eine Option</string>
+    <string name="select_your_role_and_begin_the_interview_journey1">Wählen Sie Ihr Feld, um Ihre Interview-Reise zu beginnen.</string>
+    <string name="hiring1">👔 Einstellung</string>
+    <string name="candidates1">🧑‍💼 Jobsuchend</string>
+    <string name="explore_ocr">Möchten Sie OCR mit PDF erkunden?</string>
+    <string name="candidate_job_description">Stellenbeschreibung <font color='#8A000000'>(optional)</font></string>
 
 </resources>

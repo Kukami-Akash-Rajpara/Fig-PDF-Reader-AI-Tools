@@ -200,15 +200,6 @@ class ConvertPDFActivity : BaseActivity() {
             showRenameDialog(this)
         }
         setupBackPressed()
-        // Create initial empty pdf if not exists
-        /*  if (!file.exists()) {
-              mPDFUtils!!.createPdfFromImages(
-                  file.absolutePath,
-                  ArrayList(images.filter { it != "ADD_IMAGE" })
-              )
-          }*/
-
-
         // 👉 Create initial empty pdf if not exists
         /* if (!file.exists()) {
              mPDFUtils!!.createPdfFromImages(
@@ -240,20 +231,6 @@ class ConvertPDFActivity : BaseActivity() {
             }
         }
 
-        /*if (images[pos] == ADD_IMAGE) {
-            // Handle add image click
-            val intent = Intent(this, ImageSelection::class.java)
-            imageSelectionLauncher.launch(intent)
-            Toast.makeText(this, "Add Image clicked", Toast.LENGTH_SHORT).show()
-        } else {
-            val intent = Intent(this, EditScreen::class.java)
-            intent.putStringArrayListExtra(
-                "IMAGE_LIST",
-                ArrayList(images.filter { it != ADD_IMAGE })
-            )
-            intent.putExtra("POSITION", pos)
-            editScreenLauncher.launch(intent)
-        }*/
         adapter = EditedImagesAdapter(
             this,
             images,
@@ -268,10 +245,6 @@ class ConvertPDFActivity : BaseActivity() {
                     imageSelectionLauncher.launch(intent)
                 } else {
                     // Open EditScreen for editing
-                    /*val intent = Intent(this, EditScreen::class.java)
-                    intent.putExtra("IMAGE_PATH", images[pos])
-                    intent.putExtra("POSITION", pos)
-                    imageEditLauncher.launch(intent)*/
                     val intent = Intent(this, EditScreen::class.java)
                     intent.putStringArrayListExtra(
                         "IMAGE_LIST",

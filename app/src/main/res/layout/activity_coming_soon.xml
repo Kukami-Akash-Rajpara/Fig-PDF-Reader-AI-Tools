@@ -5,10 +5,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical|center_horizontal"
     android:orientation="vertical"
     tools:context=".activity.ComingSoonActivity">
-
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backKey"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:adjustViewBounds="true"
+        android:visibility="visible"
+        android:src="@drawable/back_img" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="match_parent">
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="@dimen/_140sdp"
         android:layout_height="wrap_content"
@@ -36,5 +49,6 @@
             android:textSize="@dimen/_24ssp" />
 
     </com.facebook.shimmer.ShimmerFrameLayout>
+    </LinearLayout>
 
 </LinearLayout>

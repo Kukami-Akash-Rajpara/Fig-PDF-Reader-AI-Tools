@@ -108,7 +108,7 @@
     <string name="evaluation">Değerlendirme</string>
     <string name="no_text_found">Metin bulunamadı</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Yüklenen PDF\'den metin çıkarılamadı. Lütfen geçerli bir özgeçmiş yükleyin</string>
-    <string name="coming_soon">🌟Yakında</string>
+    <string name="coming_soon">🎉 Yakında</string>
     <string name="history">Geçmiş</string>
     <string name="image_selection">Görüntü Seçimi</string>
     <string name="save_all_images">Tüm Görüntüleri Kaydet</string>
@@ -240,5 +240,36 @@ Kesintisiz erişim ve en iyi deneyimi sağlamak için lütfen hemen en son sür�
     <string name="scan_result">Tarama Sonucu</string>
     <string name="edit_text_hint">Taranmış metniniz burada görünecektir...</string>
     <string name="download_pdf_text">PDF İndir</string>
+
+    <string name="presentation_generation">Sunum Oluşturma</string>
+    <string name="generate_outline">Taslak Oluştur</string>
+    <string name="please_enter_your_slides_topic">Lütfen slaytlarınızın konusunu girin</string>
+    <string name="number_of_slides">Slayt Sayısı</string>
+    <string name="home">Ana Sayfa</string>
+    <string name="community">Topluluk</string>
+    <string name="suggest_prompt">Öneri Sun</string>
+    <string name="select_a_template">Bir Şablon Seç</string>
+    <string name="view_all">Tümünü Görüntüle</string>
+    <string name="edit_data">Verileri Düzenle</string>
+    <string name="enter_heading_text">Başlık Metni Gir</string>
+    <string name="color">Renk</string>
+    <string name="category">Kategori</string>
+    <string name="value">Değer</string>
+    <string name="select_your_language">Dil Seçiniz</string>
+    <string name="export_pdf">PDF Olarak Dışa Aktar</string>
+    <string name="analyzing">Analiz ediliyor...</string>
+    <string name="eg_hiring_job_description">💡 Doğru aday eşleşmesi için iş tanımını belirtin (örneğin, deneyim, rol)</string>
+    <string name="eg_candidate_job_description">💡 Özgeçmişinizi eşleştirmek için şirket iş tanımını ekleyin (örneğin, rol, uzmanlık, deneyim)</string>
+    <string name="choose_your_language">Dil Seçiniz</string>
+    <string name="upload_pdf">PDF Yükle</string>
+    <string name="card_heading1"><font color='#EB7A9A'>AI</font> Her Belge için Özetleyici</string>
+    <string name="card_description1">Uzun belgeleri net ve işe hazır içgörülere dönüştürün</string>
+    <string name="interview_bot_heading1">Mülakat Arkadaşı</string>
+    <string name="choose_any_one_option1">Seçeneğinizi Seçin</string>
+    <string name="select_your_role_and_begin_the_interview_journey1">Alanınızı seçin ve mülakat yolculuğunuza başlayın.</string>
+    <string name="hiring1">👔 İşe alım için</string>
+    <string name="candidates1">🧑‍💼 İş arayanlar için</string>
+    <string name="explore_ocr">PDF ile OCR\'yi keşfetmek ister misiniz?</string>
+    <string name="candidate_job_description">İş Tanımı <font color='#8A000000'>(İsteğe Bağlı)</font></string>
 
 </resources>

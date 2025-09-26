@@ -40,6 +40,9 @@
         android:theme="@style/Theme.PDFConverter"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".pptedit.GraphEditActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.PptMainActivity"
             android:exported="false" />
         <activity
@@ -111,12 +114,6 @@
             android:name=".activity.ProConverterTools"
             android:exported="false" />
         <activity
-            android:name=".summarizer.activity.RAHiringActivity"
-            android:exported="false" />
-        <activity
-            android:name=".summarizer.activity.ResumeAnalyzerActivity"
-            android:exported="false" />
-        <activity
             android:name=".activity.PdfSummaryActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize|stateHidden" />
@@ -128,9 +125,6 @@
             android:exported="false" />
         <activity
             android:name=".activity.PDFSummarizerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.CropActivity"
             android:exported="false" />
         <activity
             android:name=".activity.FullScreenImageActivity"
@@ -165,6 +159,7 @@
         <activity
             android:name=".activity.ImageOcrResult"
             android:exported="false" />
+        <activity android:name=".pptedit.MainActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

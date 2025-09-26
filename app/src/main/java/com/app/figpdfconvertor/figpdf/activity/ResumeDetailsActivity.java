@@ -1,8 +1,11 @@
 package com.app.figpdfconvertor.figpdf.activity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,8 +15,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.app.figpdfconvertor.figpdf.BuildConfig;
 import com.app.figpdfconvertor.figpdf.R;
 import com.app.figpdfconvertor.figpdf.adapter.KeywordAdapter;
+import com.app.figpdfconvertor.figpdf.api.ApiClient;
 import com.app.figpdfconvertor.figpdf.databinding.ActivityResumeDetailsBinding;
 import com.app.figpdfconvertor.figpdf.model.ResumeAnalyzer.ResumeAnalyzerHiring;
 import com.app.figpdfconvertor.figpdf.utils.MyUtils;
@@ -21,7 +26,15 @@ import com.google.android.flexbox.FlexDirection;
 import com.google.android.flexbox.FlexboxLayoutManager;
 import com.google.android.flexbox.JustifyContent;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.util.List;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Response;
+
 
 public class ResumeDetailsActivity extends BaseActivity {
 
@@ -50,6 +63,7 @@ public class ResumeDetailsActivity extends BaseActivity {
             int technicalSkillsScore = result.getTechnicalSkillsScore();
             int requirementsScore = result.getRequirementsScore();
             int keywordsScore = result.getKeywordsScore();
+            String sessionId = result.getSessionId();
             String analysis = result.getAnalysis();
             String resumeFeedback = result.getResumeFeedback();
             String hiringOverview = result.getHiringOverview();
@@ -100,6 +114,34 @@ public class ResumeDetailsActivity extends BaseActivity {
 
             recyclerFound.setAdapter(foundAdapter);
             recyclerMissing.setAdapter(missingAdapter);
+
+            binding.txtSubmit.setOnClickListener(view -> {
+                // ✅ Show toast before download starts
+                Toast.makeText(this, "Downloading report...", Toast.LENGTH_SHORT).show();
+
+                ApiClient.INSTANCE.getApiService()
+                        .downloadResumeReportJava(sessionId, BuildConfig.VERSION_CODE)
+                        .enqueue(new retrofit2.Callback<ResponseBody>() {
+                            @Override
+                            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                                if (response.isSuccessful() && response.body() != null) {
+                                    saveFile(response.body());
+                                } else {
+                                    Toast.makeText(ResumeDetailsActivity.this,
+                                            "Failed to download report",
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                                Toast.makeText(ResumeDetailsActivity.this,
+                                        "Error: " + t.getMessage(),
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        });
+            });
+
         }
 
         binding.imgArrow1.setOnClickListener(view -> {
@@ -172,4 +214,38 @@ public class ResumeDetailsActivity extends BaseActivity {
             callback.handleOnBackPressed();
         });
     }
+
+    private void saveFile(ResponseBody body) {
+        try {
+            String appName = getString(R.string.app_name);
+            File documentsDir = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
+            File appDir = new File(documentsDir, appName + "/ResumeReports");
+            if (!appDir.exists()) appDir.mkdirs();
+
+            File file = new File(appDir, "resume_report_" + System.currentTimeMillis() + ".pdf");
+
+            InputStream inputStream = body.byteStream();
+            FileOutputStream outputStream = new FileOutputStream(file);
+
+            byte[] buffer = new byte[4096];
+            int bytesRead;
+            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, bytesRead);
+            }
+            outputStream.close();
+            inputStream.close();
+
+            // ✅ Success toast
+            Toast.makeText(this, "Report downloaded!", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(this, ViewFileActivity.class);
+            intent.putExtra("pdf_uri", Uri.fromFile(file).toString());
+            startActivity(intent);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(this, "File save error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }

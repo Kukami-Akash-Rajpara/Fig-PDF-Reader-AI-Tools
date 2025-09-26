@@ -108,7 +108,7 @@
     <string name="evaluation">评估</string>
     <string name="no_text_found">未找到文本</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">我们无法从上传的PDF中提取文本，请上传有效的简历</string>
-    <string name="coming_soon">🌟即将</string>
+    <string name="coming_soon">🎉 即将</string>
     <string name="history">历史记录</string>
     <string name="image_selection">图片选择</string>
     <string name="save_all_images">保存所有图片</string>
@@ -240,5 +240,36 @@
     <string name="scan_result">扫描结果</string>
     <string name="edit_text_hint">您的扫描文本将显示在此处……</string>
     <string name="download_pdf_text">下载 PDF</string>
+
+    <string name="presentation_generation">演示文稿生成</string>
+    <string name="generate_outline">生成大纲</string>
+    <string name="please_enter_your_slides_topic">请输入您的幻灯片主题</string>
+    <string name="number_of_slides">幻灯片数量</string>
+    <string name="home">主页</string>
+    <string name="community">社区</string>
+    <string name="suggest_prompt">建议提示</string>
+    <string name="select_a_template">选择模板</string>
+    <string name="view_all">查看全部</string>
+    <string name="edit_data">编辑数据</string>
+    <string name="enter_heading_text">输入标题文本</string>
+    <string name="color">颜色</string>
+    <string name="category">类别</string>
+    <string name="value">值</string>
+    <string name="select_your_language">选择您的语言</string>
+    <string name="export_pdf">导出PDF</string>
+    <string name="analyzing">正在分析...</string>
+    <string name="eg_hiring_job_description">💡 指定职位描述以进行准确的候选人匹配（例如经验、角色）</string>
+    <string name="eg_candidate_job_description">💡 添加公司职位描述以匹配您的简历（例如角色、专业知识、经验）</string>
+    <string name="choose_your_language">选择您的语言</string>
+    <string name="upload_pdf">上传PDF</string>
+    <string name="card_heading1"><font color='#EB7A9A'>人工智能</font> 每份文档的摘要工具</string>
+    <string name="card_description1">将长文档转化为清晰、适合工作的见解</string>
+    <string name="interview_bot_heading1">面试助手</string>
+    <string name="choose_any_one_option1">选择您的选项</string>
+    <string name="select_your_role_and_begin_the_interview_journey1">选择您的领域，开始您的面试之旅。</string>
+    <string name="hiring1">👔 用于招聘</string>
+    <string name="candidates1">🧑‍💼 用于求职者</string>
+    <string name="explore_ocr">想探索PDF的OCR吗？</string>
+    <string name="candidate_job_description">职位描述 <font color='#8A000000'>(可选)</font></string>
 
 </resources>

@@ -3,11 +3,14 @@
 
     <string name="landing_title">Fig PDF Reader &amp; AI Tools</string>
     <string name="card_heading">Experience <font color='#EB7A9A'>AI</font> Brilliance \nin Every Summary.</string>
+
     <string name="card_description">Your Smart PDF Summarizer \nfor Instant Clarity</string>
+
     <string name="card_button">Summarize with AI</string>
     <string name="features">Premium Features</string>
     <string name="interview_text">Your Personal Interview Mentor</string>
     <string name="interview_bot_heading">Interview Bot</string>
+
     <string name="interview_bot_description">Enhance your interview readiness with AI-powered tips and mock questions</string>
     <string name="interview_badge">✨&#160;Let’s Practice!</string>
     <string name="recommendation_text">Personalized Recommendations</string>
@@ -81,9 +84,13 @@
     <string name="interview">Interview</string>
     <string name="bot">Bot</string>
     <string name="choose_any_one_option">Choose any one Option</string>
+
     <string name="select_your_role_and_begin_the_interview_journey">Select Your Role and Begin the Interview Journey.</string>
+
     <string name="hiring">👔 Hiring</string>
+
     <string name="candidates">🧑‍💼 Candidates</string>
+
     <string name="upload_resume">Upload Resume</string>
     <string name="choose_file">Choose File</string>
     <string name="extensions">Extensions</string>
@@ -108,7 +115,7 @@
     <string name="evaluation">Evaluation</string>
     <string name="no_text_found">No Text Found</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">We could not extract text from the uploaded PDF. Please upload a valid resume</string>
-    <string name="coming_soon">🌟Soon</string>
+    <string name="coming_soon">🎉Coming Soon</string>
     <string name="history">History</string>
     <string name="image_selection">Image Selection</string>
     <string name="save_all_images">Save All Images</string>
@@ -164,11 +171,12 @@
     <string name="are_you_sure_you_want_to_exit">Are You Sure You Want To Exit?</string>
     <string name="you_ll_miss_out_on_the_fun_if_you_leave_now">You’ll miss out on the fun if you\nleave now.</string>
     <string name="exit">Exit</string>
-    <string name="explore_pro_tool">Want to Explore PF Converter Pro Tools?</string>
+    <string name="explore_pro_tool">Want to Explore PDF Converter Pro Tools?</string>
+
     <string name="pdf_tools">PDF Tools</string>
     <string name="add_pdf">Add PDF</string>
     <string name="no_file_selected">No file selected</string>
-    <string name="change_language">Change Language</string>
+    <string name="change_language">Choose Language</string>
     <string name="data_not_available">Data Not Available</string>
     <string name="pdf_converter">PDF Converter</string>
     <string name="ai_ppt_maker">AI PPT Maker</string>
@@ -183,8 +191,11 @@
     <string name="interview_bot_result">Interview Bot Result</string>
     <string name="images_from_pdf">Images From PDF</string>
     <string name="upload_your_resume"><![CDATA[Upload your resume\nPDF & DOCX only. Max 10MB file size.]]></string>
+
+    <string name="upload_your_resume_1">Upload your resume</string>
     <string name="privacy_guaranteed">Privacy Guaranteed</string>
-    <string name="job_description">Job Description</string>
+    <string name="job_description"><font color='#000000'>Job Description</font> <font color='#FF0000'>*</font> <font color='#8A000000'>(Required)</font></string>
+
     <string name="clear">Clear</string>
     <string name="copy_paste_the_job_description">Copy paste the job description</string>
     <string name="your_score">Your score</string>
@@ -246,4 +257,30 @@ We appreciate your cooperation and apologize for any inconvenience this may caus
     <string name="generate_outline">Generate Outline</string>
     <string name="please_enter_your_slides_topic">Please enter your slides topic</string>
     <string name="number_of_slides">Number Of Slides</string>
+    <string name="home">Home</string>
+    <string name="community">Community</string>
+    <string name="suggest_prompt">Suggest Prompt</string>
+    <string name="select_a_template">Select a Template</string>
+    <string name="view_all">View All</string>
+    <string name="edit_data">Edit Data</string>
+    <string name="enter_heading_text">Enter Heading Text</string>
+    <string name="color">Color</string>
+    <string name="category">Category</string>
+    <string name="value">Value</string>
+    <string name="select_your_language">Select Your Language</string>
+    <string name="export_pdf">Export PDF</string>
+    <string name="analyzing">Analyzing...</string>
+    <string name="eg_hiring_job_description">💡 Specify the job description for accurate candidate matching (e.g experience, role)</string>
+    <string name="eg_candidate_job_description">💡 Add company job description for match your resume (e.g role, expertise, experience)</string>
+    <string name="choose_your_language">Change Your Language</string>
+    <string name="upload_pdf">Upload PDF</string>
+    <string name="card_heading1"><font color='#EB7A9A'>AI</font> Summarizer For \nEvery Document</string>
+    <string name="card_description1">Turn Long Document \ninto Clear Job Ready Insight</string>
+    <string name="interview_bot_heading1">Interview Buddy</string>
+    <string name="choose_any_one_option1">Select Your Option</string>
+    <string name="select_your_role_and_begin_the_interview_journey1">Select Your Field To Start Your Interview Journey.</string>
+    <string name="hiring1">👔 For Hiring</string>
+    <string name="candidates1">🧑‍💼 For Jobseeker</string>
+    <string name="explore_ocr">Want to Explore OCR with PDF?</string>
+    <string name="candidate_job_description">Job Description <font color='#8A000000'>(Optional)</font></string>
 </resources>

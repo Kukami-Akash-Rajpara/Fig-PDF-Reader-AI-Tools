@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.core.graphics.Insets;
@@ -137,6 +138,28 @@ public class FullScreenImageActivity extends BaseActivity {
             updateBottomSheetImages();
             updateImportButtonText();
             finish();
+        });
+
+        importButton.setOnClickListener(v -> {
+            // Collect selected image URIs
+            ArrayList<Uri> allImages = new ArrayList<>(imageGalleryAdapter.getImageUris());
+            ArrayList<String> newImages = new ArrayList<>();
+
+            for (int pos : selectedPositions) {
+                if (pos >= 0 && pos < allImages.size()) {
+                    newImages.add(allImages.get(pos).toString());
+                }
+            }
+
+            if (!newImages.isEmpty()) {
+                // Start ImageEditActivity
+                Intent editIntent = new Intent(this, ImageEditActivity.class);
+                editIntent.putStringArrayListExtra("imageUris", newImages);
+                startActivity(editIntent);
+                finish();
+            } else {
+                Toast.makeText(this, "Please select at least one image", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 

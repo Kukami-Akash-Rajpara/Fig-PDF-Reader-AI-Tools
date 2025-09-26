@@ -60,7 +60,7 @@ public class MainActivity extends BaseActivity {
             return insets;
         });
 
-        if (isNetworkAvailable(this)) {
+      /*  if (isNetworkAvailable(this)) {
             try {
                 if (!AppHelper.isConsentCompleted()){
                     if (checkCountry()) {
@@ -77,7 +77,7 @@ public class MainActivity extends BaseActivity {
                                             Log.e("Consent", "Consent required but not granted.");
                                         }
                                     } else {
-                                        // ✅ If consent is NOT required → always load ads
+                                        //  If consent is NOT required → always load ads
                                         MyApp.getInstance().loadPreferredAds();
                                     }
                                 } else {
@@ -96,6 +96,53 @@ public class MainActivity extends BaseActivity {
             }
         } else {
             // progressBar.setVisibility(View.GONE);
+        }
+*/
+        if (isNetworkAvailable(this)) {
+            try {
+                // Check if consent already completed
+                if (AppHelper.isConsentCompleted()) {
+                    //  Already completed → directly load ads if allowed
+                    if (getGoogleMobileAdsConsentManager().canRequestAds()) {
+                        MyApp.getInstance().loadPreferredAds();
+                    } else {
+                        // Optionally load NPA ads
+                        MyApp.getInstance().loadPreferredAds();
+                    }
+                } else {
+                    // Consent not completed → check if user is in EU
+                    if (checkCountry()) {
+                        getGoogleMobileAdsConsentManager().gatherConsent(this, error -> {
+                            if (error == null) {
+                                AppHelper.setConsentCompleted(true); //  mark consent done
+
+                                // If consent required → check if ads can be requested
+                                if (getGoogleMobileAdsConsentManager().isConsentRequired() &&
+                                        getGoogleMobileAdsConsentManager().canRequestAds()) {
+                                    MyApp.getInstance().loadPreferredAds();
+                                } else {
+                                    // Consent not required or cannot request → fallback
+                                    MyApp.getInstance().loadPreferredAds();
+                                }
+                            } else {
+                                Log.e("Consent", "Consent gathering failed: " + error.getMessage());
+                                // Fallback → load non-personalized ads
+                                MyApp.getInstance().loadPreferredAds();
+                            }
+                        });
+                    } else {
+                        // User outside EU → load ads directly
+                        MyApp.getInstance().loadPreferredAds();
+                        AppHelper.setConsentCompleted(true); // mark completed to skip next time
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                // fallback → still load ads
+                MyApp.getInstance().loadPreferredAds();
+            }
+        } else {
+            // No internet → optionally load cached ads or do nothing
         }
 
         // AnalyticsManager.INSTANCE.logEvent("home_viewed", null);

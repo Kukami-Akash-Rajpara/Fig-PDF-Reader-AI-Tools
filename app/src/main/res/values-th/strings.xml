@@ -108,7 +108,7 @@
     <string name="evaluation">การประเมิน</string>
     <string name="no_text_found">ไม่พบข้อความ</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">เราไม่สามารถดึงข้อความจาก PDF ที่อัปโหลดได้ กรุณาอัปโหลดเรซูเม่ที่ถูกต้อง</string>
-    <string name="coming_soon">🌟เร็ว ๆ นี้</string>
+    <string name="coming_soon">🎉 เร็ว ๆ นี้</string>
     <string name="history">ประวัติ</string>
     <string name="image_selection">การเลือกภาพ</string>
     <string name="save_all_images">บันทึกภาพทั้งหมด</string>
@@ -240,5 +240,36 @@
     <string name="scan_result">ผลการสแกน</string>
     <string name="edit_text_hint">ข้อความที่สแกนจะปรากฏที่นี่...</string>
     <string name="download_pdf_text">ดาวน์โหลด PDF</string>
+
+    <string name="presentation_generation">การสร้างงานนำเสนอ</string>
+    <string name="generate_outline">สร้างโครงร่าง</string>
+    <string name="please_enter_your_slides_topic">กรุณากรอกหัวข้อของสไลด์ของคุณ</string>
+    <string name="number_of_slides">จำนวนสไลด์</string>
+    <string name="home">หน้าแรก</string>
+    <string name="community">ชุมชน</string>
+    <string name="suggest_prompt">แนะนำคำสั่ง</string>
+    <string name="select_a_template">เลือกเทมเพลต</string>
+    <string name="view_all">ดูทั้งหมด</string>
+    <string name="edit_data">แก้ไขข้อมูล</string>
+    <string name="enter_heading_text">ป้อนข้อความส่วนหัว</string>
+    <string name="color">สี</string>
+    <string name="category">หมวดหมู่</string>
+    <string name="value">ค่า</string>
+    <string name="select_your_language">เลือกภาษาของคุณ</string>
+    <string name="export_pdf">ส่งออก PDF</string>
+    <string name="analyzing">กำลังวิเคราะห์...</string>
+    <string name="eg_hiring_job_description">💡 ระบุรายละเอียดงานเพื่อการจับคู่ผู้สมัครที่แม่นยำ (เช่น ประสบการณ์, บทบาท)</string>
+    <string name="eg_candidate_job_description">💡 เพิ่มรายละเอียดงานของบริษัทเพื่อปรับเรซูเมของคุณ (เช่น บทบาท, ความเชี่ยวชาญ, ประสบการณ์)</string>
+    <string name="choose_your_language">เลือกภาษาของคุณ</string>
+    <string name="upload_pdf">อัปโหลด PDF</string>
+    <string name="card_heading1"><font color='#EB7A9A'>AI</font> ผู้สรุปสำหรับทุกเอกสาร</string>
+    <string name="card_description1">เปลี่ยนเอกสารยาวให้เป็นข้อมูลที่ชัดเจนและพร้อมสำหรับงาน</string>
+    <string name="interview_bot_heading1">เพื่อนสัมภาษณ์</string>
+    <string name="choose_any_one_option1">เลือกตัวเลือกของคุณ</string>
+    <string name="select_your_role_and_begin_the_interview_journey1">เลือกสาขาของคุณเพื่อเริ่มต้นการเดินทางสัมภาษณ์</string>
+    <string name="hiring1">👔 สำหรับการจ้างงาน</string>
+    <string name="candidates1">🧑‍💼 สำหรับผู้สมัครงาน</string>
+    <string name="explore_ocr">ต้องการสำรวจ OCR กับ PDF หรือไม่?</string>
+    <string name="candidate_job_description">รายละเอียดงาน <font color='#8A000000'>(ไม่บังคับ)</font></string>
 
 </resources>

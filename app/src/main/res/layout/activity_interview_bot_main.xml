@@ -84,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="@string/choose_any_one_option"
+                    android:text="@string/choose_any_one_option1"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_16sdp"
                     app:fontFamily="@font/roboto_semi_bold" />
@@ -94,7 +94,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="@string/select_your_role_and_begin_the_interview_journey"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/select_your_role_and_begin_the_interview_journey1"
                     android:textColor="@color/color_subtext"
                     android:textSize="@dimen/_10sdp"
                     app:fontFamily="@font/roboto_regular" />
@@ -103,7 +104,7 @@
 
             <RelativeLayout
                 android:id="@+id/rlHiring"
-                android:layout_width="@dimen/_180sdp"
+                android:layout_width="@dimen/_200sdp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_20sdp"
@@ -115,7 +116,7 @@
                     android:layout_width="@dimen/_65sdp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:background="@drawable/top_right_shape"
+                    android:background="@drawable/top_right_shape_red"
                     android:fontFamily="@font/roboto_semi_bold"
                     android:gravity="center"
                     android:paddingHorizontal="@dimen/_3sdp"
@@ -128,10 +129,10 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_gravity="center"
-                    android:layout_marginVertical="@dimen/_7sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
                     android:fontFamily="@font/roboto_medium"
                     android:gravity="center"
-                    android:text="@string/hiring"
+                    android:text="@string/hiring1"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_13sdp" />
 
@@ -139,7 +140,7 @@
 
             <LinearLayout
                 android:id="@+id/llCandidate"
-                android:layout_width="@dimen/_180sdp"
+                android:layout_width="@dimen/_200sdp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_10sdp"
@@ -151,10 +152,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginVertical="@dimen/_7sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
                     android:fontFamily="@font/roboto_medium"
                     android:gravity="center"
-                    android:text="@string/candidates"
+                    android:text="@string/candidates1"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_13sdp" />
 

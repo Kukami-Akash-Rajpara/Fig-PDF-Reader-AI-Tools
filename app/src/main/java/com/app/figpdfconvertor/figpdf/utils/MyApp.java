@@ -1,8 +1,5 @@
 package com.app.figpdfconvertor.figpdf.utils;
 
-import static com.app.figpdfconvertor.figpdf.ads.AdManagerSplash.initializeInterstitialAd;
-import static com.app.figpdfconvertor.figpdf.ads.ConstantKt.getGoogleMobileAdsConsentManager;
-
 import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
@@ -13,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.multidex.MultiDexApplication;
 
 import com.app.figpdfconvertor.figpdf.BuildConfig;
-import com.app.figpdfconvertor.figpdf.activity.BaseActivity;
 import com.app.figpdfconvertor.figpdf.ads.AdManagerInter;
 import com.app.figpdfconvertor.figpdf.ads.AdManagerNative;
 import com.app.figpdfconvertor.figpdf.ads.AdManagerRewarded;
@@ -24,8 +20,6 @@ import com.app.figpdfconvertor.figpdf.preferences.AppHelper;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.firebase.FirebaseApp;
-import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.microsoft.clarity.Clarity;
 import com.microsoft.clarity.ClarityConfig;
 
@@ -36,14 +30,11 @@ import java.util.Collections;
 import java.util.Locale;
 
 public class MyApp extends MultiDexApplication implements Application.ActivityLifecycleCallbacks {
-
     private static MyApp instance;
-
     private int activityReferences = 0;
     private boolean isActivityChangingConfigurations = false;
     private boolean userHasExplored = false;
     public static boolean isAdVisibleInter = false;
-
     public void setUserHasExplored(boolean explored) {
         this.userHasExplored = explored;
     }
@@ -51,40 +42,66 @@ public class MyApp extends MultiDexApplication implements Application.ActivityLi
     public boolean hasUserExplored() {
         return userHasExplored;
     }
+
     @Override
     public void onCreate() {
         super.onCreate();
         instance = this;
 
+//        AppHelper.setAppUpdateVersionCode(String.valueOf(BuildConfig.VERSION_CODE));
         try {
-            FirebaseApp.initializeApp(this);
-            AnalyticsManager.INSTANCE.init(this); // this will get FirebaseAnalytics inside
+            // ✅ Always initialize AppHelper and language
+            ConstantKt.setGoogleMobileAdsConsentManager(GoogleMobileAdsConsentManager.Companion.getInstance(this));
+            setDefaultLanguageIfFirstLaunch();
+
+            // Only initialize analytics / tracking in release mode
+            if (!BuildConfig.DEBUG) {
+                // Firebase Analytics
+                try {
+                    FirebaseApp.initializeApp(this);
+                    AnalyticsManager.INSTANCE.init(this); // this internally gets FirebaseAnalytics
+                    Log.d("MyApp", "Firebase Analytics initialized");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Log.e("MyApp", "Firebase init failed: " + e.getMessage());
+                }
+
+                // Microsoft Clarity
+                try {
+                    ClarityConfig config = new ClarityConfig("qyv47gjkaf");
+                    Clarity.initialize(getApplicationContext(), config);
+                    Log.d("MyApp", "Microsoft Clarity initialized");
+                } catch (Exception e) {
+                    Log.e("MyApp", "Clarity init failed: " + e.getMessage());
+                }
+
+                // AppMetrica
+                try {
+                    String apiKey = "9e786f9c-02b1-42ca-8bb3-01eb9105dd3d";
+                    AppMetricaConfig config = AppMetricaConfig.newConfigBuilder(apiKey)
+                            .withLogs()
+                            .build();
+                    AppMetrica.activate(getApplicationContext(), config);
+                    AppMetrica.enableActivityAutoTracking(this);
+                    Log.d("MyApp", "AppMetrica initialized");
+                } catch (Exception e) {
+                    Log.e("MyApp", "AppMetrica init failed: " + e.getMessage());
+                }
+            } else {
+                // ✅ Debug mode → skip analytics init
+                Log.d("MyApp", "Debug mode → skipping Firebase / Clarity / AppMetrica");
+            }
+
+            // Register lifecycle callbacks for global exit tracking
+            registerActivityLifecycleCallbacks(this);
+
+            // Ads (you can also wrap in debug check if needed)
+            // loadPreferredAds();
+
         } catch (Exception e) {
             e.printStackTrace();
+            Log.e("MyApp", "App init failed: " + e.getMessage());
         }
-        if (!BuildConfig.DEBUG) {
-            ClarityConfig config = new ClarityConfig("qyv47gjkaf");
-            Clarity.initialize(getApplicationContext(), config);
-        }
-        ConstantKt.setGoogleMobileAdsConsentManager(GoogleMobileAdsConsentManager.Companion.getInstance(this));
-        setDefaultLanguageIfFirstLaunch();
-        String apiKey = "9e786f9c-02b1-42ca-8bb3-01eb9105dd3d";
-        try {
-            AppMetricaConfig config = AppMetricaConfig.newConfigBuilder(apiKey)
-                    .withLogs()
-                    .build();
-            AppMetrica.activate(getApplicationContext(), config);
-            AppMetrica.enableActivityAutoTracking(this);
-            Log.d("TAG", "App Metrica initialized successfully");
-        } catch (Exception e) {
-            Log.e("TAG", "Failed to initialize App Metrica", e);
-        }
-
-        // Register lifecycle callbacks for hard exit tracking
-        registerActivityLifecycleCallbacks(this);
-
-    //    loadPreferredAds();
-
     }
 
     public static MyApp getInstance() {
@@ -116,11 +133,25 @@ public class MyApp extends MultiDexApplication implements Application.ActivityLi
     }
 
     // ---------------- Unused lifecycle methods ----------------
-    @Override public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle bundle) {}
-    @Override public void onActivityResumed(@NonNull Activity activity) {}
-    @Override public void onActivityPaused(@NonNull Activity activity) {}
-    @Override public void onActivitySaveInstanceState(@NonNull Activity activity, @NonNull Bundle bundle) {}
-    @Override public void onActivityDestroyed(@NonNull Activity activity) {}
+    @Override
+    public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle bundle) {
+    }
+
+    @Override
+    public void onActivityResumed(@NonNull Activity activity) {
+    }
+
+    @Override
+    public void onActivityPaused(@NonNull Activity activity) {
+    }
+
+    @Override
+    public void onActivitySaveInstanceState(@NonNull Activity activity, @NonNull Bundle bundle) {
+    }
+
+    @Override
+    public void onActivityDestroyed(@NonNull Activity activity) {
+    }
 
 
     public void initializeAllAds(Activity mActivity, OnInitializationCompleteListener mInitListener) {
@@ -148,46 +179,70 @@ public class MyApp extends MultiDexApplication implements Application.ActivityLi
             String defaultLangCode = "en"; // fallback
 
             switch (deviceCountry) {
-                case "DE":
-                    defaultLangCode = "de"; // German
+                case "BD": // Bangladesh
+                    defaultLangCode = "bn"; // Bengali
                     break;
-                case "FR":
-                    defaultLangCode = "fr"; // French
-                    break;
-                case "IN":
-                    defaultLangCode = "hi"; // Hindi
-                    break;
-                case "ES":
-                    defaultLangCode = "es"; // Spanish
-                    break;
-                case "BR":
-                    defaultLangCode = "pt"; // Portuguese
-                    break;
-                case "TH":
-                    defaultLangCode = "th"; // Thai
-                    break;
-                case "CN":
-                case "TW":
+                case "CN": // China
                     defaultLangCode = "zh"; // Chinese
                     break;
-                case "JP":
+                case "NL": // Netherlands
+                    defaultLangCode = "nl"; // Dutch
+                    break;
+                case "PH": // Philippines
+                    defaultLangCode = "fil"; // Filipino
+                    break;
+                case "FR": // France
+                    defaultLangCode = "fr"; // French
+                    break;
+                case "DE": // Germany
+                    defaultLangCode = "de"; // German
+                    break;
+                case "IN": // India
+                    defaultLangCode = "en"; // English
+                    break;
+                case "ID": // Indonesia
+                    defaultLangCode = "id"; // Indonesian
+                    break;
+                case "IT": // Italy
+                    defaultLangCode = "it"; // Italian
+                    break;
+                case "JP": // Japan
                     defaultLangCode = "ja"; // Japanese
                     break;
-                case "RU":
+                case "KR": // South Korea
+                    defaultLangCode = "ko"; // Korean
+                    break;
+                case "MY": // Malaysia
+                    defaultLangCode = "ms"; // Malay
+                    break;
+                case "PL": // Poland
+                    defaultLangCode = "pl"; // Polish
+                    break;
+                case "BR": // Brazil
+                    defaultLangCode = "pt"; // Portuguese
+                    break;
+                case "RU": // Russia
                     defaultLangCode = "ru"; // Russian
                     break;
-                case "TR":
+                case "ES": // Spain
+                    defaultLangCode = "es"; // Spanish
+                    break;
+                case "TH": // Thailand
+                    defaultLangCode = "th"; // Thai
+                    break;
+                case "TR": // Turkey
                     defaultLangCode = "tr"; // Turkish
                     break;
-                case "VN":
+                case "VN": // Vietnam
                     defaultLangCode = "vi"; // Vietnamese
                     break;
                 default:
                     defaultLangCode = "en"; // fallback English
+                    break;
             }
 
-            AppHelper.setLanguageCode(defaultLangCode); // save in preferences
-            LocaleHelper.setLocale(this, defaultLangCode); // apply locale
+            AppHelper.setLanguageCode(defaultLangCode);
+            LocaleHelper.setLocale(this, defaultLangCode);
         }
     }
 

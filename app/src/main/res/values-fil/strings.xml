@@ -108,7 +108,7 @@
     <string name="evaluation">Pagsusuri</string>
     <string name="no_text_found">Walang Tekstong Natagpuan</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Hindi kami makakuha ng teksto mula sa na-upload na PDF. Mangyaring mag-upload ng wastong resume</string>
-    <string name="coming_soon">🌟Malapit</string>
+    <string name="coming_soon">🎉 Malapit</string>
     <string name="history">Kasaysayan</string>
     <string name="image_selection">Pagpili ng Larawan</string>
     <string name="save_all_images">I-save ang Lahat ng Larawan</string>
@@ -239,4 +239,33 @@ Pinapahalagahan namin ang iyong kooperasyon at humihingi ng paumanhin para sa an
     <string name="download_pdf_text">I-download ang PDF</string>
     <string name="presentation_generation">Pagbuo ng Presentasyon</string>
     <string name="generate_outline">Bumuo ng Balangkas</string>
+
+    <string name="please_enter_your_slides_topic">Mangyaring ilagay ang paksa ng iyong mga slide</string>
+    <string name="number_of_slides">Bilang ng mga Slide</string>
+    <string name="home">Home</string>
+    <string name="community">Komunidad</string>
+    <string name="suggest_prompt">Magmungkahi ng Prompt</string>
+    <string name="select_a_template">Pumili ng Template</string>
+    <string name="view_all">Tingnan Lahat</string>
+    <string name="edit_data">I-edit ang Data</string>
+    <string name="enter_heading_text">Maglagay ng Teksto ng Pamagat</string>
+    <string name="color">Kulay</string>
+    <string name="category">Kategorya</string>
+    <string name="value">Halaga</string>
+    <string name="select_your_language">Piliin ang Iyong Wika</string>
+    <string name="export_pdf">I-export ang PDF</string>
+    <string name="analyzing">Sinusuri...</string>
+    <string name="eg_hiring_job_description">💡 Tukuyin ang paglalarawan ng trabaho para sa tumpak na pagtutugma ng kandidato (halimbawa, karanasan, tungkulin)</string>
+    <string name="eg_candidate_job_description">💡 Idagdag ang paglalarawan ng trabaho ng kumpanya para itugma sa iyong resume (halimbawa, tungkulin, kadalubhasaan, karanasan)</string>
+    <string name="choose_your_language">Piliin ang Iyong Wika</string>
+    <string name="upload_pdf">Mag-upload ng PDF</string>
+    <string name="card_heading1"><font color='#EB7A9A'>AI</font> Summarizer Para sa Bawat Dokumento</string>
+    <string name="card_description1">Gawing malinaw at handa para sa trabaho ang mahabang dokumento</string>
+    <string name="interview_bot_heading1">Kaibigan sa Panayam</string>
+    <string name="choose_any_one_option1">Pumili ng Opsyon</string>
+    <string name="select_your_role_and_begin_the_interview_journey1">Piliin ang iyong larangan upang simulan ang iyong paglalakbay sa panayam.</string>
+    <string name="hiring1">👔 Pagkuha</string>
+    <string name="candidates1">🧑‍💼 Naghanap</string>
+    <string name="explore_ocr">Gusto mo bang tuklasin ang OCR gamit ang PDF?</string>
+    <string name="candidate_job_description">Paglalarawan ng Trabaho <font color='#8A000000'>(Opsyonal)</font></string>
 </resources>

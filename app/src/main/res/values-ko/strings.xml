@@ -108,7 +108,7 @@
     <string name="evaluation">평가</string>
     <string name="no_text_found">텍스트를 찾을 수 없음</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">업로드된 PDF에서 텍스트를 추출할 수 없습니다. 유효한 이력서를 업로드하세요</string>
-    <string name="coming_soon">🌟곧</string>
+    <string name="coming_soon">🎉 곧</string>
     <string name="history">기록</string>
     <string name="image_selection">이미지 선택</string>
     <string name="save_all_images">모든 이미지 저장</string>
@@ -239,4 +239,33 @@
     <string name="download_pdf_text">PDF 다운로드</string>
     <string name="presentation_generation">프레젠테이션 생성</string>
     <string name="generate_outline">개요 생성</string>
+
+    <string name="please_enter_your_slides_topic">슬라이드 주제를 입력하세요</string>
+    <string name="number_of_slides">슬라이드 수</string>
+    <string name="home">홈</string>
+    <string name="community">커뮤니티</string>
+    <string name="suggest_prompt">프롬프트 제안</string>
+    <string name="select_a_template">템플릿 선택</string>
+    <string name="view_all">모두 보기</string>
+    <string name="edit_data">데이터 편집</string>
+    <string name="enter_heading_text">제목 텍스트 입력</string>
+    <string name="color">색상</string>
+    <string name="category">카테고리</string>
+    <string name="value">값</string>
+    <string name="select_your_language">언어 선택</string>
+    <string name="export_pdf">PDF 내보내기</string>
+    <string name="analyzing">분석 중...</string>
+    <string name="eg_hiring_job_description">💡 정확한 후보자 매칭을 위해 직무 설명을 지정하세요 (예: 경험, 역할)</string>
+    <string name="eg_candidate_job_description">💡 이력서와 맞추기 위해 회사 직무 설명을 추가하세요 (예: 역할, 전문성, 경험)</string>
+    <string name="choose_your_language">언어 선택</string>
+    <string name="upload_pdf">PDF 업로드</string>
+    <string name="card_heading1"><font color='#EB7A9A'>AI</font> 모든 문서용 요약기</string>
+    <string name="card_description1">긴 문서를 명확하고 직업에 적합한 통찰로 변환</string>
+    <string name="interview_bot_heading1">인터뷰 버디</string>
+    <string name="choose_any_one_option1">옵션 선택</string>
+    <string name="select_your_role_and_begin_the_interview_journey1">분야를 선택하여 인터뷰 여정을 시작하세요.</string>
+    <string name="hiring1">👔 채용용</string>
+    <string name="candidates1">🧑‍💼 구직자용</string>
+    <string name="explore_ocr">PDF로 OCR을 탐색하고 싶으신가요?</string>
+    <string name="candidate_job_description">직무 설명 <font color='#8A000000'>(선택 사항)</font></string>
 </resources>

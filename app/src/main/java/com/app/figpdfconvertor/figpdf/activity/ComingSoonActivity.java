@@ -1,6 +1,7 @@
 package com.app.figpdfconvertor.figpdf.activity;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -25,5 +26,7 @@ public class ComingSoonActivity extends BaseActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        binding.backKey.setOnClickListener(view -> finish());
     }
 }

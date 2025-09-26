@@ -60,7 +60,6 @@ public class ResumeAnalyzerActivity extends BaseActivity {
         binding.cvCandidates.setOnClickListener(new DoubleClickListener() {
             @Override
             public void performClick(View v) {
-
                 Intent intent = new Intent(ResumeAnalyzerActivity.this, RAHiringActivity.class);
                 intent.putExtra("isJobDes", false);
                 startActivity(intent);

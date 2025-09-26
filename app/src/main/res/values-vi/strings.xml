@@ -108,7 +108,7 @@
     <string name="evaluation">Đánh giá</string>
     <string name="no_text_found">Không tìm thấy văn bản</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Chúng tôi không thể trích xuất văn bản từ PDF đã tải lên. Vui lòng tải lên một hồ sơ hợp lệ</string>
-    <string name="coming_soon">🌟Sắp</string>
+    <string name="coming_soon">🎉 Sắp</string>
     <string name="history">Lịch sử</string>
     <string name="image_selection">Chọn hình ảnh</string>
     <string name="save_all_images">Lưu tất cả hình ảnh</string>
@@ -240,5 +240,36 @@ Chúng tôi cảm ơn sự hợp tác của bạn và xin lỗi vì bất kỳ s
     <string name="scan_result">Kết quả quét</string>
     <string name="edit_text_hint">Văn bản đã quét của bạn sẽ xuất hiện tại đây...</string>
     <string name="download_pdf_text">Tải xuống PDF</string>
+
+    <string name="presentation_generation">Tạo bài thuyết trình</string>
+    <string name="generate_outline">Tạo dàn ý</string>
+    <string name="please_enter_your_slides_topic">Vui lòng nhập chủ đề của các slide của bạn</string>
+    <string name="number_of_slides">Số lượng slide</string>
+    <string name="home">Trang chủ</string>
+    <string name="community">Cộng đồng</string>
+    <string name="suggest_prompt">Gợi ý lời nhắc</string>
+    <string name="select_a_template">Chọn mẫu</string>
+    <string name="view_all">Xem tất cả</string>
+    <string name="edit_data">Chỉnh sửa dữ liệu</string>
+    <string name="enter_heading_text">Nhập văn bản tiêu đề</string>
+    <string name="color">Màu sắc</string>
+    <string name="category">Danh mục</string>
+    <string name="value">Giá trị</string>
+    <string name="select_your_language">Chọn ngôn ngữ của bạn</string>
+    <string name="export_pdf">Xuất PDF</string>
+    <string name="analyzing">Đang phân tích...</string>
+    <string name="eg_hiring_job_description">💡 Chỉ định mô tả công việc để khớp ứng viên chính xác (ví dụ: kinh nghiệm, vai trò)</string>
+    <string name="eg_candidate_job_description">💡 Thêm mô tả công việc của công ty để khớp với hồ sơ của bạn (ví dụ: vai trò, chuyên môn, kinh nghiệm)</string>
+    <string name="choose_your_language">Chọn ngôn ngữ của bạn</string>
+    <string name="upload_pdf">Tải lên PDF</string>
+    <string name="card_heading1"><font color='#EB7A9A'>AI</font> Tóm tắt cho mọi tài liệu</string>
+    <string name="card_description1">Chuyển đổi tài liệu dài thành thông tin rõ ràng, sẵn sàng cho công việc</string>
+    <string name="interview_bot_heading1">Bạn đồng hành phỏng vấn</string>
+    <string name="choose_any_one_option1">Chọn tùy chọn của bạn</string>
+    <string name="select_your_role_and_begin_the_interview_journey1">Chọn lĩnh vực của bạn để bắt đầu hành trình phỏng vấn.</string>
+    <string name="hiring1">👔 Tuyển dụng</string>
+    <string name="candidates1">🧑‍💼 Ứng viên</string>
+    <string name="explore_ocr">Bạn muốn khám phá OCR với PDF không?</string>
+    <string name="candidate_job_description">Mô tả công việc <font color='#8A000000'>(Tùy chọn)</font></string>
 
 </resources>

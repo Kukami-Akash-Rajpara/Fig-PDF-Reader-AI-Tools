@@ -71,7 +71,7 @@ class DialogPDFComponent(
             val userEnteredName = binding.txtPDFname.text.toString().trim()
 
             // Update PDF options
-            pdfOption.outFileName = if (userEnteredName.isNotEmpty()) userEnteredName else pdfOption.outFileName
+            pdfOption.outFileName = userEnteredName.ifEmpty { pdfOption.outFileName }
 
             listener.convert()
             dismiss()
@@ -134,7 +134,7 @@ class DialogPDFComponent(
                     }
 
                     // Set orientation in PDF options
-                    pdfOption?.pdfOrientation = orientation
+                    pdfOption.pdfOrientation = orientation
                 }
             })
             pageSizeDialog.show(parentFragmentManager, "pageSizeDialog")
@@ -174,14 +174,8 @@ class DialogPDFComponent(
             binding.imgPwEye.visibility = View.GONE
             binding.txtPw.visibility = View.GONE
         }
-
-
     }
-
     interface CardDialogListener {
-        /* fun setPage()
-         fun setOrientation()
-         fun setDescending()*/
         fun setPassword()
         fun convert()
     }

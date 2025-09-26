@@ -10,220 +10,350 @@
     tools:context=".activity.PdfSummaryActivity">
 
     <LinearLayout
+        android:id="@+id/layLoading"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_14sdp"
-        android:gravity="center">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/backKey"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_marginStart="@dimen/_14sdp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/back_img" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="@font/roboto_bold"
-            android:gravity="center"
-            android:includeFontPadding="false"
-            android:text="@string/pdf_summarizer"
-            android:textColor="#DE000000"
-            android:textSize="@dimen/_14ssp" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_marginEnd="@dimen/_14sdp"
-            android:adjustViewBounds="true" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_12sdp"
-        android:gravity="center">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_20sdp"
-            android:layout_marginStart="@dimen/_14sdp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/icon_pdf_img" />
-
-        <TextView
-            android:id="@+id/txtPdfName"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_weight="1"
-            android:fontFamily="@font/roboto_regular"
-            android:includeFontPadding="false"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:scrollHorizontally="true"
-            android:singleLine="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:freezesText="true"
-            android:text="@string/tap_to_upload_your_file"
-            android:textColor="#DD000000"
-            android:textSize="@dimen/_13ssp"
-            android:ellipsize="marquee" />
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/layViewFile"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_5sdp"
-            android:orientation="vertical"
-            android:paddingHorizontal="@dimen/_10sdp"
-            android:paddingTop="@dimen/_10sdp"
-            android:paddingBottom="@dimen/_10sdp">
+            android:layout_marginTop="@dimen/_14sdp"
+            android:gravity="center">
 
-            <com.app.figpdfconvertor.figpdf.customwidget.GradientTextView
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/backKey"
                 android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/back_img" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/pdf_summarizer"
+                android:textColor="#DE000000"
+                android:textSize="@dimen/_14ssp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:adjustViewBounds="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icon_pdf_img" />
+
+            <TextView
+                android:id="@+id/txtPdfName"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:fontFamily="@font/roboto_regular"
+                android:freezesText="true"
                 android:includeFontPadding="false"
-                android:text="@string/view_doc"
-                android:textSize="@dimen/_10ssp"
-                app:endColor="#BF496A"
-                app:startColor="#F975CD" />
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/tap_to_upload_your_file"
+                android:textColor="#DD000000"
+                android:textSize="@dimen/_13ssp" />
 
-            <View
+            <LinearLayout
+                android:id="@+id/layViewFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp">
+
+                <com.app.figpdfconvertor.figpdf.customwidget.GradientTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/view_doc"
+                    android:textSize="@dimen/_10ssp"
+                    app:endColor="#BF496A"
+                    app:startColor="#F975CD" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F975CD" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#F975CD" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_white_10dp"
+                    android:orientation="vertical">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:shimmer_auto_start="true"
+                        app:shimmer_base_alpha="0.3"
+                        app:shimmer_duration="1000">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/analyzing"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                        <TextView
+                            android:id="@+id/txtSummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/analyzing"
+                            android:visibility="gone"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12ssp" />
+
+                    <!-- <TextView
+                         android:id="@+id/txtSummary"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:ellipsize="end"
+                         android:fontFamily="@font/roboto_regular"
+                         android:overScrollMode="ifContentScrolls"
+                         android:padding="@dimen/_10sdp"
+                         android:textColor="@android:color/black"
+                         android:textSize="@dimen/_12ssp" />-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgDownload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_26sdp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/icon_download_summarizer" />
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_marginHorizontal="@dimen/_7sdp"
+                            android:background="@drawable/bg_white_10dp"
+                            android:backgroundTint="#32000000" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgCopy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_26sdp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/icon_copy_summarizer" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvQuestionAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_14sdp"
+                    android:paddingHorizontal="@dimen/_9sdp" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSuggestedQA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_14sdp"
+            android:paddingHorizontal="@dimen/_9sdp" />
+
+        <LinearLayout
+            android:id="@+id/bottomInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginBottom="@dimen/_14sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etQuestion"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_et_enter_chat"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="@string/ask_any_thing_here"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:textColor="#72000000"
+                android:textColorHint="#72000000"
+                android:textSize="@dimen/_14ssp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnSend"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icon_send_question" />
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/nestedScrollView"
+    <LinearLayout
+        android:id="@+id/cvTryAgain"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@android:color/white"
+
+        app:cardCornerRadius="20dp"
+        android:layout_gravity="center"
+        app:cardElevation="12dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:adjustViewBounds="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/animation_not_found_2"
+            app:lottie_repeatMode="restart" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/animation_not_found_1"
+                app:lottie_repeatMode="restart" />
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_semi_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="@string/no_word_found"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/we_could_not_find"
+                android:textColor="#80000000"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/txtTryAgain"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_gravity="center"
                 android:layout_marginHorizontal="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/bg_white_10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/txtSummary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:fontFamily="@font/roboto_regular"
-                    android:overScrollMode="ifContentScrolls"
-                    android:padding="@dimen/_10sdp"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/_12ssp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:gravity="center">
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1" />
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/imgDownload"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/_26sdp"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/icon_download_summarizer" />
-
-                    <View
-                        android:layout_width="2dp"
-                        android:layout_height="@dimen/_18sdp"
-                        android:layout_marginHorizontal="@dimen/_7sdp"
-                        android:background="@drawable/bg_white_10dp"
-                        android:backgroundTint="#32000000" />
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/imgCopy"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/_26sdp"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/icon_copy_summarizer" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvQuestionAns"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_14sdp"
-                android:paddingHorizontal="@dimen/_9sdp" />
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/bg_btn_theme"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="@string/try_again"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
 
         </LinearLayout>
 
-    </androidx.core.widget.NestedScrollView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvSuggestedQA"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_14sdp"
-        android:paddingHorizontal="@dimen/_9sdp" />
-
-    <LinearLayout
-        android:id="@+id/bottomInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_14sdp"
-        android:layout_marginBottom="@dimen/_14sdp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/etQuestion"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/_36sdp"
-            android:layout_marginEnd="@dimen/_14sdp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_et_enter_chat"
-            android:fontFamily="@font/roboto_regular"
-            android:hint="@string/ask_any_thing_here"
-            android:inputType="text"
-            android:paddingHorizontal="@dimen/_14sdp"
-            android:textColor="#72000000"
-            android:textColorHint="#72000000"
-            android:textSize="@dimen/_14ssp" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/btnSend"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:adjustViewBounds="true"
-            android:src="@drawable/icon_send_question" />
-
+    </androidx.cardview.widget.CardView>
     </LinearLayout>
-
 </LinearLayout>

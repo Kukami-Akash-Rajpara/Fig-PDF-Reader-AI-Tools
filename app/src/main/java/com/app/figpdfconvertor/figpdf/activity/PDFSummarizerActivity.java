@@ -50,11 +50,13 @@ public class PDFSummarizerActivity extends BaseActivity {
                         selectedPdfUri = result.getData().getData();
                         if (selectedPdfUri != null) {
                             showPdfDetails(selectedPdfUri);
+                            updateSummarizeButtonState();
                         }
                     }
                 });
 
-        binding.layUpload.setOnClickListener(new DoubleClickListener() {
+
+        binding.btnUpload.setOnClickListener(new DoubleClickListener() {
             @Override
             public void performClick(View v) {
                 openPdfPicker();
@@ -87,12 +89,12 @@ public class PDFSummarizerActivity extends BaseActivity {
                 if (selectedPdfUri != null) {
                     if (AppHelper.getShowInterSummarize()) {
                         AdManagerInter.renderInterAdFixed(PDFSummarizerActivity.this, () -> {
-                            Intent intent = new Intent(PDFSummarizerActivity.this, LoadingActivity.class);
+                            Intent intent = new Intent(PDFSummarizerActivity.this, PdfSummaryActivity.class);
                             intent.putExtra("pdf_uri", selectedPdfUri.toString());
                             startActivity(intent);
                         });
                     } else {
-                        Intent intent = new Intent(PDFSummarizerActivity.this, LoadingActivity.class);
+                        Intent intent = new Intent(PDFSummarizerActivity.this, PdfSummaryActivity.class);
                         intent.putExtra("pdf_uri", selectedPdfUri.toString());
                         startActivity(intent);
                     }
@@ -102,6 +104,27 @@ public class PDFSummarizerActivity extends BaseActivity {
             }
         });
     }
+
+    private void updateSummarizeButtonState() {
+        if (selectedPdfUri != null) {
+            // Enable button
+            binding.txtSummarizer.setAlpha(1f);
+            binding.txtSummarizer.setEnabled(true);
+
+            // Show shimmer continuously
+            binding.shimmer.setVisibility(View.VISIBLE);
+            binding.shimmer.playAnimation();
+        } else {
+            // Disable button
+            binding.txtSummarizer.setAlpha(0.5f);
+            binding.txtSummarizer.setEnabled(false);
+
+            // Hide shimmer
+            binding.shimmer.cancelAnimation();
+            binding.shimmer.setVisibility(View.GONE);
+        }
+    }
+
 
     private void openPdfPicker() {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);

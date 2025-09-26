@@ -113,11 +113,60 @@
                     android:gravity="center"
                     android:includeFontPadding="false"
                     android:lineSpacingExtra="@dimen/_2sdp"
-                    android:text="@string/upload_your_resume"
+                    android:text="@string/upload_your_resume_1"
                     android:textColor="#65000000"
-                    android:textSize="@dimen/_11ssp" />
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:text="@string/upload_your_resume"
+                    android:textColor="#65000000"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/btnUpload"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_btn_theme"
+                        android:fontFamily="@font/roboto_semi_bold"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:includeFontPadding="false"
+                        android:text="@string/upload_resume"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_32sdp"
+                        app:lottie_autoPlay="true"
+                        android:scaleType="fitXY"
+                        app:lottie_loop="true"
+
+                        android:visibility="visible"
+                        android:adjustViewBounds="true"
+                        app:lottie_rawRes="@raw/shimmer" />
+
+
+                </RelativeLayout>
+               <!-- <TextView
+                    android:id="@+id/btnUpload"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_32sdp"
                     android:layout_gravity="center"
@@ -130,7 +179,7 @@
                     android:text="@string/upload_resume"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_11ssp" />
-
+-->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -224,6 +273,7 @@
             android:layout_marginBottom="@dimen/_3sdp">
 
             <TextView
+                android:id="@+id/txtJobDesc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -231,8 +281,8 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/roboto_bold"
                 android:includeFontPadding="false"
-                android:text="@string/job_description"
                 android:textColor="@color/black"
+                android:text="@string/job_description"
                 android:textSize="@dimen/_13ssp" />
 
             <LinearLayout
@@ -251,13 +301,13 @@
                     android:fontFamily="@font/roboto_regular"
                     android:includeFontPadding="false"
                     android:text="@string/clear"
-                    android:textColor="#7F000000"
+                    android:textColor="#E5252A"
                     android:textSize="@dimen/_11ssp" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#7F000000" />
+                    android:background="#E5252A" />
 
             </LinearLayout>
 
@@ -276,7 +326,7 @@
                 android:background="@drawable/bg_upload_pdf_layout"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="start"
-                android:hint="@string/copy_paste_the_job_description"
+                android:hint="e.g. HR Manager – Recruitment, Payroll, Team handling"
                 android:padding="@dimen/_10sdp"
                 android:textColor="#DD000000"
                 android:textColorHint="#66000000"
@@ -286,20 +336,39 @@
 
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:layout_height="wrap_content">
+
     <TextView
         android:id="@+id/txtSubmit"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_36sdp"
         android:layout_gravity="center"
-        android:layout_marginHorizontal="@dimen/_30sdp"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:layout_marginBottom="@dimen/_30sdp"
         android:background="@drawable/bg_btn_theme"
         android:fontFamily="@font/roboto_semi_bold"
         android:gravity="center"
         android:includeFontPadding="false"
+        android:layout_marginHorizontal="@dimen/_10sdp"
         android:text="@string/submit"
+        android:alpha="0.5"
         android:textColor="@color/white"
         android:textSize="@dimen/_14ssp" />
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_36sdp"
+            app:lottie_autoPlay="true"
+            android:scaleType="fitXY"
+            app:lottie_loop="true"
+            android:visibility="gone"
+            android:adjustViewBounds="true"
+            app:lottie_rawRes="@raw/shimmer" />
+
+
+    </RelativeLayout>
 </LinearLayout>

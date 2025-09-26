@@ -108,7 +108,7 @@
     <string name="evaluation">評価</string>
     <string name="no_text_found">テキストが見つかりません</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">アップロードされたPDFからテキストを抽出できませんでした。有効な履歴書をアップロードしてください</string>
-    <string name="coming_soon">🌟近日</string>
+    <string name="coming_soon">🎉 近日</string>
     <string name="history">履歴</string>
     <string name="image_selection">画像選択</string>
     <string name="save_all_images">すべての画像を保存</string>
@@ -240,5 +240,36 @@
     <string name="scan_result">スキャン結果</string>
     <string name="edit_text_hint">スキャンしたテキストはここに表示されます…</string>
     <string name="download_pdf_text">PDFをダウンロード</string>
+
+    <string name="presentation_generation">プレゼンテーション作成</string>
+    <string name="generate_outline">アウトラインを作成</string>
+    <string name="please_enter_your_slides_topic">スライドのトピックを入力してください</string>
+    <string name="number_of_slides">スライドの数</string>
+    <string name="home">ホーム</string>
+    <string name="community">コミュニティ</string>
+    <string name="suggest_prompt">プロンプトを提案</string>
+    <string name="select_a_template">テンプレートを選択</string>
+    <string name="view_all">すべて表示</string>
+    <string name="edit_data">データを編集</string>
+    <string name="enter_heading_text">見出しテキストを入力</string>
+    <string name="color">色</string>
+    <string name="category">カテゴリ</string>
+    <string name="value">値</string>
+    <string name="select_your_language">言語を選択</string>
+    <string name="export_pdf">PDFをエクスポート</string>
+    <string name="analyzing">分析中...</string>
+    <string name="eg_hiring_job_description">💡 正確な候補者マッチングのために職務内容を指定してください（例：経験、役割）</string>
+    <string name="eg_candidate_job_description">💡 履歴書に合わせるために企業の職務内容を追加してください（例：役割、専門知識、経験）</string>
+    <string name="choose_your_language">言語を選択</string>
+    <string name="upload_pdf">PDFをアップロード</string>
+    <string name="card_heading1"><font color='#EB7A9A'>AI</font> すべてのドキュメントのための要約ツール</string>
+    <string name="card_description1">長いドキュメントを明確で仕事に即した洞察に変換</string>
+    <string name="interview_bot_heading1">面接バディ</string>
+    <string name="choose_any_one_option1">オプションを選択</string>
+    <string name="select_your_role_and_begin_the_interview_journey1">分野を選択して面接の旅を始めましょう。</string>
+    <string name="hiring1">👔 採用向け</string>
+    <string name="candidates1">🧑‍💼 求職者向け</string>
+    <string name="explore_ocr">PDFでOCRを試してみたいですか？</string>
+    <string name="candidate_job_description">職務内容 <font color='#8A000000'>(任意)</font></string>
 
 </resources>

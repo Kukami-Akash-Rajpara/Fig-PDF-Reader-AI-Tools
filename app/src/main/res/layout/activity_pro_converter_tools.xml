@@ -511,7 +511,7 @@
                                     android:layout_width="@dimen/_70sdp"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/imagetopdf" />
+                                    android:src="@drawable/ic_pdf_to_image" />
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:layout_width="@dimen/_20sdp"
@@ -574,7 +574,7 @@
                                     android:layout_width="@dimen/_70sdp"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/wordtopdf" />
+                                    android:src="@drawable/ic_pdf_to_doc" />
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:layout_width="@dimen/_20sdp"
@@ -637,7 +637,7 @@
                                     android:layout_width="@dimen/_70sdp"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/exceltopdf" />
+                                    android:src="@drawable/ic_pdf_to_xls" />
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:layout_width="@dimen/_20sdp"
@@ -700,7 +700,7 @@
                                     android:layout_width="@dimen/_70sdp"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/ppttopdf" />
+                                    android:src="@drawable/ic_pdf_to_ppt" />
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:layout_width="@dimen/_20sdp"
@@ -763,7 +763,7 @@
                                     android:layout_width="@dimen/_70sdp"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/texttopdf" />
+                                    android:src="@drawable/ic_pdf_to_text" />
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:layout_width="@dimen/_20sdp"
@@ -856,7 +856,7 @@
                                     android:layout_width="@dimen/_70sdp"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/imagetopdf" />
+                                    android:src="@drawable/ic_merge_pdf" />
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:layout_width="@dimen/_20sdp"
@@ -919,7 +919,7 @@
                                     android:layout_width="@dimen/_70sdp"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/wordtopdf" />
+                                    android:src="@drawable/ic_split_pdf" />
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:layout_width="@dimen/_20sdp"
@@ -982,7 +982,7 @@
                                     android:layout_width="@dimen/_70sdp"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/exceltopdf" />
+                                    android:src="@drawable/ic_compress_pdf" />
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:layout_width="@dimen/_20sdp"

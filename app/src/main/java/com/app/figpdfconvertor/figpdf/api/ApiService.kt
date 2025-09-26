@@ -7,6 +7,8 @@ import com.app.figpdfconvertor.figpdf.model.ResumeAnalyzer.ResumeAnalyzerHiring
 import com.app.figpdfconvertor.figpdf.model.SkillTestResponse
 import com.app.figpdfconvertor.figpdf.model.SubmitAnswerRequest
 import com.app.figpdfconvertor.figpdf.model.SubmitAnswerResponse
+import com.app.figpdfconvertor.figpdf.model.SuggestedPromptsResponse
+import com.app.figpdfconvertor.figpdf.model.TemplateResponse
 import com.app.figpdfconvertor.figpdf.model.ocr.GetResponse
 import com.app.figpdfconvertor.figpdf.model.ocr.OcrResponse
 import okhttp3.MultipartBody
@@ -79,7 +81,6 @@ interface ApiService {
 
 
     /* Resume Analyzer */
-
     @Multipart
     @POST("resume/get_hiring/")
     fun getHiring(
@@ -95,9 +96,14 @@ interface ApiService {
         @Part resume: MultipartBody.Part?
     ): Call<ResumeAnalyzerHiring?>?
 
+    @GET("resume/api/v1/report/download-resume-report/")
+    fun downloadResumeReportJava(
+        @Query("session_id") sessionId: String,
+        @Query("app_version") appVersion: Int
+    ): Call<ResponseBody>
+
 
     //OCR
-
     @Multipart
     @POST("ocr/upload-image/")
     fun uploadOcrImage(
@@ -107,5 +113,15 @@ interface ApiService {
 
     @GET("ocr/job/{job_id}")
     fun getJobStatus(@Path("job_id") jobId: String?): Call<GetResponse?>?
+
+    //PPT
+    @GET("ppt/api/suggested-prompts")
+    suspend fun getSuggestedPrompts(): Response<SuggestedPromptsResponse>
+
+    @GET("ppt/api/templates/")
+    suspend fun getTemplates(
+        @Query("app_version") appVersion: Int
+    ): Response<TemplateResponse>
+
 }
 

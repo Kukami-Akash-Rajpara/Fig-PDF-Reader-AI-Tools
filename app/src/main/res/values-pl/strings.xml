@@ -108,7 +108,7 @@
     <string name="evaluation">Ocena</string>
     <string name="no_text_found">Nie znaleziono tekstu</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Nie udało się wyodrębnić tekstu z przesłanego PDF. Prześlij prawidłowe CV</string>
-    <string name="coming_soon">🌟Wkrótce</string>
+    <string name="coming_soon">🎉 Wkrótce</string>
     <string name="history">Historia</string>
     <string name="image_selection">Wybór obrazu</string>
     <string name="save_all_images">Zapisz wszystkie obrazy</string>
@@ -239,4 +239,33 @@ Dziękujemy za współpracę i przepraszamy za wszelkie niedogodności. Dziękuj
     <string name="download_pdf_text">Pobierz PDF</string>
     <string name="presentation_generation">Generowanie prezentacji</string>
     <string name="generate_outline">Wygeneruj konspekt</string>
+
+    <string name="please_enter_your_slides_topic">Proszę wprowadzić temat slajdów</string>
+    <string name="number_of_slides">Liczba slajdów</string>
+    <string name="home">Strona główna</string>
+    <string name="community">Społeczność</string>
+    <string name="suggest_prompt">Zasugeruj podpowiedź</string>
+    <string name="select_a_template">Wybierz szablon</string>
+    <string name="view_all">Wyświetl wszystkie</string>
+    <string name="edit_data">Edytuj dane</string>
+    <string name="enter_heading_text">Wprowadź tekst nagłówka</string>
+    <string name="color">Kolor</string>
+    <string name="category">Kategoria</string>
+    <string name="value">Wartość</string>
+    <string name="select_your_language">Wybierz swój język</string>
+    <string name="export_pdf">Eksportuj PDF</string>
+    <string name="analyzing">Analizowanie...</string>
+    <string name="eg_hiring_job_description">💡 Określ opis stanowiska dla dokładnego dopasowania kandydatów (np. doświadczenie, rola)</string>
+    <string name="eg_candidate_job_description">💡 Dodaj opis stanowiska firmy, aby dopasować swoje CV (np. rola, doświadczenie, umiejętności)</string>
+    <string name="choose_your_language">Wybierz swój język</string>
+    <string name="upload_pdf">Prześlij PDF</string>
+    <string name="card_heading1"><font color='#EB7A9A'>AI</font> Podsumowanie dla każdego dokumentu</string>
+    <string name="card_description1">Przekształć długie dokumenty w przejrzyste informacje gotowe do pracy</string>
+    <string name="interview_bot_heading1">Przyjaciel na rozmowie kwalifikacyjnej</string>
+    <string name="choose_any_one_option1">Wybierz opcję</string>
+    <string name="select_your_role_and_begin_the_interview_journey1">Wybierz swoją dziedzinę, aby rozpocząć podróż z rozmowami kwalifikacyjnymi.</string>
+    <string name="hiring1">👔 Rekrutacja</string>
+    <string name="candidates1">🧑‍💼 Poszukujący</string>
+    <string name="explore_ocr">Chcesz poznać OCR z PDF?</string>
+    <string name="candidate_job_description">Opis stanowiska <font color='#8A000000'>(Opcjonalne)</font></string>
 </resources>

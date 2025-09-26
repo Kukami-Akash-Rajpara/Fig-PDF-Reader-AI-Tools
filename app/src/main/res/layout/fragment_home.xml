@@ -85,12 +85,12 @@
                         android:id="@+id/card_heading"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:layout_marginEnd="@dimen/_80sdp"
                         android:fontFamily="@font/roboto_bold"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:text="@string/card_heading"
-                        android:textSize="@dimen/_14ssp"
+                        android:text="@string/card_heading1"
                         android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -99,7 +99,7 @@
                         android:layout_marginTop="@dimen/_8sdp"
                         android:layout_marginEnd="@dimen/_80sdp"
                         android:fontFamily="@font/roboto_medium"
-                        android:text="@string/card_description"
+                        android:text="@string/card_description1"
                         android:textColor="#77222222"
                         android:textSize="@dimen/_12ssp" />
 
@@ -139,14 +139,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_10sdp"
-                app:cardBackgroundColor="@color/card_background_light_pink"
                 app:cardCornerRadius="@dimen/_12sdp"
-                app:cardElevation="@dimen/_3sdp">
+                app:cardElevation="@dimen/_1sdp">
 
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent">
+                    android:background="@drawable/bg_blue_ocr">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -208,10 +207,10 @@
                         android:layout_gravity="top|end"
                         android:background="@drawable/top_right_popular"
                         android:fontFamily="@font/roboto_semi_bold"
-                        android:paddingEnd="@dimen/_10sdp"
                         android:gravity="center"
-                        android:paddingStart="@dimen/_10sdp"
                         android:paddingVertical="@dimen/_4sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
                         android:text="@string/ocr_badge"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_10ssp" />
@@ -226,12 +225,13 @@
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginBottom="0dp"
-                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_extra_bold"
                 android:text="@string/features"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_14ssp" />
 
             <HorizontalScrollView
+                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_5sdp"
@@ -243,42 +243,59 @@
                     android:clipChildren="false"
                     android:orientation="horizontal">
 
-                    <FrameLayout
+                    <RelativeLayout
                         android:id="@+id/pdf_converter_pro_button"
-                        android:layout_width="@dimen/_118sdp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_7sdp"
                         android:layout_marginEnd="@dimen/_10sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
-                        android:clipChildren="false">
+                        android:clipChildren="false"
+                        android:clipToPadding="false">
 
+                        <!-- Image on top, half outside card -->
+                        <ImageView
+                            android:id="@+id/pdf_converter_image"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:adjustViewBounds="true"
+                            android:elevation="@dimen/_7sdp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/banner_home_pdf_converter" />
+
+                        <!-- CardView below image -->
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
+                            android:id="@+id/pdf_card"
+                            android:layout_width="@dimen/_118sdp"
                             android:layout_height="@dimen/_130sdp"
+                            android:layout_below="@id/pdf_converter_image"
                             android:layout_gravity="bottom"
-                            android:layout_marginTop="@dimen/_40sdp"
-                            app:cardBackgroundColor="@color/card_background_light_pink"
+                            android:layout_marginTop="-60dp"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
                             app:cardCornerRadius="@dimen/_12sdp"
-                            app:cardElevation="2dp">
+                            app:cardElevation="@dimen/_1sdp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:gravity="bottom"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_pink_pdf"
+                                android:gravity="center_horizontal"
                                 android:orientation="vertical"
-                                android:paddingHorizontal="@dimen/_8sdp"
-                                android:paddingBottom="@dimen/_8sdp">
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingTop="60dp">
 
                                 <TextView
                                     android:id="@+id/pdf_converter_heading"
                                     android:layout_width="match_parent"
-                                    android:layout_height="44dp"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="2"
                                     android:fontFamily="@font/roboto_semi_bold"
-                                    android:paddingHorizontal="@dimen/_10sdp"
-                                    android:paddingBottom="@dimen/_6sdp"
+                                    android:paddingBottom="@dimen/_5sdp"
                                     android:text="@string/pdf_converter_heading"
                                     android:textAlignment="center"
-
                                     android:textColor="@color/heading_color"
                                     android:textSize="@dimen/_12ssp" />
 
@@ -286,61 +303,71 @@
                                     android:id="@+id/pdf_converter_description"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:ellipsize="end"
                                     android:fontFamily="@font/roboto_medium"
-                                    android:paddingBottom="@dimen/_7sdp"
+                                    android:maxLines="2"
+                                    android:paddingBottom="@dimen/_5sdp"
                                     android:text="@string/pdf_converter_description"
                                     android:textAlignment="center"
-                                    android:maxLines="2"
-                                    android:ellipsize="end"
                                     android:textColor="@color/desc_color"
                                     android:textSize="@dimen/_9ssp" />
-
                             </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:elevation="4dp"
-                            android:padding="@dimen/_8sdp"
-                            android:src="@drawable/banner_home_pdf_converter" />
+                    </RelativeLayout>
 
-                    </FrameLayout>
-
-                    <FrameLayout
+                    <RelativeLayout
                         android:id="@+id/layAiResumeAnalyzer"
-                        android:layout_width="@dimen/_118sdp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_10sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
-                        android:clipChildren="false">
+                        android:clipChildren="false"
+                        android:clipToPadding="false">
 
+                        <!-- Image on top, half outside card -->
+                        <ImageView
+                            android:id="@+id/resume"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:adjustViewBounds="true"
+                            android:elevation="@dimen/_7sdp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/banner_home_resume_analyzer" />
+
+                        <!-- CardView below image -->
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
+                            android:id="@+id/card_resume"
+                            android:layout_width="@dimen/_118sdp"
                             android:layout_height="@dimen/_130sdp"
+                            android:layout_below="@id/resume"
                             android:layout_gravity="bottom"
-                            android:layout_marginTop="@dimen/_40sdp"
-                            app:cardBackgroundColor="@color/card_background_light_pink"
+                            android:layout_marginTop="-60dp"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
                             app:cardCornerRadius="@dimen/_12sdp"
-                            app:cardElevation="2dp">
+                            app:cardElevation="@dimen/_1sdp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:gravity="bottom"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_purple_analyzer"
+                                android:gravity="center_horizontal"
                                 android:orientation="vertical"
-                                android:paddingHorizontal="@dimen/_8sdp"
-                                android:paddingBottom="@dimen/_8sdp">
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingTop="60dp">
 
                                 <TextView
                                     android:id="@+id/resume_analuzer_heading"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:maxLines="2"
                                     android:fontFamily="@font/roboto_semi_bold"
-                                    android:paddingHorizontal="@dimen/_10sdp"
-                                    android:paddingBottom="@dimen/_4sdp"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:paddingBottom="@dimen/_5sdp"
                                     android:text="@string/resume_analyzer"
                                     android:textAlignment="center"
                                     android:textColor="@color/heading_color"
@@ -350,90 +377,111 @@
                                     android:id="@+id/resume_description"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:ellipsize="end"
                                     android:fontFamily="@font/roboto_medium"
                                     android:maxLines="2"
-                                    android:ellipsize="end"
-                                    android:paddingBottom="@dimen/_7sdp"
+                                    android:paddingBottom="@dimen/_5sdp"
                                     android:text="@string/resume_description"
                                     android:textAlignment="center"
                                     android:textColor="@color/desc_color"
                                     android:textSize="@dimen/_9ssp" />
-
                             </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:elevation="4dp"
-                            android:padding="@dimen/_8sdp"
-                            android:src="@drawable/banner_home_resume_analyzer" />
+                    </RelativeLayout>
 
-                    </FrameLayout>
-
-                    <FrameLayout
+                    <RelativeLayout
                         android:id="@+id/layAiPptMaker"
-                        android:layout_width="@dimen/_118sdp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
-                        android:clipChildren="false">
+                        android:clipChildren="false"
+                        android:clipToPadding="false">
 
+                        <!-- Image on top, half outside card -->
+                        <ImageView
+                            android:id="@+id/ppt"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:adjustViewBounds="true"
+                            android:elevation="@dimen/_7sdp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/banner_home_ppt_maker" />
+
+                        <!-- CardView below image -->
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
+                            android:id="@+id/card_ppt"
+                            android:layout_width="@dimen/_118sdp"
                             android:layout_height="@dimen/_130sdp"
+                            android:layout_below="@id/ppt"
                             android:layout_gravity="bottom"
-                            android:layout_marginTop="@dimen/_40sdp"
-                            app:cardBackgroundColor="@color/card_background_light_pink"
+                            android:layout_marginTop="-60dp"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
                             app:cardCornerRadius="@dimen/_12sdp"
-                            app:cardElevation="2dp">
+                            app:cardElevation="@dimen/_1sdp">
 
-                            <LinearLayout
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:gravity="bottom"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_orange_analyzer"
+                                android:gravity="center_horizontal"
                                 android:orientation="vertical"
-                                android:paddingHorizontal="@dimen/_8sdp"
-                                android:paddingBottom="@dimen/_8sdp">
+                                android:paddingTop="60dp">
 
                                 <TextView
                                     android:id="@+id/ppt_heading"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:maxLines="2"
+                                    android:layout_marginHorizontal="@dimen/_10sdp"
                                     android:fontFamily="@font/roboto_semi_bold"
-                                    android:paddingHorizontal="0dp"
-                                    android:paddingBottom="@dimen/_4sdp"
+                                    android:paddingBottom="@dimen/_5sdp"
                                     android:text="@string/ppt_heading"
                                     android:textAlignment="center"
                                     android:textColor="@color/heading_color"
-                                    android:textSize="@dimen/_11ssp" />
+                                    android:textSize="@dimen/_12ssp" />
 
                                 <TextView
+                                    android:layout_above="@id/txt"
+                                    android:layout_below="@id/ppt_heading"
                                     android:id="@+id/ppt_description"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:fontFamily="@font/roboto_medium"
-                                    android:paddingBottom="@dimen/_7sdp"
-                                    android:maxLines="2"
                                     android:ellipsize="end"
+                                    android:paddingBottom="@dimen/_3sdp"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:maxLines="2"
+                                    android:layout_marginHorizontal="@dimen/_10sdp"
                                     android:text="@string/ppt_description"
                                     android:textAlignment="center"
                                     android:textColor="@color/desc_color"
                                     android:textSize="@dimen/_9ssp" />
-                            </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/txt"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:background="@drawable/bg_coming_soon"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:paddingVertical="@dimen/_1sdp"
+                                    android:text="@string/coming_soon"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp" />
+                            </RelativeLayout>
+
                         </androidx.cardview.widget.CardView>
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:elevation="4dp"
-                            android:padding="@dimen/_8sdp"
-                            android:src="@drawable/banner_home_ppt_maker" />
-
-                    </FrameLayout>
+                    </RelativeLayout>
 
                 </LinearLayout>
 
@@ -446,8 +494,8 @@
                 android:layout_marginTop="@dimen/_12sdp"
                 android:layout_marginBottom="@dimen/_12sdp"
                 android:fontFamily="@font/roboto_extra_bold"
-                android:textColor="@color/black"
                 android:text="@string/interview_text"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_14ssp" />
 
             <androidx.cardview.widget.CardView
@@ -455,19 +503,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_10sdp"
-                app:cardBackgroundColor="@color/card_background_light_pink"
                 app:cardCornerRadius="@dimen/_12sdp"
-                app:cardElevation="@dimen/_3sdp">
+                app:cardElevation="@dimen/_1sdp">
 
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent">
+                    android:background="@drawable/bg_interviewbot">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
                         android:padding="@dimen/_8sdp">
@@ -493,15 +539,15 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="@dimen/_4sdp"
                                 android:fontFamily="@font/roboto_semi_bold"
-                                android:text="@string/interview_bot_heading"
+                                android:text="@string/interview_bot_heading1"
                                 android:textColor="@color/heading_color"
                                 android:textSize="@dimen/_12ssp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_medium"
                                 android:ellipsize="end"
+                                android:fontFamily="@font/roboto_medium"
                                 android:maxLines="2"
                                 android:text="@string/interview_bot_description"
                                 android:textColor="@color/black"
@@ -524,12 +570,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="top|end"
-                        android:background="@drawable/top_right_pink_gradient"
+                        android:background="@drawable/top_right_purple_gradient"
                         android:fontFamily="@font/roboto_semi_bold"
+                        android:gravity="center"
                         android:paddingHorizontal="@dimen/_10sdp"
                         android:paddingVertical="@dimen/_4sdp"
                         android:text="@string/interview_badge"
-                        android:gravity="center"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_10ssp" />
 
@@ -555,7 +601,7 @@
                 android:layout_marginBottom="@dimen/_80sdp"
                 app:cardBackgroundColor="@color/card_background_light_pink"
                 app:cardCornerRadius="@dimen/_12sdp"
-                app:cardElevation="@dimen/_3sdp">
+                app:cardElevation="@dimen/_1sdp">
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -575,12 +621,12 @@
                             android:layout_gravity="center_vertical"
                             android:adjustViewBounds="true"
                             android:scaleType="centerInside"
-                            android:src="@drawable/banner_home_pdf_converter" />
+                            android:src="@drawable/ic_ocr" />
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
                             android:layout_weight="0.8"
                             android:background="@android:color/transparent"
                             android:gravity="start"
@@ -590,7 +636,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto_semi_bold"
-                                android:text="@string/pdf_converter_pro_tools"
+                                android:text="@string/ocr_title"
                                 android:textColor="@color/heading_color"
                                 android:textSize="@dimen/_12ssp"
                                 android:textStyle="bold" />
@@ -610,8 +656,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
                                 android:fontFamily="@font/roboto_medium"
-                                android:text="@string/explore_pro_tool"
+                                android:text="@string/explore_ocr"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/_10ssp" />
 
@@ -620,12 +667,13 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_3sdp"
                                 android:background="@drawable/bg_gradient_stroke"
                                 android:drawablePadding="@dimen/_4sdp"
                                 android:fontFamily="@font/roboto_medium"
                                 android:paddingHorizontal="@dimen/_10sdp"
                                 android:paddingVertical="@dimen/_6sdp"
-                                android:text="@string/pdf_tools"
+                                android:text="@string/ocr_title"
                                 android:textSize="@dimen/_10ssp"
                                 app:drawableEndCompat="@drawable/pointerright"
                                 app:endColor="#BF496A"
@@ -642,10 +690,10 @@
                         android:layout_gravity="top|end"
                         android:background="@drawable/top_right_pink_gradient"
                         android:fontFamily="@font/roboto_semi_bold"
-                        android:paddingEnd="@dimen/_10sdp"
-                        android:paddingStart="@dimen/_10sdp"
                         android:gravity="center"
                         android:paddingVertical="@dimen/_4sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
                         android:text="@string/recommendation_badge"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_10ssp" />

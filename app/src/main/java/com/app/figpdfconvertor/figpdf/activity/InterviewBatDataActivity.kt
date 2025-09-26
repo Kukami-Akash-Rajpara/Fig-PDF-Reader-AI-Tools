@@ -7,9 +7,12 @@ import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.provider.OpenableColumns
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.RelativeLayout
@@ -40,12 +43,31 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import java.io.File
+import androidx.core.view.isVisible
+import androidx.core.view.size
+import androidx.core.view.get
 
 class InterviewBatDataActivity : BaseActivity() {
     private lateinit var binding: ActivityInterviewBatDataBinding
     private lateinit var filePickerLauncher: ActivityResultLauncher<Intent>
     private var pickedDocumentUri: Uri? = null
     private var dialogErrorBinding: DialogNotTextErrorBinding? = null
+
+    private fun updateSubmitButtonState() {
+        val isReady = pickedDocumentUri != null && binding.etPosition.text.toString().trim().isNotEmpty()
+
+        binding.okButton.alpha = if (isReady) 1f else 0.5f
+        binding.okButton.isEnabled = isReady
+
+        if (isReady){
+            binding.btnShimmer.visibility = View.VISIBLE
+        }else{
+            binding.btnShimmer.visibility = View.GONE
+        }
+
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         MyUtils.fullScreenLightStatusBar(this)
@@ -58,7 +80,7 @@ class InterviewBatDataActivity : BaseActivity() {
         }
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                if (binding.llLoading.visibility == View.VISIBLE) {
+                if (binding.llLoading.isVisible) {
                     // If loading is showing, block exit
                     showExitDialog(this@InterviewBatDataActivity)
                 } else {
@@ -75,12 +97,26 @@ class InterviewBatDataActivity : BaseActivity() {
                 uri?.let {
                     val fileName = getFileNameFromUri(it)
                     // ✅ update dialog binding, not activity binding
-                    binding?.txtFileName?.text = fileName
+                    binding.txtFileName?.text = fileName
                     pickedDocumentUri = it
+
+                    updateSubmitButtonState()
+
+                    val anim = AnimationUtils.loadAnimation(this, R.anim.blink)
+                    binding.rlPositionContainer.startAnimation(anim)
                 }
             }
         }
-        binding!!.llChooseFile.setOnClickListener {
+
+        binding.etPosition.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                updateSubmitButtonState()
+            }
+            override fun afterTextChanged(s: Editable?) {}
+        })
+
+        binding.llChooseFile.setOnClickListener {
             val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
                 addCategory(Intent.CATEGORY_OPENABLE)
                 type = "application/pdf" // or "application/pdf"
@@ -101,7 +137,7 @@ class InterviewBatDataActivity : BaseActivity() {
 
         binding.imgDifficultyDrop.setOnClickListener { v ->
             showCustomPopup(v, menuRes = R.menu.menu_difficulty) { selected ->
-                binding.txtQuestionDifficulty.setText(selected)
+                binding.txtQuestionDifficulty.text = selected
             }
         }
 
@@ -112,21 +148,25 @@ class InterviewBatDataActivity : BaseActivity() {
             }
         }
 
-        binding!!.okButton.setOnClickListener {
-            val position = binding!!.etPosition.text.toString().trim().lowercase()
-            val difficulty = binding!!.txtQuestionDifficulty.text.toString().lowercase()
-            val range = binding!!.txtQueRange.text.toString()
+        binding.okButton.setOnClickListener {
+            val position = binding.etPosition.text.toString().trim().lowercase()
+            val difficulty = binding.txtQuestionDifficulty.text.toString().lowercase()
+            val range = binding.txtQueRange.text.toString()
+            if (position.isEmpty()) {
+                // Highlight border with blink
+                val anim = AnimationUtils.loadAnimation(this, R.anim.blink)
+                binding.rlPositionContainer.startAnimation(anim)
 
-            // ✅ Extract last number from range like "1-50" → 50
+                Toast.makeText(this, "Please enter position", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            //  Extract last number from range like "1-50" → 50
             val numQuestions = range.split("-").lastOrNull()?.toIntOrNull() ?: 10
 
             if (pickedDocumentUri == null) {
                 Toast.makeText(this, "Please choose a resume file", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-
-            // Send the path of this new file to next activity
-
 
             // Now call API with extracted value
             callGenerateQuestionsApi(
@@ -161,8 +201,8 @@ class InterviewBatDataActivity : BaseActivity() {
 
         lifecycleScope.launch {
             try {
-                showLoading(true) // 👈 show loading view
-                showMain(false) // 👈 show loading view
+                showLoading(true) //  show loading view
+                showMain(false) //  show loading view
 
                 /*  val response = apiService.generateQuestions(
                       appVersion,
@@ -190,7 +230,7 @@ class InterviewBatDataActivity : BaseActivity() {
                         /*  Toast.makeText(this@InterviewBotMainActivity, it.message, Toast.LENGTH_LONG)
                               .show()*/
 
-                        if (it.questions?.interview_questions?.isNotEmpty() == true) {
+                        if (it.questions.interview_questions?.isNotEmpty() == true) {
                             val intent = Intent(
                                 this@InterviewBatDataActivity,
                                 InterviewBotQuestionActivity::class.java
@@ -210,7 +250,7 @@ class InterviewBatDataActivity : BaseActivity() {
                     val errorBody = response.errorBody()?.string()
                     Log.e("API_RESPONSE", "Error body: $errorBody")
 
-                    // ✅ Parse API error
+                    //  Parse API error
                     if (!errorBody.isNullOrEmpty() && errorBody.contains("Failed to extract text")) {
                         showErrorDialog("We could not extract text from the uploaded PDF. Please upload a valid resume.")
                     } else {
@@ -226,14 +266,14 @@ class InterviewBatDataActivity : BaseActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             } finally {
-                showLoading(false) // 👈 hide loading view
-                showMain(true) // 👈 hide loading view
+                showLoading(false) //  hide loading view
+                showMain(true) //  hide loading view
             }
         }
     }
     private var exitDialog: AlertDialog? = null
     fun showExitDialog(context: Context) {
-        if (exitDialog != null && exitDialog!!.isShowing()) return  // avoid multiple dialogs
+        if (exitDialog != null && exitDialog!!.isShowing) return  // avoid multiple dialogs
 
 
         val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_exit, null)
@@ -246,8 +286,8 @@ class InterviewBatDataActivity : BaseActivity() {
             .setCancelable(true)
             .create()
 
-        if (exitDialog!!.getWindow() != null) {
-            exitDialog!!.getWindow()!!.setBackgroundDrawableResource(android.R.color.transparent)
+        if (exitDialog!!.window != null) {
+            exitDialog!!.window!!.setBackgroundDrawableResource(android.R.color.transparent)
         }
 
         cancelBtn.setOnClickListener(View.OnClickListener { v: View? -> exitDialog!!.dismiss() })
@@ -290,7 +330,7 @@ class InterviewBatDataActivity : BaseActivity() {
     private fun showLoading(show: Boolean) {
         binding.llLoading.visibility = if (show) View.VISIBLE else View.GONE
         if (!show) {
-            // ✅ dismiss exit dialog if it's still open
+            //  dismiss exit dialog if it's still open
             exitDialog?.dismiss()
             exitDialog = null
         }
@@ -314,10 +354,10 @@ class InterviewBatDataActivity : BaseActivity() {
         if (menuRes != null) {
             val tempMenu = PopupMenu(this, anchor)
             tempMenu.menuInflater.inflate(menuRes, tempMenu.menu)
-            for (i in 0 until tempMenu.menu.size()) {
-                val item = tempMenu.menu.getItem(i)
+            for (i in 0 until tempMenu.menu.size) {
+                val item = tempMenu.menu[i]
                 addItemToContainer(container, item.title.toString())
-                if (i < tempMenu.menu.size() - 1) addDivider(container)
+                if (i < tempMenu.menu.size - 1) addDivider(container)
             }
         }
         items?.forEachIndexed { index, title ->
@@ -345,7 +385,7 @@ class InterviewBatDataActivity : BaseActivity() {
             }
         }
 
-        // ✅ Measure popup content width and height
+        //  Measure popup content width and height
         popupView.measure(
             View.MeasureSpec.UNSPECIFIED,
             View.MeasureSpec.UNSPECIFIED
@@ -353,7 +393,7 @@ class InterviewBatDataActivity : BaseActivity() {
         val popupWidth = popupView.measuredWidth
         val popupHeight = popupView.measuredHeight
 
-        // ✅ Get anchor location
+        //  Get anchor location
         val location = IntArray(2)
         anchor.getLocationOnScreen(location)
         val anchorX = location[0]
@@ -361,7 +401,7 @@ class InterviewBatDataActivity : BaseActivity() {
         val anchorWidth = anchor.width
         val anchorHeight = anchor.height
 
-        // ✅ Show popup aligned to bottom-end of anchor
+        // Show popup aligned to bottom-end of anchor
         popupWindow.showAtLocation(
             anchor,
             0,
@@ -370,7 +410,6 @@ class InterviewBatDataActivity : BaseActivity() {
         )
     }
 
-
     private fun addItemToContainer(container: LinearLayout, title: String) {
         val tv = TextView(this).apply {
             text = title
@@ -378,7 +417,7 @@ class InterviewBatDataActivity : BaseActivity() {
             setTextColor(resources.getColor(R.color.black, null))
             textSize = 15f
             layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT, // ✅ wrap content
+                LinearLayout.LayoutParams.WRAP_CONTENT, //  wrap content
                 LinearLayout.LayoutParams.WRAP_CONTENT
             )
         }

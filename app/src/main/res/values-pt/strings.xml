@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">Fig PDF Reader &amp; AI Tools</string>
 
-    <string name="landing_title">Leitor de PDF Fig e Ferramentas de IA</string>
-    <string name="card_heading">Experimente a <font color='#EB7A9A'>Brilhantismo da IA</font> \nem Cada Resumo.</string>
+    <string name="landing_title">Leitor de PDF Fig e Ferramentas de AI</string>
+    <string name="card_heading">Experimente a <font color='#EB7A9A'>Brilhantismo da AI</font> \nem Cada Resumo.</string>
     <string name="card_description">Seu Resumidor Inteligente de PDF \npara Clareza Instantânea</string>
-    <string name="card_button">Resumir com IA</string>
+    <string name="card_button">Resumir com AI</string>
     <string name="features">Funcionalidades Premium</string>
     <string name="interview_text">Seu Mentor Pessoal de Entrevistas</string>
     <string name="interview_bot_heading">Bot de Entrevista</string>
-    <string name="interview_bot_description">Melhore sua preparação para entrevistas com dicas e perguntas simuladas alimentadas por IA</string>
+    <string name="interview_bot_description">Melhore sua preparação para entrevistas com dicas e perguntas simuladas alimentadas por AI</string>
     <string name="interview_badge">✨&#160;Pratique!</string>
     <string name="recommendation_text">Recomendações Personalizadas</string>
     <string name="recommendation_badge">💡&#160;Experimente!</string>
@@ -108,14 +108,14 @@
     <string name="evaluation">Avaliação</string>
     <string name="no_text_found">Nenhum Texto Encontrado</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Não foi possível extrair texto do PDF carregado. Por favor, carregue um currículo válido</string>
-    <string name="coming_soon">🌟Breve</string>
+    <string name="coming_soon">🎉 Breve</string>
     <string name="history">Histórico</string>
     <string name="image_selection">Seleção de Imagens</string>
     <string name="save_all_images">Salvar Todas as Imagens</string>
     <string name="convert_successfully">Convertido com Sucesso</string>
     <string name="more_feature">Mais Funcionalidades</string>
-    <string name="summarize_with_ai">Resumir \ncom IA</string>
-    <string name="ai_resume_analyzer">Analisador de \nCurrículo com IA</string>
+    <string name="summarize_with_ai">Resumir \ncom AI</string>
+    <string name="ai_resume_analyzer">Analisador de \nCurrículo com AI</string>
     <string name="pdf_converter_pro_tools">Ferramentas Pro \nde Conversão de PDF</string>
     <string name="ocr_text_heading">OCR Facilitado</string>
     <string name="ocr_title">OCR com PDF</string>
@@ -123,9 +123,9 @@
     <string name="ocr_badge">🔥&#160;Popular</string>
     <string name="pdf_converter_heading">Ferramentas Pro de Conversão de PDF</string>
     <string name="pdf_converter_description">Conversor de PDF Inteligente para Conversões Rápidas e Fáceis</string>
-    <string name="resume_analyzer">Analisador de Currículo com IA</string>
+    <string name="resume_analyzer">Analisador de Currículo com AI</string>
     <string name="resume_description">Otimize seu CV com insights inteligentes</string>
-    <string name="ppt_heading">Criador de Apresentações PowerPoint com IA</string>
+    <string name="ppt_heading">Criador de Apresentações PowerPoint com AI</string>
     <string name="ppt_description">Gere apresentações impressionantes automaticamente</string>
     <string name="help_us_know_you">Ajude-nos a conhecê-lo</string>
     <string name="your_preferred_language_is">Qual é o seu \nidioma preferido?</string>
@@ -139,7 +139,7 @@
     <string name="pdf">PDF</string>
     <string name="summarizer">Resumidor</string>
     <string name="tap_to_upload_your_file">Toque para carregar seu arquivo</string>
-    <string name="just_upload_your_file">Basta carregar seu arquivo e deixar a IA criar um resumo conciso para você.</string>
+    <string name="just_upload_your_file">Basta carregar seu arquivo e deixar a AI criar um resumo conciso para você.</string>
     <string name="view_file">Ver Arquivo</string>
     <string name="pdf_summarizer">Resumidor de PDF</string>
     <string name="view_doc">Ver Documento</string>
@@ -147,7 +147,7 @@
     <string name="select_your_role_and_begin">Selecione seu Papel e Inicie \nsua Jornada.</string>
     <string name="view_document">Ver Documento</string>
     <string name="settings">Configurações</string>
-    <string name="ai">IA</string>
+    <string name="ai">AI</string>
     <string name="language">Idioma</string>
     <string name="about">Sobre</string>
     <string name="rate_us">Avalie-nos</string>
@@ -158,7 +158,7 @@
     <string name="fig_by_kukami_technology">Fig por Kukami Technology</string>
     <string name="visit_kukami_technology">Visite Kukami Technology</string>
     <string name="this_app_contains_ads">Este aplicativo contém anúncios</string>
-    <string name="splash_screen_heading">Leitor de PDF Fig e Ferramentas de IA</string>
+    <string name="splash_screen_heading">Leitor de PDF Fig e Ferramentas de AI</string>
     <string name="splash_screen_subheading">Fig por Kukami Technology</string>
     <string name="converter_tools">Ferramentas de Conversão</string>
     <string name="are_you_sure_you_want_to_exit">Tem certeza de que deseja sair?</string>
@@ -171,7 +171,7 @@
     <string name="change_language">Mudar Idioma</string>
     <string name="data_not_available">Dados Não Disponíveis</string>
     <string name="pdf_converter">Conversor de PDF</string>
-    <string name="ai_ppt_maker">Criador de PPT com IA</string>
+    <string name="ai_ppt_maker">Criador de PPT com AI</string>
     <string name="no_internet_connection">Sem Conexão com a Internet</string>
     <string name="no_internet_connection_des">Por favor, verifique sua conexão e tente novamente.</string>
     <string name="retry">Tentar Novamente</string>
@@ -240,5 +240,36 @@ Agradecemos sua cooperação e pedimos desculpas por qualquer inconveniente que 
     <string name="scan_result">Resultado da digitalização</string>
     <string name="edit_text_hint">O seu texto digitalizado aparecerá aqui...</string>
     <string name="download_pdf_text">Baixar PDF</string>
+
+    <string name="presentation_generation">Geração de apresentações</string>
+    <string name="generate_outline">Gerar esboço</string>
+    <string name="please_enter_your_slides_topic">Por favor, insira o tema dos seus slides</string>
+    <string name="number_of_slides">Número de slides</string>
+    <string name="home">Início</string>
+    <string name="community">Comunidade</string>
+    <string name="suggest_prompt">Sugerir prompt</string>
+    <string name="select_a_template">Selecionar um modelo</string>
+    <string name="view_all">Ver tudo</string>
+    <string name="edit_data">Editar dados</string>
+    <string name="enter_heading_text">Inserir texto do cabeçalho</string>
+    <string name="color">Cor</string>
+    <string name="category">Categoria</string>
+    <string name="value">Valor</string>
+    <string name="select_your_language">Selecione seu idioma</string>
+    <string name="export_pdf">Exportar PDF</string>
+    <string name="analyzing">Analisando...</string>
+    <string name="eg_hiring_job_description">💡 Especifique a descrição do cargo para correspondência precisa de candidatos (ex.: experiência, função)</string>
+    <string name="eg_candidate_job_description">💡 Adicione a descrição do cargo da empresa para adequar seu currículo (ex.: função, expertise, experiência)</string>
+    <string name="choose_your_language">Escolha seu idioma</string>
+    <string name="upload_pdf">Carregar PDF</string>
+    <string name="card_heading1"><font color='#EB7A9A'>AI</font> Resumidor para cada documento</string>
+    <string name="card_description1">Transforme documentos longos em informações claras e prontas para o trabalho</string>
+    <string name="interview_bot_heading1">Amigo de entrevistas</string>
+    <string name="choose_any_one_option1">Selecione sua opção</string>
+    <string name="select_your_role_and_begin_the_interview_journey1">Selecione seu campo para iniciar sua jornada de entrevistas.</string>
+    <string name="hiring1">👔 Contratar</string>
+    <string name="candidates1">🧑‍💼 Candidato</string>
+    <string name="explore_ocr">Quer explorar OCR com PDF?</string>
+    <string name="candidate_job_description">Descrição do cargo <font color='#8A000000'>(Opcional)</font></string>
 
 </resources>

@@ -108,7 +108,7 @@
     <string name="evaluation">Valutazione</string>
     <string name="no_text_found">Nessun testo trovato</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Non siamo riusciti a estrarre il testo dal PDF caricato. Carica un curriculum valido</string>
-    <string name="coming_soon">🌟Presto</string>
+    <string name="coming_soon">🎉 Presto</string>
     <string name="history">Cronologia</string>
     <string name="image_selection">Selezione immagine</string>
     <string name="save_all_images">Salva tutte le immagini</string>
@@ -239,4 +239,33 @@ Apprezziamo la tua collaborazione e ci scusiamo per eventuali inconvenienti. Gra
     <string name="download_pdf_text">Scarica PDF</string>
     <string name="presentation_generation">Generazione di presentazioni</string>
     <string name="generate_outline">Genera struttura</string>
+
+    <string name="please_enter_your_slides_topic">Inserisci l\'argomento delle tue diapositive</string>
+    <string name="number_of_slides">Numero di diapositive</string>
+    <string name="home">Home</string>
+    <string name="community">Comunità</string>
+    <string name="suggest_prompt">Suggerisci prompt</string>
+    <string name="select_a_template">Seleziona un modello</string>
+    <string name="view_all">Visualizza tutto</string>
+    <string name="edit_data">Modifica dati</string>
+    <string name="enter_heading_text">Inserisci il testo dell\'intestazione</string>
+    <string name="color">Colore</string>
+    <string name="category">Categoria</string>
+    <string name="value">Valore</string>
+    <string name="select_your_language">Seleziona la tua lingua</string>
+    <string name="export_pdf">Esporta PDF</string>
+    <string name="analyzing">Analisi in corso...</string>
+    <string name="eg_hiring_job_description">💡 Specifica la descrizione del lavoro per un abbinamento accurato dei candidati (es. esperienza, ruolo)</string>
+    <string name="eg_candidate_job_description">💡 Aggiungi la descrizione del lavoro aziendale per adattare il tuo curriculum (es. ruolo, competenze, esperienza)</string>
+    <string name="choose_your_language">Scegli la tua lingua</string>
+    <string name="upload_pdf">Carica PDF</string>
+    <string name="card_heading1"><font color='#EB7A9A'>AI</font> Riepilogatore per ogni documento</string>
+    <string name="card_description1">Trasforma documenti lunghi in informazioni chiare e pronte per il lavoro</string>
+    <string name="interview_bot_heading1">Amico per i colloqui</string>
+    <string name="choose_any_one_option1">Seleziona la tua opzione</string>
+    <string name="select_your_role_and_begin_the_interview_journey1">Seleziona il tuo campo per iniziare il tuo percorso di colloquio.</string>
+    <string name="hiring1">👔 Per le assunzioni</string>
+    <string name="candidates1">🧑‍💼 Per i cercatori di lavoro</string>
+    <string name="explore_ocr">Vuoi esplorare l\'OCR con PDF?</string>
+    <string name="candidate_job_description">Descrizione del lavoro <font color='#8A000000'>(Opzionale)</font></string>
 </resources>

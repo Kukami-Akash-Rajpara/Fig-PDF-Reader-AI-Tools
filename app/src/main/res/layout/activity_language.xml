@@ -28,13 +28,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/txtTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginHorizontal="@dimen/_40sdp"
             android:fontFamily="@font/roboto_semi_bold"
             android:includeFontPadding="false"
-            android:text="@string/change_language"
+            android:text="@string/select_your_language"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="@dimen/_13ssp"
@@ -99,12 +100,23 @@
                 android:background="@drawable/btn_fill_gradient"
                 android:fontFamily="@font/roboto_bold"
                 android:gravity="center"
+                android:layout_marginHorizontal="@dimen/_10sdp"
                 android:includeFontPadding="false"
                 android:paddingVertical="@dimen/_10sdp"
                 android:singleLine="true"
                 android:text="@string/next"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_14ssp" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/nextBtnShimmer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:lottie_autoPlay="true"
+                android:scaleType="fitXY"
+                app:lottie_loop="true"
+                android:visibility="gone"
+                app:lottie_rawRes="@raw/shimmer" />
 
         </FrameLayout>
 

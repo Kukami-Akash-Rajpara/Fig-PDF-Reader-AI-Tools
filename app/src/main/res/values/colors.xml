@@ -21,6 +21,7 @@
     <color name="gray_border_color">#D9D9D9</color>
     <color name="colorOverlay">#78ffffff</color>
     <color name="default_stroke_color">#B8B6B9</color>
+    <color name="stroke_color">#4DBF496A</color>
     <color name="color_subtext">#3D3D3D</color>
     <color name="color_pink_text">#D47891</color>
     <color name="green">#1A941E</color>

@@ -35,6 +35,7 @@
         android:layout_gravity="center"
         android:fontFamily="@font/federant_regular"
         android:gravity="center"
+        android:layout_marginHorizontal="@dimen/_20sdp"
         android:text="@string/resume_analyzer"
         android:textSize="@dimen/_20ssp"
         app:endColor="#BF496A"
@@ -56,11 +57,11 @@
         android:layout_marginTop="@dimen/_20ssp"
         android:fontFamily="@font/roboto_medium"
         android:includeFontPadding="false"
-        android:text="@string/choose_any_one_option"
+        android:text="@string/choose_any_one_option1"
         android:textColor="@color/black"
         android:textSize="@dimen/_15ssp" />
 
-    <TextView
+    <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -71,11 +72,11 @@
         android:includeFontPadding="false"
         android:text="@string/select_your_role_and_begin"
         android:textColor="#65000000"
-        android:textSize="@dimen/_10ssp" />
+        android:textSize="@dimen/_10ssp" />-->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvHiring"
-        android:layout_width="@dimen/_160sdp"
+        android:layout_width="@dimen/_170sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_16sdp"
@@ -94,7 +95,7 @@
             android:includeFontPadding="false"
             android:paddingHorizontal="@dimen/_10ssp"
             android:singleLine="true"
-            android:text="@string/hiring"
+            android:text="@string/hiring1"
             android:textColor="@color/black"
             android:textSize="@dimen/_12ssp" />
 
@@ -102,7 +103,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvCandidates"
-        android:layout_width="@dimen/_160sdp"
+        android:layout_width="@dimen/_170sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_5sdp"
@@ -121,7 +122,7 @@
             android:includeFontPadding="false"
             android:paddingHorizontal="@dimen/_10ssp"
             android:singleLine="true"
-            android:text="@string/candidates"
+            android:text="@string/candidates1"
             android:textColor="@color/black"
             android:textSize="@dimen/_12ssp" />
 

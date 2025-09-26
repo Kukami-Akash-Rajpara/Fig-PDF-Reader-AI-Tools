@@ -47,7 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
                     android:fontFamily="@font/roboto_medium"
                     android:gravity="center"
                     android:text="@string/upload_resume"
@@ -103,10 +103,11 @@
                     android:textSize="@dimen/_13ssp" />
 
                 <RelativeLayout
+                    android:id="@+id/rlPositionContainer"
                     android:layout_width="@dimen/_200sdp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="@drawable/bg_dark_gray_stroke"
+                    android:background="@drawable/brown_stroke_dark_gray"
                     android:elevation="@dimen/_3sdp"
                     android:paddingVertical="@dimen/_3sdp">
 
@@ -120,21 +121,21 @@
                         android:background="@android:color/transparent"
                         android:ellipsize="end"
                         android:fontFamily="@font/roboto_medium"
-                        android:hint="@string/extensions"
+                        android:hint="@string/position_level"
                         android:inputType="textCapWords"
                         android:singleLine="true"
-                        android:text="Human Resources"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_13ssp" />
 
                     <ImageView
                         android:id="@+id/img_extention_drop"
-                        android:layout_width="@dimen/_20sdp"
-                        android:layout_height="@dimen/_20sdp"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/_15sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
                         android:adjustViewBounds="true"
                         android:src="@drawable/ic_drop_down_arrow" />
 
@@ -152,10 +153,11 @@
                     android:textSize="@dimen/_13ssp" />
 
                 <RelativeLayout
+                    android:id="@+id/img_difficulty_drop"
                     android:layout_width="@dimen/_200sdp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="@drawable/bg_dark_gray_stroke"
+                    android:background="@drawable/purple_stroke_dark_gray"
                     android:elevation="@dimen/_3sdp"
                     android:paddingVertical="@dimen/_3sdp">
 
@@ -165,20 +167,21 @@
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="@dimen/_5sdp"
                         android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_toStartOf="@id/img_difficulty_drop"
+                        android:layout_toStartOf="@id/drop1"
                         android:fontFamily="@font/roboto_medium"
                         android:text="@string/medium"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_13ssp" />
 
                     <ImageView
-                        android:id="@+id/img_difficulty_drop"
-                        android:layout_width="@dimen/_20sdp"
-                        android:layout_height="@dimen/_20sdp"
+                        android:id="@+id/drop1"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/_15sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
                         android:adjustViewBounds="true"
                         android:src="@drawable/ic_drop_down_arrow" />
                 </RelativeLayout>
@@ -195,11 +198,12 @@
                     android:textSize="@dimen/_13ssp" />
 
                 <RelativeLayout
+                    android:id="@+id/img_range_drop"
                     android:layout_width="@dimen/_200sdp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="@dimen/_10sdp"
-                    android:background="@drawable/bg_dark_gray_stroke"
+                    android:background="@drawable/blue_stroke_dark_gray"
                     android:elevation="@dimen/_3sdp"
                     android:paddingVertical="@dimen/_3sdp">
 
@@ -209,44 +213,90 @@
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="@dimen/_5sdp"
                         android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_toStartOf="@id/img_range_drop"
+                        android:layout_toStartOf="@id/drop2"
                         android:fontFamily="@font/roboto_medium"
                         android:text="1-10"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_13ssp" />
 
                     <ImageView
-                        android:id="@+id/img_range_drop"
-                        android:layout_width="@dimen/_20sdp"
-                        android:layout_height="@dimen/_20sdp"
+                        android:id="@+id/drop2"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/_15sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
                         android:adjustViewBounds="true"
                         android:src="@drawable/ic_drop_down_arrow" />
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/okButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_36sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_btn_theme"
+                        android:fontFamily="@font/roboto_semi_bold"
+                        android:gravity="center"
+                        android:alpha="0.5"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:includeFontPadding="false"
+                        android:text="@string/submit"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_36sdp"
+                        app:lottie_autoPlay="true"
+                        android:scaleType="fitXY"
+                        app:lottie_loop="true"
+                        android:id="@+id/btnShimmer"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        app:lottie_rawRes="@raw/shimmer" />
+
+
+                </RelativeLayout>
+
+              <!--  <RelativeLayout
                     android:id="@+id/okButton"
-                    android:layout_width="@dimen/_200sdp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/_180sdp"
+                    android:layout_height="@dimen/_36sdp"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/_10sdp"
+                    android:alpha="0.5"
                     android:background="@drawable/btn_fill_gradient"
-                    android:padding="@dimen/_8sdp">
+                   >
 
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_centerInParent="true"
                         android:fontFamily="@font/roboto_semi_bold"
                         android:gravity="center"
                         android:text="@string/submit"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_13ssp" />
 
-                </RelativeLayout>
+                        android:textSize="@dimen/_13ssp" />
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:lottie_autoPlay="true"
+                        android:scaleType="fitXY"
+                        app:lottie_loop="true"
+                        android:visibility="gone"
+                        app:lottie_rawRes="@raw/shimmer" />
+                </RelativeLayout>-->
 
             </LinearLayout>
 

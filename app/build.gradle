@@ -141,7 +141,9 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.16.0'
 
     implementation "com.google.mlkit:text-recognition:16.0.1"
+
     implementation "org.apache.poi:poi-scratchpad:5.2.3"
+    implementation 'org.apache.poi:poi:5.2.3'
     implementation "org.apache.poi:poi-ooxml:5.2.3"
 
     implementation "com.github.Victor2018:DocViewer:3.0.4"
@@ -154,6 +156,8 @@ dependencies {
 
     implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
     implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    implementation 'org.json:json:20230227'
 }
 
 assemble.dependsOn('lint')

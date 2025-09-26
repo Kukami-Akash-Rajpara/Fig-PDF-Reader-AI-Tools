@@ -64,8 +64,6 @@ public class AdManagerInter {
         }
     }
 
-
-
     private static void checkAndInitAds(Activity activity) {
         int currentVersionCode = BuildConfig.VERSION_CODE;
         String remoteCodeStr = AppHelper.getAppUpdateVersionCode();

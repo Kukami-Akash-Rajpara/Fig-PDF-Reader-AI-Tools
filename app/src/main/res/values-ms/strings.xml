@@ -107,7 +107,7 @@
     <string name="evaluation">Penilaian</string>
     <string name="no_text_found">Tiada Teks Dijumpai</string>
     <string name="we_could_not_extract_text_from_the_uploaded_pdf_please_upload_a_valid_resume">Kami tidak dapat mengekstrak teks daripada PDF yang dimuat naik. Sila muat naik resume yang sah</string>
-    <string name="coming_soon">🌟Akan</string>
+    <string name="coming_soon">🎉 Akan</string>
     <string name="history">Sejarah</string>
     <string name="image_selection">Pemilihan Imej</string>
     <string name="save_all_images">Simpan Semua Imej</string>
@@ -238,4 +238,33 @@ Kami menghargai kerjasama anda dan memohon maaf atas sebarang kesulitan yang mun
     <string name="download_pdf_text">Muat Turun PDF</string>
     <string name="presentation_generation">Penjanaan Persembahan</string>
     <string name="generate_outline">Jana Garis Panduan</string>
+
+    <string name="please_enter_your_slides_topic">Sila masukkan topik slaid anda</string>
+    <string name="number_of_slides">Bilangan Slaid</string>
+    <string name="home">Laman Utama</string>
+    <string name="community">Komuniti</string>
+    <string name="suggest_prompt">Cadangkan Prompt</string>
+    <string name="select_a_template">Pilih Templat</string>
+    <string name="view_all">Lihat Semua</string>
+    <string name="edit_data">Edit Data</string>
+    <string name="enter_heading_text">Masukkan Teks Tajuk</string>
+    <string name="color">Warna</string>
+    <string name="category">Kategori</string>
+    <string name="value">Nilai</string>
+    <string name="select_your_language">Pilih Bahasa Anda</string>
+    <string name="export_pdf">Eksport PDF</string>
+    <string name="analyzing">Menganalisis...</string>
+    <string name="eg_hiring_job_description">💡 Nyatakan perihalan kerja untuk padanan calon yang tepat (contohnya pengalaman, peranan)</string>
+    <string name="eg_candidate_job_description">💡 Tambah perihalan kerja syarikat untuk menyesuaikan resume anda (contohnya peranan, kepakaran, pengalaman)</string>
+    <string name="choose_your_language">Pilih Bahasa Anda</string>
+    <string name="upload_pdf">Muat Naik PDF</string>
+    <string name="card_heading1"><font color='#EB7A9A'>AI</font> Penyaring untuk Setiap Dokumen</string>
+    <string name="card_description1">Tukar dokumen panjang menjadi pandangan yang jelas dan bersedia untuk pekerjaan</string>
+    <string name="interview_bot_heading1">Rakan Temuduga</string>
+    <string name="choose_any_one_option1">Pilih Pilihan Anda</string>
+    <string name="select_your_role_and_begin_the_interview_journey1">Pilih bidang anda untuk memulakan perjalanan temuduga.</string>
+    <string name="hiring1">👔 Pengambilan</string>
+    <string name="candidates1">🧑‍💼 Pencari Kerja</string>
+    <string name="explore_ocr">Ingin meneroka OCR dengan PDF?</string>
+    <string name="candidate_job_description">Perihalan Kerja <font color='#8A000000'>(Pilihan)</font></string>
 </resources>

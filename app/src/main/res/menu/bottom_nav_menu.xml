@@ -2,20 +2,20 @@
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/home_selector"
-        android:title="Home"/>
+        android:title="@string/home"/>
 
     <item
         android:id="@+id/nav_community"
         android:icon="@drawable/community_selector"
-        android:title="Community"/>
+        android:title="@string/community"/>
 
     <item
         android:id="@+id/nav_history"
         android:icon="@drawable/history_selector"
-        android:title="History"/>
+        android:title="@string/history"/>
 
     <item
         android:id="@+id/nav_settings"
         android:icon="@drawable/settings_selector"
-        android:title="Settings"/>
+        android:title="@string/settings"/>
 </menu>

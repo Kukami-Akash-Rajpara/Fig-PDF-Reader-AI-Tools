@@ -52,8 +52,10 @@ public class LanguageActivity extends BaseActivity {
 
         if (AppHelper.isFirstTime()) {
             binding.nextTxt.setText(R.string.next);
+            binding.txtTitle.setText(R.string.select_your_language);
         } else {
             binding.nextTxt.setText(R.string.save);
+            binding.txtTitle.setText(R.string.choose_your_language);
         }
         if (AppHelper.getShowNativeLanguage()) {
             AdManagerNative.renderNativeAdLarge(this, findViewById(R.id.layLargeNative), findViewById(R.id.layNative));
@@ -72,6 +74,8 @@ public class LanguageActivity extends BaseActivity {
         binding.languageRv.setLayoutManager(new LinearLayoutManager(this));
         AdapterLanguage adapter = new AdapterLanguage(this, languageList, selectedLanguage -> {
             selectedLanguageCode = selectedLanguage.languageCode;
+            binding.nextBtnShimmer.setVisibility(View.VISIBLE);
+            binding.nextBtnShimmer.playAnimation();
         });
         binding.languageRv.setAdapter(adapter);
     }

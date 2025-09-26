@@ -36,7 +36,7 @@
                 android:fontFamily="@font/roboto_bold"
                 android:gravity="center"
                 android:maxLines="1"
-                android:text="@string/interview_bot"
+                android:text="@string/interview_bot_heading1"
                 android:textSize="@dimen/_14ssp" />
 
         </RelativeLayout>

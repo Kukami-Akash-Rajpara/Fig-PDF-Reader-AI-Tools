@@ -30,6 +30,7 @@ import com.app.figpdfconvertor.figpdf.databinding.FragmentHomeBinding;
 import com.app.figpdfconvertor.figpdf.funnelss.AnalyticsManager;
 import com.app.figpdfconvertor.figpdf.activity.InterviewBotMainActivity;
 import com.app.figpdfconvertor.figpdf.activity.PDFSummarizerActivity;
+import com.app.figpdfconvertor.figpdf.pptedit.MainActivity;
 import com.app.figpdfconvertor.figpdf.utils.DoubleClickListener;
 import com.app.figpdfconvertor.figpdf.utils.OcrImageUtils;
 
@@ -81,8 +82,10 @@ public class HomeFragment extends BaseFragment {
             startActivity(new Intent(getContext(), ProConverterTools.class));
         });
 
-
-        binding.cardRecommendation.setOnClickListener(v -> startActivity(new Intent(getContext(), ProConverterTools.class)));
+        binding.cardRecommendation.setOnClickListener(v -> {
+            checkCameraPermissionAndOpenCamera();
+//            startActivity(new Intent(getContext(), ProConverterTools.class));
+        });
 
         binding.cardInterviewbot.setOnClickListener(v -> {
             AnalyticsManager.INSTANCE.logEvent("feature_selected",
@@ -98,6 +101,7 @@ public class HomeFragment extends BaseFragment {
                     java.util.Collections.singletonMap("feature", "ppt_maker"));
             AnalyticsManager.INSTANCE.logFunnelStep("ppt_maker_selected", null);
             startActivity(new Intent(requireContext(), ComingSoonActivity.class));
+//            startActivity(new Intent(requireContext(), PptMainActivity.class));
         });
 
         binding.layAiResumeAnalyzer.setOnClickListener(new DoubleClickListener() {
@@ -130,7 +134,6 @@ public class HomeFragment extends BaseFragment {
         });
         return view;
     }
-
 
     // Check camera permission and open camera if granted
     private void checkCameraPermissionAndOpenCamera() {
