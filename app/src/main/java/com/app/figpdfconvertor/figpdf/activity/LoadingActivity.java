@@ -138,7 +138,7 @@ public class LoadingActivity extends BaseActivity {
                 if (response.isSuccessful() && response.body() != null) {
                     AnalyzeResponse analyzeRes = response.body();
 
-                    // ✅ Open PdfSummaryActivity
+                    // Open PdfSummaryActivity
                     Intent intent = new Intent(LoadingActivity.this, PdfSummaryActivity.class);
                     intent.putExtra("pdf_uri", pdfUriString);
                     intent.putExtra("summary", analyzeRes.getSummary());

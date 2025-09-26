@@ -95,7 +95,7 @@ public class ImageSelection extends BaseActivity {
         }
     }
 
-    // ✅ Recycler setup
+    //  Recycler setup
     private void setupRecyclerViews() {
         binding.imageSelection.setLayoutManager(new GridLayoutManager(this, 3));
 
@@ -128,7 +128,7 @@ public class ImageSelection extends BaseActivity {
         });
     }
 
-    // ✅ Launchers
+    //  Launchers
     private void setupLaunchers() {
         cameraLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -166,7 +166,7 @@ public class ImageSelection extends BaseActivity {
         );
     }
 
-    // ✅ Button listeners
+    // Button listeners
     private void setupButtons() {
         binding.backButtonToProConverterTools.setOnClickListener(v -> finish());
 
@@ -265,7 +265,7 @@ public class ImageSelection extends BaseActivity {
 
         exitDialog.show();
     }
-    // ✅ Save captured image
+    //  Save captured image
     private Uri saveImageToCache(Bitmap bitmap) {
         try {
             File cachePath = new File(getCacheDir(), "captured_images");
@@ -280,7 +280,7 @@ public class ImageSelection extends BaseActivity {
         }
     }
 
-    // ✅ Permissions
+    //  Permissions
     private void checkPermissionAndLoad() {
         List<String> permissionsToRequest = new ArrayList<>();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
@@ -301,7 +301,7 @@ public class ImageSelection extends BaseActivity {
         }
     }
 
-    // ✅ Load folders spinner
+    //  Load folders spinner
     private void loadFoldersAsync() {
         executor.execute(() -> {
             List<String> folders = getImageFolders();
@@ -331,7 +331,7 @@ public class ImageSelection extends BaseActivity {
         });
     }
 
-    // ✅ Load images
+    // Load images
     private void loadImagesIfNotLoaded(@Nullable String folderName) {
         if (imagesLoaded) return;
         imagesLoaded = true;
@@ -403,7 +403,7 @@ public class ImageSelection extends BaseActivity {
         });
     }
 
-    // ✅ Updates
+    //  Updates
     private void updateBottomSheetImages() {
         List<Uri> selectedUris = new ArrayList<>();
         if (adapter != null) {
@@ -434,7 +434,7 @@ public class ImageSelection extends BaseActivity {
         updateBottomSheetState();
     }
 
-    // ✅ Permissions result
+    //  Permissions result
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
@@ -447,7 +447,7 @@ public class ImageSelection extends BaseActivity {
         }
     }
 
-    // ✅ Folder names
+    //  Folder names
     private List<String> getImageFolders() {
         List<String> folders = new ArrayList<>();
         Set<String> folderSet = new HashSet<>();
