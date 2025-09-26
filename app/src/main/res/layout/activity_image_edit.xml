@@ -239,7 +239,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
                     android:layout_weight="1.5"
                     android:background="@drawable/bg_gradient_stroke"
                     android:gravity="center">
@@ -250,10 +250,11 @@
                         android:layout_gravity="center"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-                        android:paddingHorizontal="@dimen/_20sdp"
+                        android:paddingHorizontal="@dimen/_10sdp"
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="@string/done"
                         android:textSize="@dimen/_12sdp"
+                        android:lines="1"
                         app:endColor="#BF496A"
                         app:startColor="#F975CD" />
 

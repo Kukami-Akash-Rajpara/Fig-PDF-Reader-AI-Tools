@@ -125,14 +125,12 @@ public class PDFSummarizerActivity extends BaseActivity {
         }
     }
 
-
     private void openPdfPicker() {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.setType("application/pdf");
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         pdfPickerLauncher.launch(intent);
     }
-
     private void showPdfDetails(Uri uri) {
         // Show layPdfView
         binding.layUpload.setVisibility(View.GONE);

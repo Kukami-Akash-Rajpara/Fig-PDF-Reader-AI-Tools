@@ -130,7 +130,7 @@
     <string name="ocr_badge">🔥&#160;पॉपुलर</string>
     <string name="pdf_converter_heading">PDF Converter Pro टूल्स</string>
     <string name="pdf_converter_description">तेज़ और आसान कन्वर्जन के लिए स्मार्ट PDF कन्वर्टर</string>
-    <string name="resume_analyzer">AI रिज्यूमे एनालाइज़र</string>
+    <string name="resume_analyzer">AI रिज्यूमे \nएनालाइज़र</string>
     <string name="resume_description">स्मार्ट इनसाइट्स के साथ अपनी CV को ऑप्टिमाइज़ करें</string>
     <string name="ppt_heading">AI PowerPoint प्रेजेंटेशन मेकर</string>
     <string name="ppt_description">शानदार प्रेजेंटेशन अपने आप बनाएं</string>

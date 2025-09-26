@@ -398,7 +398,6 @@ class ConvertPDFActivity : BaseActivity() {
                         eventParams["file_name"] = "Converted_123.pdf"
                         eventParams["time"] = System.currentTimeMillis()
 
-                        AppMetrica.reportEvent("PDF_Conversion_Started", eventParams)
                         convertImagesToPdf(ArrayList(images.filter { it != ADD_IMAGE }))
 
                     }
@@ -515,8 +514,8 @@ class ConvertPDFActivity : BaseActivity() {
         okBtn.setOnClickListener {
             val newName = etRename.text.toString().trim()
             if (newName.isNotEmpty()) {
-                pdfTitle = newName               // ✅ store the PDF title
-                binding.txtTitle.text = newName  // ✅ update UI
+                pdfTitle = newName               // store the PDF title
+                binding.txtTitle.text = newName  // update UI
             }
             dialog.dismiss()
         }
@@ -552,7 +551,6 @@ class ConvertPDFActivity : BaseActivity() {
                         if (file.exists()) FileInputStream(file) else null
                     }
                 }
-
 
                 if (inputStream != null) {
                     val fileName = "IMG_${System.currentTimeMillis()}.jpg"

@@ -129,6 +129,8 @@
                     android:gravity="center"
                     android:layout_marginBottom="@dimen/_4sdp"
                     android:textSize="@dimen/_12ssp"
+                    android:lines="1"
+                    android:ellipsize="end"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/crop_text_selector"/>
             </LinearLayout>

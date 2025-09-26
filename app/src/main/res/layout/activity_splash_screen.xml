@@ -33,7 +33,9 @@
             android:fontFamily="@font/roboto_bold"
             android:includeFontPadding="false"
             android:text="@string/splash_screen_heading"
-            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/_20sdp"
             android:textColor="@color/splash_screen_text_color"
             android:textSize="@dimen/_17ssp" />
 

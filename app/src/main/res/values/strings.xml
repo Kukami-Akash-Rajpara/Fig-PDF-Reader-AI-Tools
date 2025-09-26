@@ -145,7 +145,7 @@
     <string name="try_again">Try Again</string>
     <string name="pdf">PDF</string>
     <string name="summarizer">Summarizer</string>
-    <string name="tap_to_upload_your_file">Tap to upload your file</string>
+    <string name="tap_to_upload_your_file">Upload your file</string>
     <string name="just_upload_your_file">Just upload your file and let AI create a concise summary for you.</string>
     <string name="view_file">View File</string>
     <string name="pdf_summarizer">PDF Summarizer</string>
@@ -275,7 +275,7 @@ We appreciate your cooperation and apologize for any inconvenience this may caus
     <string name="choose_your_language">Change Your Language</string>
     <string name="upload_pdf">Upload PDF</string>
     <string name="card_heading1"><font color='#EB7A9A'>AI</font> Summarizer For \nEvery Document</string>
-    <string name="card_description1">Turn Long Document \ninto Clear Job Ready Insight</string>
+    <string name="card_description1">Turn Long Document \nInto Clear Job Ready Insight</string>
     <string name="interview_bot_heading1">Interview Buddy</string>
     <string name="choose_any_one_option1">Select Your Option</string>
     <string name="select_your_role_and_begin_the_interview_journey1">Select Your Field To Start Your Interview Journey.</string>

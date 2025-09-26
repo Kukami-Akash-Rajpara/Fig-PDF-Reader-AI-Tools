@@ -78,7 +78,7 @@ class PdfFileAdapter(
                     if (fileItem.file.exists()) {
                         val deleted = fileItem.file.delete()
                         if (deleted) {
-                            android.widget.Toast.makeText(context, "${fileItem.name} deleted", android.widget.Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "${fileItem.name} deleted", Toast.LENGTH_SHORT).show()
 
                             // remove from adapter list
                             val index = items.indexOf(fileItem)
@@ -87,7 +87,7 @@ class PdfFileAdapter(
                                 notifyItemRemoved(index)
                             }
                         } else {
-                            android.widget.Toast.makeText(context, "Failed to delete ${fileItem.name}", android.widget.Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "Failed to delete ${fileItem.name}", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }

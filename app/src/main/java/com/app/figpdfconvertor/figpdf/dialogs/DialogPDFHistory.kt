@@ -47,7 +47,7 @@ class DialogPDFHistory(
             val newName = binding.txtPDFname.text.toString().trim()
 
             if (newName.isNotEmpty() && newName != fileItem.name) {
-                listener.rename(fileItem, newName)  // ✅ notify adapter/activity
+                listener.rename(fileItem, newName)  // notify adapter/activity
             }
 
             dismiss()
@@ -62,6 +62,10 @@ class DialogPDFHistory(
             dismiss()
         }
 
+        binding.llSetPw.setOnClickListener {
+            listener.setPassword(fileItem)
+            dismiss()
+        }
         // Password UI
       /*  if (fileItem.isPasswordProtected) {
             binding.imgPwEye.visibility = View.VISIBLE

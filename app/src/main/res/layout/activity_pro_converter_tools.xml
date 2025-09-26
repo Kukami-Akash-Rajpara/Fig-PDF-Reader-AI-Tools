@@ -36,6 +36,7 @@
         android:fontFamily="@font/federant_regular"
         android:gravity="center"
         android:text="@string/converter_tools"
+        android:layout_marginHorizontal="@dimen/_15sdp"
         android:textSize="@dimen/_20ssp"
         app:endColor="#BF496A"
         app:startColor="#F975CD" />

@@ -86,7 +86,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_5sdp"
-                        android:layout_marginEnd="@dimen/_80sdp"
+                        android:layout_marginEnd="@dimen/_90sdp"
                         android:fontFamily="@font/roboto_bold"
                         android:text="@string/card_heading1"
                         android:textColor="@color/black"
@@ -97,8 +97,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_8sdp"
-                        android:layout_marginEnd="@dimen/_80sdp"
+                        android:layout_marginEnd="@dimen/_100sdp"
                         android:fontFamily="@font/roboto_medium"
+                        android:lines="2"
+                        android:ellipsize="end"
                         android:text="@string/card_description1"
                         android:textColor="#77222222"
                         android:textSize="@dimen/_12ssp" />
@@ -277,14 +279,13 @@
                             app:cardCornerRadius="@dimen/_12sdp"
                             app:cardElevation="@dimen/_1sdp">
 
-                            <LinearLayout
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
                                 android:background="@drawable/bg_pink_pdf"
                                 android:gravity="center_horizontal"
                                 android:orientation="vertical"
-                                android:paddingHorizontal="@dimen/_10sdp"
                                 android:paddingTop="60dp">
 
                                 <TextView
@@ -292,6 +293,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:maxLines="2"
+                                    android:layout_marginHorizontal="@dimen/_10sdp"
                                     android:fontFamily="@font/roboto_semi_bold"
                                     android:paddingBottom="@dimen/_5sdp"
                                     android:text="@string/pdf_converter_heading"
@@ -300,18 +302,38 @@
                                     android:textSize="@dimen/_12ssp" />
 
                                 <TextView
+                                    android:layout_above="@id/txt2"
+                                    android:layout_below="@id/pdf_converter_heading"
                                     android:id="@+id/pdf_converter_description"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:ellipsize="end"
                                     android:fontFamily="@font/roboto_medium"
                                     android:maxLines="2"
-                                    android:paddingBottom="@dimen/_5sdp"
+                                    android:layout_marginHorizontal="@dimen/_10sdp"
+                                    android:paddingBottom="@dimen/_3sdp"
                                     android:text="@string/pdf_converter_description"
                                     android:textAlignment="center"
                                     android:textColor="@color/desc_color"
                                     android:textSize="@dimen/_9ssp" />
-                            </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/txt2"
+                                    android:visibility="invisible"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:background="@drawable/bg_coming_soon"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:paddingVertical="@dimen/_1sdp"
+                                    android:text="@string/coming_soon"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp" />
+                            </RelativeLayout>
 
                         </androidx.cardview.widget.CardView>
 
@@ -350,14 +372,13 @@
                             app:cardCornerRadius="@dimen/_12sdp"
                             app:cardElevation="@dimen/_1sdp">
 
-                            <LinearLayout
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
                                 android:background="@drawable/bg_purple_analyzer"
                                 android:gravity="center_horizontal"
                                 android:orientation="vertical"
-                                android:paddingHorizontal="@dimen/_10sdp"
                                 android:paddingTop="60dp">
 
                                 <TextView
@@ -365,8 +386,9 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:maxLines="2"
+                                    android:lines="2"
+                                    android:layout_marginHorizontal="@dimen/_10sdp"
                                     android:fontFamily="@font/roboto_semi_bold"
-                                    android:paddingHorizontal="@dimen/_5sdp"
                                     android:paddingBottom="@dimen/_5sdp"
                                     android:text="@string/resume_analyzer"
                                     android:textAlignment="center"
@@ -374,18 +396,38 @@
                                     android:textSize="@dimen/_12ssp" />
 
                                 <TextView
+                                    android:layout_above="@id/txt1"
+                                    android:layout_below="@id/resume_analuzer_heading"
                                     android:id="@+id/resume_description"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:ellipsize="end"
                                     android:fontFamily="@font/roboto_medium"
                                     android:maxLines="2"
-                                    android:paddingBottom="@dimen/_5sdp"
+                                    android:layout_marginHorizontal="@dimen/_10sdp"
+                                    android:paddingBottom="@dimen/_3sdp"
                                     android:text="@string/resume_description"
                                     android:textAlignment="center"
                                     android:textColor="@color/desc_color"
                                     android:textSize="@dimen/_9ssp" />
-                            </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/txt1"
+                                    android:visibility="invisible"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:background="@drawable/bg_coming_soon"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:paddingVertical="@dimen/_1sdp"
+                                    android:text="@string/coming_soon"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp" />
+                            </RelativeLayout>
 
                         </androidx.cardview.widget.CardView>
 

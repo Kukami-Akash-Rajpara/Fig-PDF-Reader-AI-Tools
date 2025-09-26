@@ -47,10 +47,12 @@ public class HomeFragment extends BaseFragment {
     private final ActivityResultLauncher<Intent> cameraLauncher =
             registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
                 if (result.getResultCode() == Activity.RESULT_OK) {
-                    if (photoFile != null) {
+                    if (photoFile != null && photoFile.exists() && photoFile.length() > 0) {
                         Intent intent = new Intent(getContext(), OcrCapturedImage.class);
                         intent.putExtra("image_path", photoFile.getAbsolutePath());
                         startActivity(intent);
+                    } else {
+                        Toast.makeText(getContext(), "Failed to capture image. Try again.", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -82,7 +84,7 @@ public class HomeFragment extends BaseFragment {
             startActivity(new Intent(getContext(), ProConverterTools.class));
         });
 
-        binding.cardRecommendation.setOnClickListener(v -> {
+        binding.cardRecommendation.setOnClickListener( v -> {
             checkCameraPermissionAndOpenCamera();
 //            startActivity(new Intent(getContext(), ProConverterTools.class));
         });
@@ -161,6 +163,11 @@ public class HomeFragment extends BaseFragment {
             // Step 3: Launch the camera with the output URI
             Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
+
+// Grant URI permissions explicitly
+            cameraIntent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+            cameraIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
             cameraLauncher.launch(cameraIntent);
 
         } catch (IOException e) {

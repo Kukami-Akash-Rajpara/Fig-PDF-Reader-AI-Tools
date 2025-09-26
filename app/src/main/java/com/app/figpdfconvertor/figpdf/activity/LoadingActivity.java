@@ -133,8 +133,8 @@ public class LoadingActivity extends BaseActivity {
             @Override
             public void onResponse(@NonNull Call<AnalyzeResponse> call, @NonNull Response<AnalyzeResponse> response) {
                 Log.d("Akash", "onResponse ::-> " + response.body());
-                isProcessing = false; // ✅ mark finished
-                dismissExitDialogIfShowing(); // ✅ dismiss dialog if visible
+                isProcessing = false; //  mark finished
+                dismissExitDialogIfShowing(); //  dismiss dialog if visible
                 if (response.isSuccessful() && response.body() != null) {
                     AnalyzeResponse analyzeRes = response.body();
 
@@ -184,8 +184,6 @@ public class LoadingActivity extends BaseActivity {
         };
         getOnBackPressedDispatcher().addCallback(this, callback);
     }
-
-
 
     public void showExitDialog(Context context) {
         if (exitDialog != null && exitDialog.isShowing()) return; // avoid multiple dialogs
