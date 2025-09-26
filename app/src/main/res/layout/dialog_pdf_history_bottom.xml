@@ -16,9 +16,12 @@
             android:id="@+id/imgThumbnail"
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_50sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             app:shapeAppearanceOverlay="@style/RoundedImageSelection" />
 
         <LinearLayout
+            android:layout_marginStart="@dimen/_10sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toStartOf="@id/imgClose"
